@@ -1,3 +1,5 @@
+//Created By Hizas Sabilal Rasyad / 1301140251
+
 #include <iostream>
 #include <conio.h>
 #include <cmath>
@@ -67,4 +69,3 @@ int main()
     cout<<endl;
     return 0;
 }
-//Created By Hizas-Code
