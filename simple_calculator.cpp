@@ -67,4 +67,4 @@ int main()
     cout<<endl;
     return 0;
 }
-//Created by Hizas-Code
+//Created By Hizas-Code
