@@ -1,7 +1,5 @@
-# Task_1
-Task 1 : Introduction to C++
+Tugas ASD
 
-* Create a simple calculator program that ask input operan1, operan2, and operator from user and output the result
-
-* Make the program ask if the user wants to do the calculation again and loop the program
-
+Nama : Erwin Yulizar F.
+NIM  : 1301144031
+Kelas: IF 38-01
