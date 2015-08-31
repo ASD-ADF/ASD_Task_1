@@ -1,3 +1,6 @@
+//Nama : Erwin Yulizar Fardani
+//NIM  : 1301144031
+//Kelas: IF 38 01
 #include <iostream>
 #include <conio.h>
 #include <stdlib.h>
