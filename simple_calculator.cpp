@@ -77,7 +77,7 @@ int main ()
     		getch();
     		system("CLS");
     	}
-    	else {
+    	else if (p>7) {
             cout << "Pilihan Menu Salah Silahkan Masukkan Kembali";
             getch();
     		system("CLS");
