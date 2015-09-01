@@ -5,3 +5,7 @@ Task 1 : Introduction to C++
 
 * Make the program ask if the user wants to do the calculation again and loop the program
 
+Done by :
+
+Name : Kinto-D
+NIM	 : 1301140171 
