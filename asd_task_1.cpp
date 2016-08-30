@@ -107,6 +107,7 @@ void input_nilai(){
     - fungsi menerima input nilai UTS, UAS, dan TUBES
     - fungsi menampilkan index yang didapat berdasarkan input nilai UTS, UAS, dan TUBES
     **/
+    double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
 
