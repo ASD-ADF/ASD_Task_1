@@ -84,6 +84,7 @@ void set_proporsi_nilai()
     double total;
     do
     {
+        cout << "Silahkan masukkan Proporsi nilai dalam persen" << endl;
         cout << "Proporsi UTS : ";
         cin >> proputs;
         cout << "Proporsi UAS : ";
@@ -91,6 +92,8 @@ void set_proporsi_nilai()
         cout << "Proporsi TUBES : ";
         cin >> proptubes;
         total = proputs + propuas + proptubes;
+        if (total != 100)
+            cout << "Input salah totalnya != 100 silahkan coba lagi" << endl;
     }
     while(total != 100);
     // YOUR CODE ENDS HERE
@@ -111,6 +114,7 @@ void set_standar()
 
     do
     {
+        cout << "Silahkan masukkan Grade dibawah ini" << endl;
         cout << "Grade D = ";
         cin >> grade[1];
         if (grade[0] < grade[1])
@@ -133,9 +137,10 @@ void set_standar()
             if (grade[i] > 100)
                 grade[i] = 0;
         }
-        if (grade[4] == 0) {
+        if (grade[4] == 0)
+        {
             cout << "Input grade salah silahkan ulangi lagi" << endl;
-       }
+        }
     }
     while(grade[4] == 0);
 
