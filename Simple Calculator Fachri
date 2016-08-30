@@ -1,0 +1,69 @@
+// Nama : Fachri UL Albab
+// NIM : 1301140151
+// KELAS : IF-38-01
+// SIMPLE CALCULATOR
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int x,y;
+  char i,j;
+  float hasil;
+
+    i=='y';
+    while (i=='y';)
+    {
+
+
+        cout <<"1. Penjumlahan" << endl;
+        cout <<"2. Pengurangan" << endl;
+        cout <<"3. Perkalian" << endl;
+        cout <<"4. Pembagian" <<endl;
+        cin >> j;
+
+        if (j=='1')
+        {
+            cout << "Masukkan Angka Pertama: " <<endl;
+            cin >> x;
+            cout << "Masukkan Anga Kedua: " << endl;
+            cin >> y;
+            hasil=x+y;
+            cout << "Hasil" <<hasil;
+        }
+        else if (j=='2')
+        {
+            cout << "Masukkan Angka Pertama: " <<endl;
+            cin >> x;
+            cout << "Masukkan Anga Kedua: " << endl;
+            cin >> y;
+            hasil=x-y;
+            cout << "Hasil" <<hasil;
+        }
+        else if (j=='3')
+        {
+            cout << "Masukkan Angka Pertama: " <<endl;
+            cin >> x;
+            cout << "Masukkan Anga Kedua: " << endl;
+            cin >> y;
+            hasil=x*y;
+            cout << "Hasil" <<hasil;
+        }
+        else if (j=='4')
+        {
+            cout << "Masukkan Angka Pertama: " <<endl;
+            cin >> x;
+            cout << "Masukkan Anga Kedua: " << endl;
+            cin >> y;
+            hasil=x/y;
+            cout << "Hasil" <<hasil;
+        }
+
+        cout << "Hitung Lagi? y/n" <<endl;
+        cin >> i;
+    }
+
+    return 0;
+}
