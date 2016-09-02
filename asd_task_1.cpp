@@ -28,6 +28,7 @@ void input_nilai();
 void thank_you();
 
 int main() {
+	cout<<"halo";
     main_menu();
     return 0;
 }
