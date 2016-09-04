@@ -1,23 +1,18 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+NAMA  : NI PUTU SURYA FEBYANTI KUSUMADEWI
+NIM   : 1301154482
+KELAS : IF 39 - 06
 **/
 
 
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
-/**
-    - daftarkan seluruh variable global yang dibutuhkan di sini
-**/
-//=================================================
-// YOUR CODE STARTS HERE
 
-
-// YOUR CODE ENDS HERE
-//=================================================
+double Nilai_UTS, Nilai_UAS, Nilai_Tubes;
+double A,B,C,D,E;
 
 
 void main_menu();
@@ -33,98 +28,117 @@ int main() {
 }
 
 void main_menu(){
-    /**
-    - fungsi berisi pilihan menu di dalam aplikasi:
-      daftar menu:
-      1. set standar index nilai
-      2. set proporsi nilai
-      3. input nilai
-      4. keluar
-    - fungsi meminta input pilihan menu dari user
-      dan memanggil fungsi menu yang dipilih
-    **/
+		int pilihan;
+		do {
+	cout <<"Daftar Menu"<< endl;
+	cout <<"1. Set Standar Index Nilai"<< endl;
+	cout <<"2. Set Proporsi Nilai"<< endl;
+	cout <<"3. Input Nilai"<< endl;
+	cout <<"4. Keluar"<< endl;
 
-    int pilihan;
-    //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
-    //=================================================
+	cout <<"Silahkan Masukkan Menu Pilihan Anda : ";
+	cin >>pilihan;
+	switch(pilihan)
+	{case 1 : set_standar();
+	 break;
+	 case 2 : set_proporsi_nilai ();
+	 break;
+	 case 3 : input_nilai ();
+	 break;
+	 case 4 : break;
+	 default: main_menu();
+	 break;}
+	} while (pilihan !=4);
     thank_you();
 }
 
-
 void set_proporsi_nilai(){
-    /**
-    - fungsi mengubah prosentase nilai UTS, UAS, dan TUBES
-    - fungsi akan menerima 3 input prosentase dari user untuk UTS, UAS, dan TUBES
-    - fungsi akan mengulang menerima input dari user jika total prosentase != 100
-    **/
-    //=================================================
-    // YOUR CODE STARTS HERE
+	double Nuts=0, Nuas=0, Ntub=0;
 
+	cout <<"Masukkan Presentase Nilai Dalam Persen"<< endl;
+	cout <<"Masukkan Presentase UTS : ";
+	cin >>Nuts;
+	cout <<"Masukkan Presentase UAS : ";
+	cin >>Nuas;
+	cout <<"Masukkan Presentase Tubes : ";
+	cin >>Ntub;
 
-    // YOUR CODE ENDS HERE
-    //=================================================
+	if (Nuts+Nuas+Ntub <=100) {
+        Nilai_UTS = Nuts/100;
+		Nilai_UAS = Nuas/100;
+		Nilai_Tubes = Ntub/100;
+	}
+
+	else {
+		cout <<"Yang anda masukkan salah, mohon diulangi"<< endl;
+	}
 }
 
 void set_standar(){
-    /**
-    - fungsi mengubah standar index A, B, C, D, dan E
-    - fungsi akan menerima input rentang nilai untuk masing-masing index nilai
-    - fungsi akan mengulang menerima input dari user jika terdapat nilai yang overlap
-    **/
-    //=================================================
-    // YOUR CODE STARTS HERE
 
+		double Nila,Nilb,Nilc,Nild,Nile;
+		cout<<"Masukkan nilai untuk index A : ";
+		cin>>Nila;
+		cout<<"Masukkan nilai untuk index B : ";
+		cin>>Nilb;
+		cout<<"Masukkan nilai untuk index C : ";
+		cin>>Nilc;
+		cout<<"Masukkan nilai untuk index D : ";
+		cin>>Nild;
+		cout<<"Masukkan nilai untuk index E : ";
+		cin>>Nile;
 
-    // YOUR CODE ENDS HERE
-    //=================================================
+		if (((Nila>Nilb) and (Nila>Nilc) and (Nila>Nild))) {
+			if((Nilb>Nilc) and (Nilb>Nild)) {
+				if((Nilc>Nild)) {
+						A=Nila;
+						B=Nilb;
+						C=Nilc;
+						D=Nild;
+				}
+			}
+		}
+		else {
+            cout <<"Yang anda masukkan salah, silahkan diulangi"<< endl;
+		}
 }
 
 
 char hitung_index(double uts, double uas, double tubes){
-    /**
-    - fungsi menghitung total nilai berdasarkan input parameter dan proporsi nilai
-    - fungsi menentukan index nilai berdasarkan standar nilai
-    - fungsi mengembalikan karakter index nilai
-    **/
-
     char index;
-    //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
-    //=================================================
+    if(((uts*Nilai_UTS) + (uas*Nilai_UAS) + (tubes*Nilai_Tubes)) >=A ){
+        index='A';
+    }
+    else if (((uts*Nilai_UTS) + (uas*Nilai_UAS) + (tubes*Nilai_Tubes)) >=B ){
+        index='B';
+    }
+    else if (((uts*Nilai_UTS) + (uas*Nilai_UAS) + (tubes*Nilai_Tubes)) >=C) {
+        index='C';
+    }
+    else if (((uts*Nilai_UTS) + (uas*Nilai_UAS) + (tubes*Nilai_Tubes)) >=D) {
+        index='D';
+    }
+    else {
+        index='E';
+    }
     return index;
 }
 
 
 void input_nilai(){
-    /**
-    - fungsi menerima input nilai UTS, UAS, dan TUBES
-    - fungsi menampilkan index yang didapat berdasarkan input nilai UTS, UAS, dan TUBES
-    **/
+
     double uas, uts, tubes;
-    //=================================================
-    // YOUR CODE STARTS HERE
 
-
-    // YOUR CODE ENDS HERE
-    //=================================================
+   cout<<"Masukan Nilai UTS: "<< endl;
+   cin>> uts;
+   cout<<"Masukkan Nilai UAS: "<< endl;
+   cin>> uas;
+   cout<<"Masukkan Nilai Tubes: "<< endl;
+   cin>> tubes;
+   cout<<"Index nilai anda adalah : " <<hitung_index(uts,uas,tubes) <<endl;
 }
 
 void thank_you(){
-    /**
-    - fungsi menampilkan pesan singkat untuk mengakhiri program
-    - tampilkan nim dan nama kalian
-    **/
-    //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
-    //=================================================
+    cout<<"Program sudah berhasil dijalankan"<<endl;
+    cout<<"1301154482 - Surya Febyanti Kusumadewi"<<endl;
 }
