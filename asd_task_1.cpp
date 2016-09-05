@@ -72,7 +72,6 @@ void main_menu() {
 	thank_you();
 }
 
-
 void set_proporsi_nilai() {
 	/**
 	- fungsi mengubah prosentase nilai UTS, UAS, dan TUBES
@@ -119,6 +118,7 @@ void set_standar() {
 		cout<<"Ada standar nilai yang overlap, silahkan input ulang!"<<endl;
 		set_standar();
 	}
+	
 	/**
 	if (min_A < min_B && min_A < min_C && min_A < min_D){
 		cout<<"Ada standar nilai yang overlap, silahkan input ulang!";
@@ -141,14 +141,12 @@ void set_standar() {
 	//=================================================
 }
 
-
 char hitung_index(double uts, double uas, double tubes) {
 	/**
 	- fungsi menghitung total nilai berdasarkan input parameter dan proporsi nilai
 	- fungsi menentukan index nilai berdasarkan standar nilai
 	- fungsi mengembalikan karakter index nilai
 	**/
-
 	char index;
 	double tot_nilai;
 	//=================================================
@@ -167,7 +165,6 @@ char hitung_index(double uts, double uas, double tubes) {
 	//=================================================
 	return index;
 }
-
 
 void input_nilai() {
 	/**
