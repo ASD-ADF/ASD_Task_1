@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : Alfin Pratama Salim
+    NIM   : 1301154342
+    KELAS : IF 39-06
 **/
 
 
@@ -14,12 +14,10 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
-
+double pUTS, pUAS, pTubes,pTotal,total, a, b, c, d;
 
 // YOUR CODE ENDS HERE
 //=================================================
-
-
 void main_menu();
 void set_standar();
 void set_proporsi_nilai();
@@ -45,9 +43,26 @@ void main_menu(){
     **/
 
     int pilihan;
+
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout<< "Daftar Menu"<< endl;
+    cout<< "1. Set Standar Index Nilai\n2. Set Proporsi Nilai\n3. Input Nilai\n4. Keluar"<<endl;
+    cin>> pilihan;
+    switch(pilihan){
+case 1 :
+    set_standar();
+    main_menu();
+    break;
+case 2 :
+    set_proporsi_nilai();
+    main_menu();
+    break;
+case 3 :
+    input_nilai();
+    main_menu();
+    break;
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -63,9 +78,19 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
+cout<< "Masukkan Proporsi Nilai UTS: ";
+cin>> pUTS;
+cout<< "Masukkan Proporsi Nilai UAS: ";
+cin>> pUAS;
+cout<< "Masukkan Proporsi Nilai Tubes: ";
+cin>> pTubes;
+pTotal = pUTS+pUAS+pTubes;
+if (pTotal != 100)
+{
+    cout<< "Proporsi salah, coba isi lagi ";
+    set_proporsi_nilai();
+}
+// YOUR CODE ENDS HERE
     //=================================================
 }
 
@@ -77,7 +102,19 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+cout<< "Masukkan Indeks Nilai A: ";
+cin>> a;
+cout<< "Masukkan Indeks Nilai B: ";
+cin>> b;
+cout<< "Masukkan Indeks Nilai C: ";
+cin>> c;
+cout<< "Masukkan Indeks Nilai D: ";
+cin>> d;
+if ((a<b)||(b<c)||(c<d))
+{
+    cout<< "Indeks anda salah, silahkan input kembali"<<endl;
+    set_standar();
+}
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -94,8 +131,18 @@ char hitung_index(double uts, double uas, double tubes){
     char index;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+total = (((uts*pUTS)/100)+((uas*pUAS)/100)+((tubes*pTubes)/100));
+if(total < d)
+    index = 'E';
+else if(total < c )
+    index = 'D';
+else if(total < b)
+    index = 'C';
+else if (total < a)
+    index = 'B';
+else
+    index = 'A';
+cout<< "Indeks"<<index<<endl;
     // YOUR CODE ENDS HERE
     //=================================================
     return index;
@@ -110,8 +157,13 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+cout<< "Masukkan Nilai UTS: ";
+cin>> uts;
+cout<< "Masukkan Nilai UAS: ";
+cin>> uas;
+cout<< "Masukkan Nilai Tubes";
+cin>> tubes;
+hitung_index(uts,uas,tubes);
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -123,7 +175,9 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+cout<< "Alfin Pratama Salim"<< endl;
+cout<< "1301154342"<< endl;
+cout<< "Trima Kasih Telah Menggunakan Program Ini";
 
     // YOUR CODE ENDS HERE
     //=================================================
