@@ -193,6 +193,7 @@ void input_nilai()
 
     hitung_index(uts,uas,tubes);
     thank_you();
+    main_menu();
     // YOUR CODE ENDS HERE
     //=================================================
 }
