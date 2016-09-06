@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : MUHAMMAD IQBAL
+    NIM   : 1301154300
+    KELAS : IF-39-06
 **/
 
 
@@ -14,7 +14,10 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
-
+		
+		int Puts, Puas, Ptubes , idxA, idxB, idxC, idxD;     
+		
+		
 
 // YOUR CODE ENDS HERE
 //=================================================
@@ -48,10 +51,30 @@ void main_menu(){
     //=================================================
     // YOUR CODE STARTS HERE
 
+		cout << "MAIN MENU"  << endl ;
+		cout<< "1. Set standar index nilai " << endl;
+		cout <<"2. set proporsi nilai " << endl ;
+		cout << "3. input nilai" << endl ;
+		cout << "4. keluar " << endl ;
+		
+		cin >> pilihan ; 
+		switch ( pilihan ) {
+			
+			case 1 : set_standar ()  ; break ;
+			case 2 : set_proporsi_nilai () ; break ;
+			case 3 : input_nilai() ; break ;
+			case 4 : thank_you() ; break ;
+		}
+		
+		 
+		main_menu (); 
+		
+		
 
     // YOUR CODE ENDS HERE
     //=================================================
-    thank_you();
+     
+     
 }
 
 
@@ -63,13 +86,34 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+		 
+		 cout << "Masukkan proporsi nilai UTS : " ;
+		 cin >> Puts ;
+		 cout << "Masukkan proporsi nilai UAS : " ;
+		 cin >> Puas ;
+		 cout << " Masukkan proporsi nilai TUBES : " ;
+		 cin >> Ptubes ;
+		 
+		 if (Puts + Puas + Ptubes != 100){
+		  	
+		 	cout << " repeat input proporsi nilai:)" << endl;
+		 	
+		 	set_proporsi_nilai () ;	 	
+		
+		  } else {
+		  	main () ;
+		  }
+		
 
     // YOUR CODE ENDS HERE
     //=================================================
 }
 
 void set_standar(){
+	
+	
+	
+	
     /**
     - fungsi mengubah standar index A, B, C, D, dan E
     - fungsi akan menerima input rentang nilai untuk masing-masing index nilai
@@ -77,8 +121,18 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+			
+			cout << " masukkan index A : "  ;
+			cin >> idxA ;
+			cout << " masukkan index B : "  ;
+			cin >> idxB ;
+			cout << "masukkan index C : "   ;
+			cin >> idxC ;
+			cout << "masukkan index D : "  ;
+			cin >> idxD ;
+			
+			 main () ;
+ 
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -92,10 +146,30 @@ char hitung_index(double uts, double uas, double tubes){
     **/
 
     char index;
+    double total_nilai ;
+    
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+		
+		total_nilai = ( Puts * uts / 100 + Puas * uas / 100 + Ptubes * tubes / 100 ) ;
+		
+			if ( total_nilai >= idxA ) {
+				
+				index = 'A' ;
+				
+			} else if  ((total_nilai >= idxB )  && (total_nilai < idxA)) {
+				
+				index = 'B' ;  
+			} else if ((total_nilai >= idxC )  && (total_nilai < idxB )){
+				 index = 'C' ; 
+			} else if ((total_nilai >= idxD)   && (total_nilai < idxC)){
+				index = 'D' ; 
+			} else if (total_nilai < idxD) {
+			       index = 'E' ; 
+			}
+			  
+		 
+		 
     // YOUR CODE ENDS HERE
     //=================================================
     return index;
@@ -110,8 +184,20 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
+		
+		cout << " masukkan nilai UTS : " ;
+		cin >> uts ;
+		cout << " masukkan nilai UAS : " ;
+		cin >> uas ;
+		cout << " masukkan nilai tubes : " ;
+		cin >> tubes ; 
 
-
+		cout << "hasilnya adalah : " <<	hitung_index(uts, uas, tubes) ; 
+		cout << endl; 
+		
+		main_menu();	
+		
+		
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -123,7 +209,10 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+		
+		cout << " Thank You " << endl ;
+		cout << "Iqbal / 1301154300 " ;
+		
 
     // YOUR CODE ENDS HERE
     //=================================================
