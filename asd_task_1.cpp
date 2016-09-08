@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  :Debora N Silaban
+    NIM   :1301154575
+    KELAS :if 39-01
 **/
 
 
@@ -14,6 +14,8 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
+double peruts,peruas,pertubes;
+int a,b,c,d;
 
 
 // YOUR CODE ENDS HERE
@@ -47,11 +49,32 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
+    cout<<"daftar menu:"<<endl;
+    cout<<"1.Set standar nilai index nilai"<<endl;
+    cout<<"2.set proporsi nilai"<<endl;
+    cout<<"3.input nilai"<<endl;
+    cout<<"4.Keluar"<<endl;
+    cout<<"masukkan pilihan:'";
+    cin>>pilihan;
+    switch(pilihan)
+{
+case 1:
+        set_standar();
+        break;
+case 2:
+    set_proporsi_nilai();
+    break;
+case 3:
+    input_nilai();
+    break;
+case 4:
+    thank_you();
+    break;
 
 
+}
     // YOUR CODE ENDS HERE
     //=================================================
-    thank_you();
 }
 
 
@@ -63,7 +86,19 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+cout<<"input persentase dalan persen"<<endl;
+cout<<"masukkan persentase UTS:";
+cin>>peruts;
+cout<<"Masukkan persentase UAS:";
+cin>>peruas;
+cout<<"masukkan persentase TUBES:";
+cin>>pertubes;
+if ((peruts+peruas+pertubes)!=100)
+{
+    cout<<"Tolal input persentase !=100,silahkan masukkan nilai lagi.";
+    set_proporsi_nilai();
+}
+main_menu();
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -77,6 +112,16 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+cout<<"masukkan standar minimum A:"; cin>>a;
+cout<<"masukkan standar minimum B:"; cin>>b;
+cout<<"masukkan standar minimum C:"; cin>>c;
+cout<<"masukkan standar minimum D:"; cin>>d;
+if (a<=b || b<=c ||c<=d )
+    {
+        cout<<"input standar minimum yang anda masukkan salah,silahkan ulang";
+        set_standar();
+    }
+    main_menu();
 
 
     // YOUR CODE ENDS HERE
@@ -92,8 +137,33 @@ char hitung_index(double uts, double uas, double tubes){
     **/
 
     char index;
+    double ntotal;
     //=================================================
     // YOUR CODE STARTS HERE
+
+ntotal=((uts*(peruts/100))+(uas*(peruas/100))+(tubes*(pertubes/100)));
+if (ntotal>=a)
+{
+    cout<<"indeks nilai anda adalah A";
+}
+else if (ntotal>=b && ntotal<a)
+{
+    cout<<"indeks nilai anda adalah B";
+}
+else if(ntotal>=c && ntotal<b)
+{
+    cout<<"indeks nilai anda adalah C";
+}
+else if (ntotal>=d && ntotal<c)
+{
+    cout<<"indeks nilai anda adalah D";
+}
+else if (ntotal>=d )
+{
+    cout <<"indeks nilai anda adalah E";
+}
+    cout<<endl;
+    main_menu();
 
 
     // YOUR CODE ENDS HERE
@@ -110,7 +180,13 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout<<"masukkan nilai UTS:";
+    cin>>uts;
+    cout<<"masukkan nilai UAS:";
+    cin>>uas;
+    cout<<"masukkan nilai TUBES:";
+    cin>>tubes;
+    hitung_index(uas,uts,tubes);
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -123,8 +199,11 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+cout<<"terimakasih telah mencoba:)"<<endl;
+cout<<"Debora N Silaban"<<endl;
+cout<<"1301154575"<<endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
 }
+
