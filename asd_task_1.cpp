@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : Nadine Azhalia
+    NIM   : 1301154519
+    KELAS :IF 39-01
 **/
 
 
@@ -14,6 +14,8 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
+double peruts,peruas,pertubes;
+int a,b,c,d;
 
 
 // YOUR CODE ENDS HERE
@@ -47,11 +49,32 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
+    cout << "Daftar Menu : "<<endl;
+    cout << "1. Set standar index nilai"<<endl;
+    cout << "2. Set proporsi nilai"<<endl;
+    cout << "3. Input nilai"<<endl;
+    cout << "4. Keluar"<<endl;
+    cout << "Masukkan pilihan : ";
+    cin >> pilihan;
+    switch (pilihan)
+    {
+        case 1 :
+            set_standar();
+            break;
+        case 2 :
+            set_proporsi_nilai();
+            break;
+        case 3 :
+            input_nilai();
+            break;
+        case 4 :
+            thank_you();
+            break;
 
 
+    }
     // YOUR CODE ENDS HERE
     //=================================================
-    thank_you();
 }
 
 
@@ -63,7 +86,19 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout << "Input persentase dalam persen"<<endl;
+    cout << "Masukkan persentase UTS: ";
+    cin >> peruts;
+    cout << "Masukkan persentase UAS: ";
+    cin >> peruas;
+    cout << "Masukkan persentase TUBES: ";
+    cin >> pertubes;
+    if ((peruts+peruas+pertubes) != 100)
+    {
+        cout << "Total input persentase != 100, silahkan masukkan nilai lagi.";
+        set_proporsi_nilai();
+    }
+    main_menu();
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -77,6 +112,16 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    cout << "Masukkan standar minimum A: "; cin >> a;
+    cout << "Masukkan standar minimum B: "; cin >> b;
+    cout << "Masukkan standar minimum C: "; cin >> c;
+    cout << "Masukkan standar minimum D: "; cin >> d;
+    if (a<=b || b<=c || c<=d)
+    {
+        cout << "Input standar minimum yang anda masukan salah, silahkan ulangi!";
+        set_standar();
+    }
+    main_menu();
 
 
     // YOUR CODE ENDS HERE
@@ -92,9 +137,33 @@ char hitung_index(double uts, double uas, double tubes){
     **/
 
     char index;
+    double ntotal;
     //=================================================
     // YOUR CODE STARTS HERE
+    ntotal = ((uts*(peruts/100))+(uas*(peruas/100))+(tubes*(pertubes/100)));
+    if (ntotal>=a)
+    {
+        cout << "Indeks nilai anda adalah A";
+    }
+    else if (ntotal>=b && ntotal<a)
+    {
+        cout << "Indeks nilai anda adalah B";
+    }
+    else if (ntotal>=c && ntotal<b)
+    {
+        cout << "Indeks nilai anda adalah C";
+    }
+    else if (ntotal>=d && ntotal<c)
+    {
+        cout << "Indeks nilai anda adalah D";
+    }
+    else if (ntotal<=d)
+    {
+        cout << "Indeks nilai anda adalah E";
+    }
 
+    cout <<endl;
+    main_menu();
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -109,8 +178,14 @@ void input_nilai(){
     **/
     double uas, uts, tubes;
     //=================================================
-    // YOUR CODE STARTS HERE
-
+    // YOUR CODhE STARTS HERE
+    cout << "Masukkan nilai UTS : ";
+    cin >> uts;
+    cout << "Masukkan nilai UAS : ";
+    cin >> uas;
+    cout << "Masukkan nilai TUBES : ";
+    cin >> tubes;
+    hitung_index(uas,uts,tubes);
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -123,6 +198,9 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    cout << "Terimakasih telah mencoba:)"<<endl;
+    cout << "Nadine Azhalia"<<endl;
+    cout << "1301154519"<<endl;
 
 
     // YOUR CODE ENDS HERE
