@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : REGITA RATIH P
+    NIM   : 1301150435
+    KELAS : IF 39-01
 **/
 
 
@@ -14,11 +14,11 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
-
+double persentuts,persentuas,persenttubes;
+int a,b,c,d;
 
 // YOUR CODE ENDS HERE
 //=================================================
-
 
 void main_menu();
 void set_standar();
@@ -47,6 +47,30 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
+    cout << "Daftar Menu: "<<endl;
+    cout << "1. Set standar index nilai"<<endl;
+    cout << "2. Set proporsi nilai"<<endl;
+    cout << "3. Input nilai"<<endl;
+    cout << "4. Keluar"<<endl;
+    cout <<endl;
+    cout <<"Masukkan pilihan: ";
+    cin >>pilihan;
+    cout <<endl;
+    switch (pilihan)
+    {
+        case 1:
+            set_standar();
+            break;
+        case 2:
+            set_proporsi_nilai();
+            break;
+        case 3:
+            input_nilai();
+            break;
+        case 4:
+            thank_you();
+            break;
+    }
 
 
     // YOUR CODE ENDS HERE
@@ -63,8 +87,19 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "Input Presentase dalam persen"<<endl;
+    cout << "Masukkan nilai UTS: ";
+    cin >> persentuts;
+    cout << "Masukkan nilai UAS: ";
+    cin >> persentuas;
+    cout << "Masukkan presentase TUBES: ";
+    cin >> persenttubes;
+    if ((persentuts+persentuas+persenttubes) !=100)
+    {
+        cout << "Total input presentase: != 100 , silahkan masukkan niai lagi.";
+        set_proporsi_nilai();
+    }
+    main_menu();
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -77,8 +112,19 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "Masukkan standar minimum A: ";
+    cin >>a;
+    cout << "Masukkan standar minimum B: ";
+    cin >>b;
+    cout << "Masukkan standar minimum C: ";
+    cin >>c;
+    cout << "Masukkan standar minimum D: ";
+    cin >>d;
+    if (a<=b || b<=c ||c<=d)
+    {
+        cout << "Input standar minimum yang anda masukkan salah, silahkan ulangi.";
+    }
+    main_menu();
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -92,9 +138,32 @@ char hitung_index(double uts, double uas, double tubes){
     **/
 
     char index;
+    double ntot;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    ntot = ((uts*(persentuts/100))+(uas*(persentuas/100))+(tubes*(persenttubes/100)));
+    if (ntot>=a)
+    {
+        cout << "Ideks nilai anda adalah A";
+    }
+    else if (ntot>=b && ntot<a)
+    {
+        cout << "Ideks nilai anda adalah B";
+    }
+    else  if (ntot>=c && ntot<b)
+    {
+        cout << "Ideks nilai anda adalah C";
+    }
+    if (ntot>=d && ntot<c)
+    {
+        cout << "Ideks nilai anda adalah D";
+    }
+    if (ntot<=d)
+    {
+        cout << "Ideks nilai anda adalah E";
+    }
+    cout <<endl;
+    main_menu();
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -110,7 +179,13 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout << "Masukkan nilai UTS: ";
+    cin >> uts;
+    cout << "Masukkan nilai UAS: ";
+    cin >> uas;
+    cout << "Masukkan nilai TUBES: ";
+    cin >> tubes;
+    hitung_index(uas,uts,tubes);
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -123,8 +198,8 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "TERIMAKASIH"<<endl;
+    cout << "REGITA RATIH P (1301150435)"<<endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
