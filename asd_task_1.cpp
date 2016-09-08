@@ -1,6 +1,6 @@
 /**
-    NAMA  : Agung Jati Prawira
-    NIM   : 1301154421
+    NAMA  : Muhammad Evan Rusyana
+    NIM   : 1301154379
     KELAS : IF-39-01
 **/
 
@@ -51,7 +51,7 @@ void main_menu()
     // YOUR CODE STARTS HERE
     while (nomer != 4)
     {
-        cout<<"----PROGRAM NILAI AKHIR----"<<endl;
+        cout<<"----PROGRAM NILAI AKHIR MAHASISWA TELKOM UNIVERSITY----"<<endl;
         cout<<"1. Set Standar Indeks Nilai"<<endl;
         cout<<"2. Set Proporsi Nilai"<<endl;
         cout<<"3. Input Nilai"<<endl;
@@ -94,15 +94,15 @@ void set_proporsi_nilai()
     do
     {
         cout<< "\nMasukan Prosentase Nilai Akhir "<< endl;
-        cout<<"Masukkan % Nilai UTS: ";
+        cout<<"Masukkan % Nilai UTS Anda: ";
         cin>> x;
-        cout<<"Masukkan % Nilai UAS: ";
+        cout<<"Masukkan % Nilai UAS Anda: ";
         cin>> y;
-        cout<<"Masukkan % Nilai Tugas Besar: ";
+        cout<<"Masukkan % Nilai Tugas Besar Anda: ";
         cin>> z;
         jumlah = x+y+z;
         if (jumlah != 100)
-            cout<< "Inputan Anda Haruslah Bernilai 100 Silahkan Ulangi Lagi! :)"<< endl;
+            cout<< "Inputan Anda Haruslah Bernilai 100 , Mohon Ulangi "<< endl;
     }
     while(jumlah!=100);
     // YOUR CODE ENDS HERE
@@ -131,17 +131,17 @@ void set_standar()
 
     if (skor[0]<skor[1] )
     {
-        cout<<"Nilai Yang dimasukkan SALAH! :( \n";
+        cout<<"Nilai Yang dimasukkan salah\n";
         set_standar();
     }
     else if (skor[1]<skor[2])
     {
-        cout<<"Nilai Yang dimasukkan SALAH! :( \n";
+        cout<<"Nilai Yang dimasukkan salah\n";
         set_standar();
     }
     else if (skor[2]<skor[3])
     {
-        cout<<"Nilai Yang dimasukkan SALAH! :( \n";
+        cout<<"Nilai Yang dimasukkan salah\n";
         set_standar();
     }
     else if (skor[0]>skor[1] && skor[1]>skor[2] && skor[2]>skor[3] )
@@ -189,11 +189,11 @@ void input_nilai()
     //=================================================
     // YOUR CODE STARTS HERE
     cout <<"Masukkan Nilai Anda!"<< endl;
-    cout <<"Nilai Ujian Tengah Semester: ";
+    cout <<"Nilai Ujian Tengah Semester Anda: ";
     cin >> uts;
-    cout <<"Nilai Ujian Akhir Semester: ";
+    cout <<"Nilai Ujian Akhir Semester Anda: ";
     cin >> uas;
-    cout <<"Nilai Tugas Besar: ";
+    cout <<"Nilai Tugas Besar Anda: ";
     cin >> tubes;
     index = hitung_index(uts,uas,tubes);
     cout << "\n Nilai Akhir Anda Ber-Indeks: "<< index<<endl;
@@ -210,8 +210,8 @@ void thank_you()
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-    cout<<"\nThank You! :) "<< endl;
-    cout<<"Regards, \n\nNama : Agung Jati Prawira\n\nNIM : 1301154421"<<endl;
+    cout<<"\nTerima kasih "<< endl;
+    cout<<"Regards, \n\nNama : Muhammad Evan Russyana\n\nNIM : 1301154379"<<endl;
 
 
     // YOUR CODE ENDS HERE
