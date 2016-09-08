@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : Egriano Aristianto
+    NIM   : 1301150043
+    KELAS : IF 39-01
 **/
 
 
@@ -14,7 +14,8 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
-
+double proputs, propuas, proptubes = 0;
+double grade[4];
 
 // YOUR CODE ENDS HERE
 //=================================================
@@ -47,7 +48,23 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
-
+while(pilihan !=4)
+{
+    cout<<"1. Set standar index nilai\n2. set proporsi nilai\n3. input nilai\n4. keluar\nPilih:";
+    cin>>pilihan;
+    switch(pilihan)
+    {
+    case 1 :
+        set_standar();
+        break;
+    case 2 :
+        set_proporsi_nilai();
+        break;
+    case 3 :
+        input_nilai();
+        break;
+    }
+}
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -63,7 +80,21 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+double total;
+do
+{
+    cout<<"Silahkan masukan proporsi nilai (dalam persen)" << endl;
+    cout<<"Proporsi UTS: ";
+    cin>>proputs;
+    cout<<"Proporsi UAS: ";
+    cin>>propuas;
+    cout<<"Proporsi Tubes: ";
+    cin>>proptubes;
+    total=proputs+propuas+proptubes;
+    if (total != 100)
+        cout<<"Input salah, total input tidak boleh melebihi 100, silahkan coba lagi"<<endl;
+}
+while(total !=100);
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -77,7 +108,40 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+for (int i=0; i<5; i++)
+    grade[i]=0;
+do
+{
+    cout<<"Silahkan masukan Grade dibawah ini"<<endl;
+    cout<<"Grade D= ";
+    cin>>grade[1];
+    if(grade[0]<grade[1])
+    {
+        cout<<"Grade C= ";
+        cin>> grade[2];
+        if (grade[1] < grade[2])
+        {
+            cout<<"Grade B= ";
+            cin>>grade[3];
+            if(grade[2] < grade[3])
+            {
+                cout<<"Grade A= ";
+                cin>>grade[4];
 
+            }
+        }
+    }
+for (int i=0; i<5; i++)
+{
+    if (grade[i]>100)
+        grade[i]=0;
+}
+if(grade[4]==0)
+{
+    cout<<"Input salah, silahkan ulangi lagi"<<endl;
+}
+}
+while(grade[4]==0);
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -92,9 +156,15 @@ char hitung_index(double uts, double uas, double tubes){
     **/
 
     char index;
+    double total;
     //=================================================
     // YOUR CODE STARTS HERE
-
+total = (uts*(proputs/100))+(uas*(propuas/100))+(tubes*(proptubes/100));
+if (total < grade[1]) index = 'E';
+if (total >= grade[1] && total < grade[2]) index ='D';
+if (total >= grade[2] && total < grade[3]) index ='C';
+if (total >= grade[3] && total < grade[4]) index ='B';
+if (total >=grade[4]) index ='A';
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -108,9 +178,17 @@ void input_nilai(){
     - fungsi menampilkan index yang didapat berdasarkan input nilai UTS, UAS, dan TUBES
     **/
     double uas, uts, tubes;
+    char indeks;
     //=================================================
     // YOUR CODE STARTS HERE
-
+cout<<"Masukan nilai UTS: ";
+cin >> uts;
+cout<<"Masukan nilai UAS: ";
+cin>>uas;
+cout<<"Masukan nilai Tubes: ";
+cin>>tubes;
+indeks = hitung_index(uts,uas,tubes);
+cout<<"Index dari nilai anda adalah" <<indeks << endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -123,7 +201,8 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+cout<<"Terima kasih telah menggunakan aplikasi ini"<<endl;
+cout<<"Saya Egriano Aristianto dengan NIM 1301150043"<<endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
