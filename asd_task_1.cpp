@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : ANJAR AFRIZAL
+    NIM   : 1301154239
+    KELAS : IF-39-01
 **/
 
 
@@ -14,7 +14,7 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
-
+int indexA,indexB,indexC,indexD,prouas,prouts,protubes,prosentase;
 
 // YOUR CODE ENDS HERE
 //=================================================
@@ -47,7 +47,20 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
+cout << "Daftar Menu" <<endl;
+    cout << "1. set standar index nilai"<<endl;
+    cout << "2. set proporsi nilai"<<endl;
+    cout << "3. input nilai"<<endl;
+    cout << "4. keluar"<<endl;
+    cout << "Masukkan Pilihan: ";
+    cin >> pilihan;
 
+        switch (pilihan) {
+            case 1 : set_standar(); break;
+            case 2 : set_proporsi_nilai(); break;
+            case 3 : input_nilai(); break;
+            case 4 : thank_you(); break;
+        }
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -63,7 +76,21 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+	cout << "input prosentase dalam persen"<<endl;
+    cout << "masukkan prosentase UTS : ";
+    cin >> prouts;
+    cout << "masukkan prosentase UAS : ";
+    cin >> prouas;
+    cout << "masukkan prosentase TUBES : ";
+    cin >> protubes;
 
+    prosentase = prouas + prouts + protubes;
+
+    if (prosentase != 100) {
+        cout << "total input prosentase !=100, silahkan ulangi lagi"<<endl;
+        set_proporsi_nilai();
+    }
+    main_menu();
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -77,7 +104,26 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+	cout << "masukkan standar nilai minimum A: ";
+    cin >> indexA;
+    cout << "masukkan standar nilai minimum B: ";
+    cin >> indexB;
+    cout << "masukkan standar nilai minimum C: ";
+    cin >> indexC;
+    cout << "masukkan standar nilai minimum D: ";
+    cin >> indexD;
 
+	if (indexB > indexA) {
+    cout << "input standar salah, silahkan ulangi lagi"<<endl;
+    set_standar();
+	} else if (indexC > indexB) {
+    cout << "input standar salah, silahkan ulangi lagi"<<endl;
+    set_standar();
+	} else if (indexD > indexC) {
+    cout << "input standar salah, silahkan ulangi lagi"<<endl;
+    set_standar();
+	}
+    main_menu();
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -94,7 +140,20 @@ char hitung_index(double uts, double uas, double tubes){
     char index;
     //=================================================
     // YOUR CODE STARTS HERE
+	double sum;
 
+    sum = (((uts * prouts)/100) + ((uas * prouas)/100) + ((tubes * protubes)/100));
+    if (sum>=indexA) {
+        index = 'A';
+    } else if (sum>=indexB && sum<indexA) {
+        index = 'B';
+    } else if (sum>=indexC && sum<indexB) {
+        index = 'C';
+    } else if (sum>=indexD && sum<indexC) {
+        index = 'D';
+    } else {
+        index = 'E';
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -110,7 +169,14 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
+	cout << "masukkan nilai uts : ";
+    cin >> uts;
+    cout << "masukkan nilai uas : ";
+    cin >> uas;
+    cout << "masukkan nilai tubes : ";
+    cin >> tubes;
+    cout << "index nilai anda adalah " << hitung_index(uts,uas,tubes) << endl;
+    main_menu();
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -123,7 +189,10 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+	cout << endl;
+    cout << "Terima Kasih telah menggunakan aplikasi kami"<<endl;
+    cout << "1301154239 | Anjar Afrizal";
+    cout << endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
