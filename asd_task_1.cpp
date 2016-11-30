@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : Eri Sadewo
+    NIM   : 1301140022
+    KELAS : IF-39-06
 **/
 
 
@@ -14,7 +14,8 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
-
+int pro_UTS,pro_UAS, pro_TUBES;
+int idks_A,idks_B,idks_C,idks_D;
 
 // YOUR CODE ENDS HERE
 //=================================================
@@ -47,8 +48,23 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
+    do {
+        cout << "1. set standar index nilai" << endl;
+        cout << "2. set proporsi nilai " << endl;
+        cout << "3. input nilai" << endl;
+        cout << "4. keluar" << endl;
+        cout << endl;
+        cout << "Inputkan nilai : ";
+        cin >> pilihan;
 
-
+        if (pilihan==1){
+             set_standar();
+        } else if (pilihan==2){
+            set_proporsi_nilai();
+        } else if (pilihan==3){
+            input_nilai();
+        };
+    } while(pilihan!=4);
     // YOUR CODE ENDS HERE
     //=================================================
     thank_you();
@@ -63,8 +79,19 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    do {
+        cout << "Input prosentase dalam persen" << endl;
+        cout << "masukan prosentase nilai UTS : ";
+        cin >> pro_UTS;
+        cout << "masukan prosentase nilai UAS : ";
+        cin >> pro_UAS;
+        cout << "masukan prosentase nilai TUBES : ";
+        cin >> pro_TUBES;
+        if (pro_UAS+pro_UTS+pro_TUBES!=100) {
+            cout << "Total input prosentase != 100, silahkan ulangi"<<endl;
+        }
+    }while (pro_UAS+pro_UTS+pro_TUBES!=100);
+    cout << endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -77,8 +104,32 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    bool catcher;
+    do {
+        catcher = false;
+        cout << "masukan standar minimum A : ";
+        cin  >> idks_A;
+        cout << "masukan standar minimum B : ";
+        cin  >> idks_B;
+        if (idks_B>=idks_A) {
+            catcher = true;
+        };
+        cout << "masukan standar minimum C : ";
+        cin  >> idks_C;
+        if (idks_C>=idks_B) {
+            catcher = true;
+        };
+        cout << "masukan standar minimum D : ";
+        cin  >> idks_D;
+        if (idks_D>=idks_C) {
+            catcher = true;
+        };
 
-
+        if (catcher) {
+            cout << "Input standar salah, silahkan ulangi!" << endl;
+        };
+    } while(catcher);
+    cout << endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -94,8 +145,19 @@ char hitung_index(double uts, double uas, double tubes){
     char index;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    double total;
+    total = (uts*pro_UTS/100)+(uas*pro_UAS/100)+(tubes*pro_TUBES/100);
+    if ((total<=100) && (total>=idks_A)) {
+        index = 'A';
+    } else if ((total<idks_A) && (total>=idks_B)) {
+        index = 'B';
+    } else if ((total<idks_B) && (total>=idks_C)) {
+        index = 'C';
+    } else if ((total<idks_C) && (total>=idks_D)) {
+        index = 'D';
+    } else if ((total<idks_D) && (total>=0)) {
+        index = 'E';
+    };
     // YOUR CODE ENDS HERE
     //=================================================
     return index;
@@ -110,7 +172,14 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout << "masukan nilai UTS : ";
+    cin >> uts;
+    cout << "masukan nilai UAS : " ;
+    cin >> uas;
+    cout << "masukan nilai TUBES : ";
+    cin >> tubes;
+    cout << "index nilai anda adalah " << hitung_index(uts,uas,tubes);
+    cout << endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -123,8 +192,12 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << endl;
+    cout << "+--------------------------------------------------+" << endl;
+    cout << "|          NIM  : 1301140022                       |" << endl;
+    cout << "|          Nama : Eri Sadewo            		|" << endl;
+    cout << "|                                                  |" << endl;
+    cout << "+--Thanks for using my program, Have a Nice Day!--+" << endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
