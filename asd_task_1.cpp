@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : Ibnu Hamdam MS
+    NIM   : 1301164177
+    KELAS : IF 40 02
 **/
 
 
