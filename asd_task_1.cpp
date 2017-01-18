@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : Nama saya
+    NIM   : Nim saya
+    KELAS : Kelas Gabungan
 **/
 
 
@@ -15,7 +15,9 @@ using namespace std;
 //=================================================
 // YOUR CODE STARTS HERE
 
-
+	int i = 10;
+	i++;
+	cout << "halo";
 // YOUR CODE ENDS HERE
 //=================================================
 
