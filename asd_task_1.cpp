@@ -9,6 +9,8 @@
 
 using namespace std;
 
+    char* pilihan;
+
 /**
     - daftarkan seluruh variable global yang dibutuhkan di sini
 **/
@@ -29,10 +31,19 @@ void thank_you();
 
 int main() {
     main_menu();
+
+
     return 0;
 }
 
 void main_menu(){
+    cout<<" DAFTAR MENU : \n";
+    cout<<" 1. Set standar index nilai \n";
+    cout<<" 2. Set proporsi nilai \n";
+    cout<<" 3. Input nilai \n";
+    cout<<" 4. Keluar \n";
+    cout<<" Masukan pilihan anda : ";
+    cin>>pilihan;
     /**
     - fungsi berisi pilihan menu di dalam aplikasi:
       daftar menu:
