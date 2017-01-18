@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : Nama saya
+    NIM   : Nim saya
+    KELAS : kelas saya
 **/
 
 
