@@ -1,7 +1,7 @@
 /**
-    NAMA  : Try Arie Rahmat Insani
-    NIM   : 1301164513
-    KELAS : IF-40-02
+    NAMA  :
+    NIM   :
+    KELAS :
 **/
 
 
