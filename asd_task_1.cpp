@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : Seiba Shonia
+    NIM   : 1301164249
+    KELAS : IF 40-02
 **/
 
 
@@ -13,10 +13,8 @@ using namespace std;
     - daftarkan seluruh variable global yang dibutuhkan di sini
 **/
 //=================================================
-// YOUR CODE STARTS HERE
-
-
-// YOUR CODE ENDS HERE
+double uts,uas,tubes;
+int pilih
 //=================================================
 
 
@@ -46,10 +44,31 @@ void main_menu(){
 
     int pilihan;
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Daftar Menu";cout<<endl;
+    cout<<"1. Set Standar Index Nilai";cout<<endl;
+    cout<<"2. Set Proporsi Nilai";cout<<endl;
+    cout<<"3. Input Nilai";cout<<endl;
+    cout<<"4. Keluar";cout<<endl;
 
+    cout<<"Pilih menu : ";cout<<endl;
+    cin>>pilih;
 
-    // YOUR CODE ENDS HERE
+    if(pilih==1)
+    {
+        set_standar()
+    }
+    else if (pilih==2)
+    {
+        set_proporsi_nilai()
+    }
+    else if (pilih==3)
+    {
+        input_nilai()
+    }
+    else if (pilih==4)
+    {
+        thank_you()
+    }
     //=================================================
     thank_you();
 }
@@ -109,7 +128,8 @@ void input_nilai(){
     **/
     double uas, uts, tubes;
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Masukan nilai UTS : ";cout<<endl;
+    cin>>uts;
 
 
     // YOUR CODE ENDS HERE
@@ -122,9 +142,9 @@ void thank_you(){
     - tampilkan nim dan nama kalian
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Terima Kasih";cout<<endl;
+    cout<<"NIM : 1301164249";cout<<endl;
+    cout<<"Nama : Seiba Shonia";cout<<endl;
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
 }
