@@ -81,10 +81,16 @@ void set_proporsi_nilai(){
     - fungsi akan mengulang menerima input dari user jika total prosentase != 100
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
+    int puts,puas,ptubes;
 
+    cout<<"Input prosentase dalam persen";cout<<endl;
+    cout<<"Masukan prosentase UTS : ";cout<<endl;
+    cin>>puts;
+    cout<<"Masukan prosentase UAS : ";cout<<endl;
+    cin>>puas;
+    cout<<"Masukan prosentase TUBES : ";cout<<endl;
+    cin>>ptubes;
 
-    // YOUR CODE ENDS HERE
     //=================================================
 }
 
@@ -95,10 +101,16 @@ void set_standar(){
     - fungsi akan mengulang menerima input dari user jika terdapat nilai yang overlap
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
+    char a,b,c,d;
 
-
-    // YOUR CODE ENDS HERE
+    cout<<"Masukan standar minimum A : ";cout<<endl;
+    cin>>a;
+    cout<<"Masukan standar minimum B : ";cout<<endl;
+    cin>>b;
+    cout<<"Masukan standar minimum C : ";cout<<endl;
+    cin>>c;
+    cout<<"Masukan standar minimum D : ";cout<<endl;
+    cin>>d;
     //=================================================
 }
 
@@ -130,6 +142,12 @@ void input_nilai(){
     //=================================================
     cout<<"Masukan nilai UTS : ";cout<<endl;
     cin>>uts;
+    cout<<"Masukan nilai UAS : ";cout<<endl;
+    cin>>uas;
+    cout>>"Masukan nilai TUBES : ";cout<<endl;
+    cin>>tubes;
+
+    cout<<"Index nilai anda adalah
 
 
     // YOUR CODE ENDS HERE
