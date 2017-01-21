@@ -9,7 +9,7 @@
 
 using namespace std;
 
-    char* pilihan;
+    int pilihan;
 
 /**
     - daftarkan seluruh variable global yang dibutuhkan di sini
@@ -32,7 +32,6 @@ void thank_you();
 int main() {
     main_menu();
 
-
     return 0;
 }
 
@@ -54,13 +53,13 @@ void main_menu(){
     - fungsi meminta input pilihan menu dari user
       dan memanggil fungsi menu yang dipilih
     **/
-
-    int pilihan;
     //=================================================
-    // YOUR CODE STARTS HERE
 
+    if (pilihan == 1)
+            cout<<"Anda Memilih nomer satu\n";
+        else
+            cout<<"Yah kamu bukan milih nomer satu\n";
 
-    // YOUR CODE ENDS HERE
     //=================================================
     thank_you();
 }
@@ -87,10 +86,17 @@ void set_standar(){
     - fungsi akan mengulang menerima input dari user jika terdapat nilai yang overlap
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Masukan standar minimum A :\n";
+    cin>>stdA;
+    cout<<"Masukan standar minimum B :\n";
+    cin>>stdB;
+    cout<<"Masukan standar minimum C :\n";
+    cin>>stdC;
+    cout>>"Masukan standar minimum D :\n";
+    cin>>stdD;
 
+    if (stdB >= stdA) or (stdC >= stdB) or (stdD >= stdC)
 
-    // YOUR CODE ENDS HERE
     //=================================================
 }
 
