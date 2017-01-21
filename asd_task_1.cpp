@@ -15,6 +15,8 @@ using namespace std;
 //=================================================
 double uts,uas,tubes;
 int pilih
+int puts,puas,ptubes;
+int a,b,c,d;
 //=================================================
 
 
@@ -81,7 +83,6 @@ void set_proporsi_nilai(){
     - fungsi akan mengulang menerima input dari user jika total prosentase != 100
     **/
     //=================================================
-    int puts,puas,ptubes;
 
     cout<<"Input prosentase dalam persen";cout<<endl;
     cout<<"Masukan prosentase UTS : ";cout<<endl;
@@ -90,6 +91,19 @@ void set_proporsi_nilai(){
     cin>>puas;
     cout<<"Masukan prosentase TUBES : ";cout<<endl;
     cin>>ptubes;
+
+    if (puts + puas + ptubes < 100) or (puts + puas + ptubes > 100)
+    {
+        cout<<"Total input prosentase !=100, silahkan masukan prosentase kembali";cout<<endl;
+        cout<<"Input prosentase dalam persen";cout<<endl;
+        cout<<"Masukan prosentase UTS : ";cout<<endl;
+        cin>>puts;
+        cout<<"Masukan prosentase UAS : ";cout<<endl;
+        cin>>puas;
+        cout<<"Masukan prosentase TUBES : ";cout<<endl;
+        cin>>ptubes;
+
+    }
 
     //=================================================
 }
@@ -101,7 +115,6 @@ void set_standar(){
     - fungsi akan mengulang menerima input dari user jika terdapat nilai yang overlap
     **/
     //=================================================
-    char a,b,c,d;
 
     cout<<"Masukan standar minimum A : ";cout<<endl;
     cin>>a;
@@ -111,6 +124,19 @@ void set_standar(){
     cin>>c;
     cout<<"Masukan standar minimum D : ";cout<<endl;
     cin>>d;
+
+    if (a>100) or (b>100) or (c>100) or (d>100)
+    {
+        cout<<"Input standar salah, silahkan ulangi lagi";cout<<endl;
+        cout<<"Masukan standar minimum A : ";cout<<endl;
+        cin>>a;
+        cout<<"Masukan standar minimum B : ";cout<<endl;
+        cin>>b;
+        cout<<"Masukan standar minimum C : ";cout<<endl;
+        cin>>c;
+        cout<<"Masukan standar minimum D : ";cout<<endl;
+        cin>>d;
+    }
     //=================================================
 }
 
@@ -124,7 +150,7 @@ char hitung_index(double uts, double uas, double tubes){
 
     char index;
     //=================================================
-    // YOUR CODE STARTS HERE
+
 
 
     // YOUR CODE ENDS HERE
@@ -149,8 +175,6 @@ void input_nilai(){
 
     cout<<"Index nilai anda adalah
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
 }
 
