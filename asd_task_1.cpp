@@ -1,5 +1,5 @@
 /**
-    NAMA  :
+    NAMA  : isikan nama anda
     NIM   :
     KELAS :
 **/
