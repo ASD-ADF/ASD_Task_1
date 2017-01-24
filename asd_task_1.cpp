@@ -82,7 +82,6 @@ void main_menu(){
 
     // YOUR CODE ENDS HERE
     //=================================================
-    //thank_you();
 }
 
 
@@ -211,8 +210,10 @@ void thank_you(){
     - tampilkan nim dan nama kalian
     **/
 
+    cout<<"Aplikasi telah ditutup"<<endl;
     cout<<"Nama : Diah Hevyka Maylawati"<<endl;
     cout<<"NIM  : 1301164336"<<endl;
+
     //=================================================
     // YOUR CODE STARTS HERE
 
