@@ -1,21 +1,21 @@
 /**
-    NAMA  : isikan nama anda
-    NIM   :
-    KELAS :
+    NAMA  : Rifki Mifathur Sutomo
+    NIM   : 1301164225
+    KELAS : IF 40-02
 **/
 
 
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
 /**
-    - daftarkan seluruh variable global yang dibutuhkan di sini
+     daftarkan seluruh variable global yang dibutuhkan di sini
 **/
 //=================================================
 // YOUR CODE STARTS HERE
-
-
+double percen_UAS, percen_UTS, percen_tubes, nilai_a, nilai_b, nilai_c, nilai_d;
 // YOUR CODE ENDS HERE
 //=================================================
 
@@ -47,13 +47,34 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
+    cout << "Menu Utama \n\n 1. Set Standar Index Nilai \n 2. Set Proporsi Nilai \n 3. Input Nilai \n 4. Keluar \n\n";
+    cout << "Pilih menu : ";
+    cin >> pilihan;
 
-
+    do {
+        switch (pilihan) {
+            case 1:
+                system("CLS");
+                set_standar();
+                system("CLS");
+                main_menu();
+            case 2 :
+                system("CLS");
+                set_proporsi_nilai();
+                system("CLS");
+                main_menu();
+            case 3 :
+                system("CLS");
+                input_nilai();
+                system("PAUSE");
+                system("CLS");
+                main_menu();
+        }
+    } while (pilihan != 4);
     // YOUR CODE ENDS HERE
     //=================================================
     thank_you();
 }
-
 
 void set_proporsi_nilai(){
     /**
@@ -63,8 +84,16 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    do {
+        cout << "**NOTE**\n- Persentase 100 \n- Persentase Sudah Dalam Persen ! \n\nMasukkan Persentase UTS : ";
+        cin >> percen_UTS;
+        cout << "Masukkan Persentase TUBES : ";
+        cin >> percen_tubes;
+        cout << "Masukkan Persentase UAS : ";
+        cin >> percen_UAS;
+    } while (percen_UTS + percen_tubes + percen_UAS != 100);
+    // YOUR CODE ENDS HERE
+    //==============================================
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -77,7 +106,14 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout << "Index A : ";
+    cin >> nilai_a;
+    cout << "Index B : ";
+    cin >> nilai_b;
+    cout << "Imdex C : ";
+    cin >> nilai_c;
+    cout << "Index D : ";
+    cin >> nilai_d;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -94,7 +130,21 @@ char hitung_index(double uts, double uas, double tubes){
     char index;
     //=================================================
     // YOUR CODE STARTS HERE
+    uts=uts*percen_UTS/100;
+    tubes=tubes*percen_tubes/100;
+    uas=uas*percen_UAS/100;
 
+    if (uts + uas + tubes >= nilai_a) {
+        index = 'A';
+    } else if (uts + uas + tubes >= nilai_b) {
+        index = 'B';
+    } else if (uts + uas + tubes >= nilai_c) {
+        index = 'C';
+    } else if (uts + uas + tubes >= nilai_d) {
+        index = 'D';
+    } else {
+        index = 'E';
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -110,8 +160,14 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "Nilai\n" << endl;
+    cout << "Input UTS : ";
+    cin >> uts;
+    cout << "Input TUBES : ";
+    cin >> tubes;
+    cout << "Input UAS : ";
+    cin >> uas;
+    cout << "\n\nIndex : " << hitung_index(uts, uas, tubes) << endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -124,7 +180,9 @@ void thank_you(){
     //=================================================
     // YOUR CODE STARTS HERE
 
-
+    cout << "\nMatur Suwun";
+    cout << "\n1301164225";
+    exit(0);
     // YOUR CODE ENDS HERE
     //=================================================
 }
