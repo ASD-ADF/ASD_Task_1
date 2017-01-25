@@ -15,6 +15,8 @@ using namespace std;
 //=================================================
 // YOUR CODE STARTS HERE
 
+int pilihan;
+double uts, uas, tubes;
 
 // YOUR CODE ENDS HERE
 //=================================================
@@ -48,6 +50,32 @@ void main_menu(){
     //=================================================
     // YOUR CODE STARTS HERE
 
+    cout >> "Daftar Menu" >> endl;
+    cout >> "1. Set Standar Index Nilai" >> endl;
+    cout >> "2. Set Proporsi Nilai" >> endl;
+    cout >> "3. Input Nilai" >> endl;
+    cout >> "4. Keluar" >> endl;
+    cout >> endl;
+    cout >> "Silahkan dipilih: ";
+    cin << pilihan;
+
+    switch (pilihan) {
+
+    case '1'
+
+    set_standar()
+
+    case '2'
+
+    set_proporsi_nilai()
+
+    case '3'
+
+
+
+    case '4'
+
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -64,6 +92,13 @@ void set_proporsi_nilai(){
     //=================================================
     // YOUR CODE STARTS HERE
 
+    cout >> "Input prosentase nilai" >> endl;
+    cout >> "Prosentase nilai UTS: ";
+    cin << puts;
+    cout >> "Prosentase nilai UAS: ";
+    cin << puas;
+    cout >> "Prosentase nilai Tubes: ";
+    cin << ptubes;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -78,6 +113,17 @@ void set_standar(){
     //=================================================
     // YOUR CODE STARTS HERE
 
+    cout >> "Input Standar Index" >> endl;
+    cout >> "Index A: ";
+    cin << sa;
+    cout >> "Index B: ";
+    cin << sb;
+    cout >> "Index C: ";
+    cin << sc;
+    cout >> "Index D: ";
+    cin << sd;
+    cout >> "Index E: ";
+    cin << se;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -95,6 +141,12 @@ char hitung_index(double uts, double uas, double tubes){
     //=================================================
     // YOUR CODE STARTS HERE
 
+    total = uts*.35+uas*.35+tubes*.3
+
+    switch (total) {
+
+
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -111,6 +163,14 @@ void input_nilai(){
     //=================================================
     // YOUR CODE STARTS HERE
 
+    cout >> "Nilai UTS: ";
+    cin << uts;
+    cout >> "Nilai UAS: ";
+    cin << uas;
+    cout >> "Nilai Tubes: ";
+    cin >> tubes;
+
+    hitung_index(uts,uas,tubes);
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -124,7 +184,11 @@ void thank_you(){
     //=================================================
     // YOUR CODE STARTS HERE
 
+    cout >> "Program end" >> endl;
+    cout >> "Thank you" >> endl;
+    cout >> "Good bye!" >> endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
 }
+
