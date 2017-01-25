@@ -1,8 +1,8 @@
 /**
-    NAMA  : isikan nama anda
-    NIM   :
-    KELAS :
-**/
+ NAMA  : Refin Heryanto
+ NIM   : 1301164324
+ KELAS : IF 40-02
+ **/
 
 
 #include <iostream>
@@ -15,6 +15,7 @@ using namespace std;
 //=================================================
 // YOUR CODE STARTS HERE
 
+double nilai_uts, nilai_uas, nilai_tubes, min_a, min_b, min_c, min_d;
 
 // YOUR CODE ENDS HERE
 //=================================================
@@ -47,8 +48,30 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "Menu Utama \n\n 1. Set Standar Index Nilai \n 2. Set Proporsi Nilai \n 3. Input Nilai \n 4. Keluar \n\n";
+    cout << "Masukkan Pilihan : ";
+    cin >> pilihan;
+    
+    do {
+        switch (pilihan) {
+            case 1:
+                system("CLS");
+                set_standar();
+                system("CLS");
+                main_menu();
+            case 2 :
+                system("CLS");
+                set_proporsi_nilai();
+                system("CLS");
+                main_menu();
+            case 3 :
+                system("CLS");
+                input_nilai();
+                system("PAUSE");
+                system("CLS");
+                main_menu();
+        }
+    } while (pilihan != 4);
     // YOUR CODE ENDS HERE
     //=================================================
     thank_you();
@@ -63,8 +86,14 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    do {
+        cout << "Total Prosentase Harus 100 \nInput Prosentase Dalam Persen \n\nMasukkan Prosentase UTS : ";
+        cin >> nilai_uts;
+        cout << "Masukkan Prosentase TUBES : ";
+        cin >> nilai_tubes;
+        cout << "Masukkan Prosentase UAS : ";
+        cin >> nilai_uas;
+    } while (nilai_uts + nilai_tubes + nilai_uas != 100);
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -77,8 +106,14 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "Masukkan Nilai Minimum A : ";
+    cin >> min_a;
+    cout << "Masukkan Nilai Minimum B : ";
+    cin >> min_b;
+    cout << "Masukkan Nilai Minimum C : ";
+    cin >> min_c;
+    cout << "Masukkan Nilai Minimum D : ";
+    cin >> min_d;
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -94,8 +129,21 @@ char hitung_index(double uts, double uas, double tubes){
     char index;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    uts = uts * nilai_uts / 100;
+    tubes = tubes * nilai_tubes / 100;
+    uas = uas * nilai_uas / 100;
+    
+    if (uts + uas + tubes >= min_a) {
+        index = 'A';
+    } else if (uts + uas + tubes >= min_b) {
+        index = 'B';
+    } else if (uts + uas + tubes >= min_c) {
+        index = 'C';
+    } else if (uts + uas + tubes >= min_d) {
+        index = 'D';
+    } else {
+        index = 'E';
+    }
     // YOUR CODE ENDS HERE
     //=================================================
     return index;
@@ -110,8 +158,14 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "Masukkan Nilai Mahasiswa\n" << endl;
+    cout << "Masukkan Nilai UTS : ";
+    cin >> uts;
+    cout << "Masukkan Nilai TUBES : ";
+    cin >> tubes;
+    cout << "Masukkan Nilai UAS : ";
+    cin >> uas;
+    cout << "\n\nNilai Index : " << hitung_index(uts, uas, tubes) << endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -123,8 +177,9 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "\nRefin Heryanto\n";
+    cout << "\n13011643243";
+    exit(0);
     // YOUR CODE ENDS HERE
     //=================================================
 }
