@@ -1,12 +1,11 @@
 /**
-    NAMA  : isikan nama anda
-    NIM   :
-    KELAS :
+    NIM   : 1301164324
+    KELAS : IF 40-02
 **/
 
 
 #include <iostream>
-
+#include <stdlib.h>
 using namespace std;
 
 /**
@@ -14,8 +13,7 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
-
-
+double per_uts, per_uas, per_tubes, min_a, min_b, min_c, min_d;
 // YOUR CODE ENDS HERE
 //=================================================
 
@@ -47,8 +45,30 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
+    cout << "Menu Utama \n\n 1. Set Standar Index Nilai \n 2. Set Proporsi Nilai \n 3. Input Nilai \n 4. Keluar \n\n";
+    cout << "Pilih menu : ";
+    cin >> pilihan;
 
-
+    do {
+        switch (pilihan) {
+            case 1:
+                system("CLS");
+                set_standar();
+                system("CLS");
+                main_menu();
+            case 2 :
+                system("CLS");
+                set_proporsi_nilai();
+                system("CLS");
+                main_menu();
+            case 3 :
+                system("CLS");
+                input_nilai();
+                system("PAUSE");
+                system("CLS");
+                main_menu();
+        }
+    } while (pilihan != 4);
     // YOUR CODE ENDS HERE
     //=================================================
     thank_you();
@@ -63,8 +83,14 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    do {
+        cout << "**NOTE**\n- Total Persentase Harus 100 ! \n- Input Persentase Dalam Persen ! \n\nMasukkan Persentase UTS : ";
+        cin >> per_uts;
+        cout << "Masukkan Persentase TUBES : ";
+        cin >> per_tubes;
+        cout << "Masukkan Persentase UAS : ";
+        cin >> per_uas;
+    } while (per_uts + per_tubes + per_uas != 100);
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -77,13 +103,18 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "Standar Nilai A : ";
+    cin >> min_a;
+    cout << "Standar Nilai B : ";
+    cin >> min_b;
+    cout << "Standar Nilai C : ";
+    cin >> min_c;
+    cout << "Standar Nilai D : ";
+    cin >> min_d;
     // YOUR CODE ENDS HERE
     //=================================================
+    thank_you();
 }
-
-
 char hitung_index(double uts, double uas, double tubes){
     /**
     - fungsi menghitung total nilai berdasarkan input parameter dan proporsi nilai
@@ -94,13 +125,25 @@ char hitung_index(double uts, double uas, double tubes){
     char index;
     //=================================================
     // YOUR CODE STARTS HERE
+    uts=uts*per_uts/100;
+    tubes=tubes*per_tubes/100;
+    uas=uas*per_uas/100;
 
-
+    if (uts + uas + tubes >= min_a) {
+        index = 'A';
+    } else if (uts + uas + tubes >= min_b) {
+        index = 'B';
+    } else if (uts + uas + tubes >= min_c) {
+        index = 'C';
+    } else if (uts + uas + tubes >= min_d) {
+        index = 'D';
+    } else {
+        index = 'E';
+    }
     // YOUR CODE ENDS HERE
     //=================================================
     return index;
 }
-
 
 void input_nilai(){
     /**
@@ -110,8 +153,14 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "Nilai\n" << endl;
+    cout << "Input UTS : ";
+    cin >> uts;
+    cout << "Input TUBES : ";
+    cin >> tubes;
+    cout << "Input UAS : ";
+    cin >> uas;
+    cout << "\n\nIndex : " << hitung_index(uts, uas, tubes) << endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -123,8 +172,10 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "\nTerima Kasih";
+    cout << "\n1301164324";
+    cout << "\nRefin Heryanto";
+    exit(0);
     // YOUR CODE ENDS HERE
     //=================================================
 }
