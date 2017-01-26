@@ -126,19 +126,29 @@ void set_standar()
     // YOUR CODE STARTS HERE
 
     cout <<" > A adalah index nilai(batas bawah) : ";
+    cin >>a_bawah;
     cout <<"   Sampai (batas atas) : ";
+    cin >>a_atas;
     cout <<endl;
     cout <<" > B adalah index nilai(batas bawah) : ";
+    cin >>b_bawah;
     cout <<"   Sampai (batas atas) : ";
+    cin >>b_atas;
     cout <<endl;
     cout <<" > C adalah index nilai(batas bawah) : ";
+    cin >>c_bawah;
     cout <<"   Sampai (batas atas) : ";
+    cin >>c_atas;
     cout <<endl;
     cout <<" > D adalah index nilai(batas bawah) : ";
+    cin >>d_bawah;
     cout <<"   Sampai (batas atas) : ";
+    cin >>d_atas;
     cout <<endl;
     cout <<" > E adalah index nilai(batas bawah) : ";
+    cin >>e_bawah;
     cout <<"   Sampai (batas atas) : ";
+    cin >>e_atas;
 
     cout <<"  > Index Nilai : "<<endl;
     cout <<endl;
@@ -166,6 +176,7 @@ char hitung_index(double nilai_uts, double nilai_uas, double nilai_tubes)
 
     Total_Nilai = nilai_uts*uts + nilai_uas*uas + nilai_tubes*tubes;
 
+    if ((Total_Nilai > a_bawah) and (Total_Nilai < a_atas))
     {
         Index = 'A';
     }
