@@ -71,9 +71,11 @@ void main_menu(){
 
     case '3'
 
-
+    input_nilai()
 
     case '4'
+
+    break
 
     }
 
@@ -92,13 +94,13 @@ void set_proporsi_nilai(){
     //=================================================
     // YOUR CODE STARTS HERE
 
-    cout >> "Input prosentase nilai" >> endl;
-    cout >> "Prosentase nilai UTS: ";
-    cin << puts;
-    cout >> "Prosentase nilai UAS: ";
-    cin << puas;
-    cout >> "Prosentase nilai Tubes: ";
-    cin << ptubes;
+    cout << "Input prosentase nilai" << endl;
+    cout << "Prosentase nilai UTS: ";
+    cin >> puts;
+    cout << "Prosentase nilai UAS: ";
+    cin >> puas;
+    cout << "Prosentase nilai Tubes: ";
+    cin >> ptubes;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -113,17 +115,17 @@ void set_standar(){
     //=================================================
     // YOUR CODE STARTS HERE
 
-    cout >> "Input Standar Index" >> endl;
-    cout >> "Index A: ";
-    cin << sa;
-    cout >> "Index B: ";
-    cin << sb;
-    cout >> "Index C: ";
-    cin << sc;
-    cout >> "Index D: ";
-    cin << sd;
-    cout >> "Index E: ";
-    cin << se;
+    cout << "Input Standar Index" << endl;
+    cout << "Index A: ";
+    cin >> sa;
+    cout << "Index B: ";
+    cin >> sb;
+    cout << "Index C: ";
+    cin >> sc;
+    cout << "Index D: ";
+    cin >> sd;
+    cout << "Index E: ";
+    cin >> se;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -163,11 +165,11 @@ void input_nilai(){
     //=================================================
     // YOUR CODE STARTS HERE
 
-    cout >> "Nilai UTS: ";
-    cin << uts;
-    cout >> "Nilai UAS: ";
-    cin << uas;
-    cout >> "Nilai Tubes: ";
+    cout << "Nilai UTS: ";
+    cin >> uts;
+    cout << "Nilai UAS: ";
+    cin >> uas;
+    cout << "Nilai Tubes: ";
     cin >> tubes;
 
     hitung_index(uts,uas,tubes);
@@ -184,9 +186,7 @@ void thank_you(){
     //=================================================
     // YOUR CODE STARTS HERE
 
-    cout >> "Program end" >> endl;
-    cout >> "Thank you" >> endl;
-    cout >> "Good bye!" >> endl;
+    cout << "Thank you and Good Bye!" << endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
