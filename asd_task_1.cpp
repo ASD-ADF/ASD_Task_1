@@ -1,7 +1,7 @@
 /**
-    NAMA  :
-    NIM   :
-    KELAS :
+    NAMA  : Andaresta Fauzan
+    NIM   : 1301164189
+    KELAS : IF 40-02
 **/
 
 
@@ -47,11 +47,30 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout << "Silahkan pilih menu anda :\n";
+    cout << "Pastikan pilihan menu hanya angka 1 sampai 4.\n"
+    cin >> menu;
+    switch(menu) {
+    case "1" :
+        cout << "Anda memilih menu set standar index nilai\n";
+        set_standar();
+        break;
+    case "2" :
+        cout << "Anda memilih menu proporsi nilai\n";
+        set_proporsi_nilai();
+        break;
+    case "3" :
+        cout << "Anda memilih menu input nilai\n";
+        input_nilai();
+        break;
+    case "4" :
+        thank_you();
+        break;
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
-    thank_you();
+    //thank_you();
 }
 
 
@@ -110,7 +129,12 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout >> "Masukkan nilai UAS anda:\n";
+    cin << uas;
+    cout >> "Masukkan nilai UTS anda:\n";
+    cin << uts;
+    cout >> "Masukkan nilai tubes anda:\n";
+    cin << tubes;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -123,7 +147,8 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout >> "Sampai jumpa lagi.\n";
+    cout >> "Andaresta Fauzan - 1301164189";
 
     // YOUR CODE ENDS HERE
     //=================================================
