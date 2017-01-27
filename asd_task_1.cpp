@@ -1,7 +1,7 @@
 /**
-    NAMA  : isikan nama anda
-    NIM   :
-    KELAS :
+    NAMA  : Muhammad Adli Ghifari
+    NIM   : 1301164374
+    KELAS : IF 40-02
 **/
 
 
@@ -13,7 +13,7 @@ using namespace std;
     - daftarkan seluruh variable global yang dibutuhkan di sini
 **/
 //=================================================
-// YOUR CODE STARTS HERE
+int psuts,psuas,pstbs,iA,iB,iC,iD,iE;
 
 
 // YOUR CODE ENDS HERE
@@ -46,10 +46,29 @@ void main_menu(){
 
     int pilihan;
     //=================================================
-    // YOUR CODE STARTS HERE
+ 
+	cout<< "1. Set standar index nilai"<<endl; 
+	cout<< "2. Set Proporsi nilai"<<endl;
+	cout<< "3. Input Nilai"<<endl;
+	cout<< "4. Keluar"<<endl;
+	cout<< "Masukan Pilihan : ";
+	cin>>pil;
+	
+	if (pil==1) {
+		setstandar();
+		mainmenu();
+	}
+	else if (pil==2) {
+		setproporsi();
+		mainmenu();
+	}
+	else if (pil==3) {
+		inputnilai();
+		hitungindex();
+		mainmenu();
+	}
+	while (pil!=4);
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
     thank_you();
 }
@@ -62,10 +81,20 @@ void set_proporsi_nilai(){
     - fungsi akan mengulang menerima input dari user jika total prosentase != 100
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Input dalam persen";
+	cout<<"Masukan persentase UTS: ";
+	cin>>psuts;
+	cout<<"Masukan persentase UAS: ";
+	cin>>psuas;
+	cout<<"Masukan persentase TUBES: ";
+	cin>>pstbs;
+	if (psuts+psuas+pstbs !=100) {
+		cout<<"Input yang anda masukan salah"<<endl;
+		set_proporsi();
+	}
+	
 
 
-    // YOUR CODE ENDS HERE
     //=================================================
 }
 
@@ -76,11 +105,34 @@ void set_standar(){
     - fungsi akan mengulang menerima input dari user jika terdapat nilai yang overlap
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
-    //=================================================
+    cout<<"Masukan standar minimum A : ";
+	cin>>iA;
+	cout<<"Masukan standar minimum B : ";
+	cin>>iB;
+	cout<<"Masukan standar minimum C : ";
+	cin>>iC;
+	cout<<"Masukan standar minimum D : ";
+	cin>>iD;
+	cout<<"Masukan standar minimum E : ";
+	cin>>iE;
+	
+	if(iE,iD,iC,iB >= iA) {
+		cout<<"Input yang anda isi tidak sesuai,silahkan input kembali"<<endl;
+		set_standar();
+	}
+	else if(iE,iD,iC >= iB) {
+		cout<<"Input yang anda isi tidak sesuai,silahkan input kembali"<<endl;
+		set_standar();
+	}
+	else if(iE,iD >= iC) {
+		cout<<"Input yang anda isi tidak sesuai,silahkan input kembali"<<endl;
+		set_standar();
+	}
+	else if(iE >= iD) {
+		cout<<"Input yang anda isi tidak sesuai,silahkan input kembali"<<endl;
+		set_standar();
+	}
+	//=================================================
 }
 
 
@@ -93,10 +145,29 @@ char hitung_index(double uts, double uas, double tubes){
 
     char index;
     //=================================================
-    // YOUR CODE STARTS HERE
+    totalnilai=:uts*psuts/100+uas*psuas/100+tubes*pstbs/100;
+	
+	if (totalnilai >= iA) {
+		index= 'A';
+		cout<<"index nilai anda adalah A";
+	}
+	else if (totalnilai >= iB) {
+		index= 'B';
+		cout<<"index nilai anda adalah B";
+	}
+	else if (totalnilai >= iC) {
+		index= 'C';
+		cout<<"index nilai anda adalah C";
+	}
+	else if (totalnilai >= iD) {
+		index= 'D';
+		cout<<"index nilai anda adalah D";
+	}
+	else {
+		index= 'E';
+		cout<<"index nilai anda adalah E";
+	}
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
     return index;
 }
@@ -109,10 +180,13 @@ void input_nilai(){
     **/
     double uas, uts, tubes;
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Masukan nilai UTS : ";
+	cin>>uts;
+	cout<<"Masukan nilai UAS : ";
+	cin>>uas;
+	cout<<"Masukan nilai TUBES : ";
+	cin>>tubes;
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
 }
 
@@ -122,9 +196,8 @@ void thank_you(){
     - tampilkan nim dan nama kalian
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
+    cout<<"Program ini dikerjakan dengan bantuan dari berbagai sumber, hatur nuhun sumber sumber tersebut hehehehe dalapan puluh 2 kali."<<endl;
+    cout<<"Nama : Muhammad Adli Ghifari"<<endl;
+    cout<<"NIM : 1301164374"<<endl;
     //=================================================
 }
