@@ -1,7 +1,7 @@
 /**
-    NAMA  : isikan nama anda
-    NIM   :
-    KELAS :
+    NAMA  : REYNALDI SYAPUTRA
+    NIM   : 1301164141
+    KELAS : IF 40-02
 **/
 
 
@@ -13,10 +13,8 @@ using namespace std;
     - daftarkan seluruh variable global yang dibutuhkan di sini
 **/
 //=================================================
-// YOUR CODE STARTS HERE
+int pil, uts, uas, tubes, Auts, Buas, Ctubes, nilaiA, nilaiB, nilaiC, nilaiD, nilaiE;
 
-
-// YOUR CODE ENDS HERE
 //=================================================
 
 
@@ -46,10 +44,17 @@ void main_menu(){
 
     int pilihan;
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Daftar Menu\n";
+    cout<<"1. Set Standar Index Nilai\n";
+    cout<<"2. Set Proporsi Nilai\n";
+    cout<<"3. Input Nilai\n";
+    cout<<"4. Keluar\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"Masukkan Pilihanmu :\n";
+    cin>>pil;
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
     thank_you();
 }
@@ -62,10 +67,18 @@ void set_proporsi_nilai(){
     - fungsi akan mengulang menerima input dari user jika total prosentase != 100
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Input Dalam Prosentase :\n";
+    cout<<"Masukkan Nilai UTS :\n";
+    cin>>Auts;
+    cout<<"Masukkan Nilai UAS :\n";
+    cin>>Buas;
+    cout<<"Masukkan Nilai TUBES :\n";
+    cin>>Ctubes;
 
+    if (Auts + Buas + Ctubes != 100) {
+        set_proporsi_nilai();
+    }
 
-    // YOUR CODE ENDS HERE
     //=================================================
 }
 
@@ -76,10 +89,17 @@ void set_standar(){
     - fungsi akan mengulang menerima input dari user jika terdapat nilai yang overlap
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Masukkan Nilai Minimum A :\n";
+    cin>>nilaiA;
+    cout<<"Masukkan Nilai Minimum B :\n";
+    cin>>nilaiB;
+    cout<<"Masukkan Nilai Minimum C :\n";
+    cin>>nilaiC;
+    cout<<"Masukkan Nilai Minimum D :\n";
+    cin>>nilaiD;
+    cout<<"Masukkan Nilai Minimum E :\n";
+    cin>>nilaiE;
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
 }
 
@@ -93,10 +113,7 @@ char hitung_index(double uts, double uas, double tubes){
 
     char index;
     //=================================================
-    // YOUR CODE STARTS HERE
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
     return index;
 }
@@ -109,10 +126,13 @@ void input_nilai(){
     **/
     double uas, uts, tubes;
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<<"Masukkan Nilai UTS :\n";
+    cin>>uts;
+    cout<<"Masukkan Nilai UAS :\n";
+    cin>>uas;
+    cout<<"Masukkan Nilai TUBES :\n";
+    cin>>tubes;
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
 }
 
