@@ -17,6 +17,10 @@ using namespace std;
 
 int pilihan;
 double uts, uas, tubes;
+double puts, puas, ptubes;
+double sa, sb, sc, sd, se;
+double total_nilai, total_proporsi;
+char index;
 
 // YOUR CODE ENDS HERE
 //=================================================
@@ -50,40 +54,41 @@ void main_menu(){
     //=================================================
     // YOUR CODE STARTS HERE
 
-    cout >> "Daftar Menu" >> endl;
-    cout >> "1. Set Standar Index Nilai" >> endl;
-    cout >> "2. Set Proporsi Nilai" >> endl;
-    cout >> "3. Input Nilai" >> endl;
-    cout >> "4. Keluar" >> endl;
-    cout >> endl;
-    cout >> "Silahkan dipilih: ";
-    cin << pilihan;
+    do {
+    cout << "Program Task 1" << endl;
+    cout << endl;
+    cout << "Daftar Menu" << endl;
+    cout << "1. Set Standar Index Nilai" << endl;
+    cout << "2. Set Proporsi Nilai" << endl;
+    cout << "3. Input Nilai" << endl;
+    cout << "4. Keluar" << endl;
+    cout << endl;
+    cout << "Silahkan dipilih: ";
+    cin >> pilihan;
 
     switch (pilihan) {
-
-    case '1'
-
-    set_standar()
-
-    case '2'
-
-    set_proporsi_nilai()
-
-    case '3'
-
-    input_nilai()
-
-    case '4'
-
-    break
-
+    case 1:
+        set_standar();
+        cout << endl;
+        break;
+    case 2:
+        set_proporsi_nilai();
+        cout << endl;
+        break;
+    case 3:
+        input_nilai();
+        cout << endl;
+        break;
+    case 4:
+        cout << endl;
+        break;
     }
+    } while (pilihan !=4);
 
     // YOUR CODE ENDS HERE
     //=================================================
     thank_you();
 }
-
 
 void set_proporsi_nilai(){
     /**
@@ -94,13 +99,18 @@ void set_proporsi_nilai(){
     //=================================================
     // YOUR CODE STARTS HERE
 
+    do {
     cout << "Input prosentase nilai" << endl;
+    cout << "(Total nilai: 100)" << endl;
     cout << "Prosentase nilai UTS: ";
     cin >> puts;
     cout << "Prosentase nilai UAS: ";
     cin >> puas;
     cout << "Prosentase nilai Tubes: ";
     cin >> ptubes;
+
+    total_proporsi = puts+puas+ptubes;
+    } while (total_proporsi!=100);
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -115,6 +125,7 @@ void set_standar(){
     //=================================================
     // YOUR CODE STARTS HERE
 
+    do {
     cout << "Input Standar Index" << endl;
     cout << "Index A: ";
     cin >> sa;
@@ -126,11 +137,11 @@ void set_standar(){
     cin >> sd;
     cout << "Index E: ";
     cin >> se;
+    } while (sa<sb, sb<sc, sc<sd, sd<se);
 
     // YOUR CODE ENDS HERE
     //=================================================
 }
-
 
 char hitung_index(double uts, double uas, double tubes){
     /**
@@ -143,18 +154,25 @@ char hitung_index(double uts, double uas, double tubes){
     //=================================================
     // YOUR CODE STARTS HERE
 
-    total = uts*.35+uas*.35+tubes*.3
+    total_nilai = uts*puts/100+uas*puas/100+tubes*ptubes/100;
 
-    switch (total) {
+    if (total_nilai>=sa)
+        index = 'A';
+    else if (total_nilai >= sb)
+        index = 'B';
+    else if (total_nilai >= sc)
+        index = 'C';
+    else if (total_nilai >= sd)
+        index = 'D';
+    else
+        index = 'E';
 
-
-    }
+    cout << "Index: " << index << endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
     return index;
 }
-
 
 void input_nilai(){
     /**
