@@ -148,23 +148,23 @@ char hitung_index(double uts, double uas, double tubes){
 
 	if (totalnilai >= iA) {
 		index= 'A';
-		cout<<"index nilai anda adalah A";
+		cout<<"index nilai anda adalah ";
 	}
 	else if (totalnilai >= iB) {
 		index= 'B';
-		cout<<"index nilai anda adalah B";
+		cout<<"index nilai anda adalah ";
 	}
 	else if (totalnilai >= iC) {
 		index= 'C';
-		cout<<"index nilai anda adalah C";
+		cout<<"index nilai anda adalah ";
 	}
 	else if (totalnilai >= iD) {
 		index= 'D';
-		cout<<"index nilai anda adalah D";
+		cout<<"index nilai anda adalah ";
 	}
 	else {
 		index= 'E';
-		cout<<"index nilai anda adalah E";
+		cout<<"index nilai anda adalah ";
 	}
 
     //=================================================
@@ -185,6 +185,7 @@ void input_nilai(){
 	cin>>uas;
 	cout<<"Masukan nilai TUBES : ";
 	cin>>tubes;
+	cout<<hitung_index(uts,uas,tubes)<<endl;
 
     //=================================================
 }

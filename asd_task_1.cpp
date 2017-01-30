@@ -46,14 +46,14 @@ void main_menu(){
 
     int pilihan;
     //=================================================
- 
-	cout<< "1. Set standar index nilai"<<endl; 
+
+	cout<< "1. Set standar index nilai"<<endl;
 	cout<< "2. Set Proporsi nilai"<<endl;
 	cout<< "3. Input Nilai"<<endl;
 	cout<< "4. Keluar"<<endl;
 	cout<< "Masukan Pilihan : ";
 	cin>>pil;
-	
+
 	if (pil==1) {
 		setstandar();
 		mainmenu();
@@ -92,7 +92,7 @@ void set_proporsi_nilai(){
 		cout<<"Input yang anda masukan salah"<<endl;
 		set_proporsi();
 	}
-	
+
 
 
     //=================================================
@@ -115,7 +115,7 @@ void set_standar(){
 	cin>>iD;
 	cout<<"Masukan standar minimum E : ";
 	cin>>iE;
-	
+
 	if(iE,iD,iC,iB >= iA) {
 		cout<<"Input yang anda isi tidak sesuai,silahkan input kembali"<<endl;
 		set_standar();
@@ -146,7 +146,7 @@ char hitung_index(double uts, double uas, double tubes){
     char index;
     //=================================================
     totalnilai=:uts*psuts/100+uas*psuas/100+tubes*pstbs/100;
-	
+
 	if (totalnilai >= iA) {
 		index= 'A';
 		cout<<"index nilai anda adalah A";
@@ -186,6 +186,8 @@ void input_nilai(){
 	cin>>uas;
 	cout<<"Masukan nilai TUBES : ";
 	cin>>tubes;
+
+	cout<<"\nNilai index"<<hitung_index(uts,tubes,uas)<<;
 
     //=================================================
 }
