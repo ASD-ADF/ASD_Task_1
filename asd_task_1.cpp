@@ -156,13 +156,13 @@ char hitung_index(double uts, double uas, double tubes){
 
     total_nilai = uts*puts/100+uas*puas/100+tubes*ptubes/100;
 
-    if (total_nilai>=sa)
+    if (total_nilai>sa)
         index = 'A';
-    else if (total_nilai >= sb)
+    else if (total_nilai>sb)
         index = 'B';
-    else if (total_nilai >= sc)
+    else if (total_nilai>sc)
         index = 'C';
-    else if (total_nilai >= sd)
+    else if (total_nilai>sd)
         index = 'D';
     else
         index = 'E';
