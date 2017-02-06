@@ -14,6 +14,7 @@ using namespace std;
 **/
 //=================================================
 int psuts,psuas,pstbs,iA,iB,iC,iD,iE;
+double totalnilai;
 
 
 // YOUR CODE ENDS HERE
@@ -52,22 +53,21 @@ void main_menu(){
 	cout<< "3. Input Nilai"<<endl;
 	cout<< "4. Keluar"<<endl;
 	cout<< "Masukan Pilihan : ";
-	cin>>pil;
+	cin>>pilihan;
 
-	if (pil==1) {
-		setstandar();
-		mainmenu();
+	if (pilihan==1) {
+		set_standar();
+		main_menu();
 	}
-	else if (pil==2) {
-		setproporsi();
-		mainmenu();
+	else if (pilihan==2) {
+		set_proporsi_nilai();
+		main_menu();
 	}
-	else if (pil==3) {
-		inputnilai();
-		hitungindex();
-		mainmenu();
+	else if (pilihan==3) {
+		input_nilai();
+		main_menu();
 	}
-	while (pil!=4);
+	while (pilihan!=4);
 
     //=================================================
     thank_you();
@@ -81,7 +81,7 @@ void set_proporsi_nilai(){
     - fungsi akan mengulang menerima input dari user jika total prosentase != 100
     **/
     //=================================================
-    cout<<"Input dalam persen";
+    cout<<"Input dalam persen"<<endl;
 	cout<<"Masukan persentase UTS: ";
 	cin>>psuts;
 	cout<<"Masukan persentase UAS: ";
@@ -90,7 +90,7 @@ void set_proporsi_nilai(){
 	cin>>pstbs;
 	if (psuts+psuas+pstbs !=100) {
 		cout<<"Input yang anda masukan salah"<<endl;
-		set_proporsi();
+		set_proporsi_nilai();
 	}
 
 
@@ -135,7 +135,6 @@ void set_standar(){
 	//=================================================
 }
 
-
 char hitung_index(double uts, double uas, double tubes){
     /**
     - fungsi menghitung total nilai berdasarkan input parameter dan proporsi nilai
@@ -145,27 +144,27 @@ char hitung_index(double uts, double uas, double tubes){
 
     char index;
     //=================================================
-    totalnilai=:uts*psuts/100+uas*psuas/100+tubes*pstbs/100;
+    totalnilai=uts*psuts/100+uas*psuas/100+tubes*pstbs/100;
 
 	if (totalnilai >= iA) {
 		index= 'A';
-		cout<<"index nilai anda adalah A";
+		cout<<"index nilai anda adalah ";
 	}
 	else if (totalnilai >= iB) {
 		index= 'B';
-		cout<<"index nilai anda adalah B";
+		cout<<"index nilai anda adalah ";
 	}
 	else if (totalnilai >= iC) {
 		index= 'C';
-		cout<<"index nilai anda adalah C";
+		cout<<"index nilai anda adalah ";
 	}
 	else if (totalnilai >= iD) {
 		index= 'D';
-		cout<<"index nilai anda adalah D";
+		cout<<"index nilai anda adalah ";
 	}
 	else {
 		index= 'E';
-		cout<<"index nilai anda adalah E";
+		cout<<"index nilai anda adalah ";
 	}
 
     //=================================================
@@ -186,8 +185,7 @@ void input_nilai(){
 	cin>>uas;
 	cout<<"Masukan nilai TUBES : ";
 	cin>>tubes;
-
-	cout<<"\nNilai index"<<hitung_index(uts,tubes,uas)<<;
+	cout<<hitung_index(uts,uas,tubes)<<endl;
 
     //=================================================
 }
@@ -198,8 +196,8 @@ void thank_you(){
     - tampilkan nim dan nama kalian
     **/
     //=================================================
-    cout<<"Program ini dikerjakan dengan bantuan dari berbagai sumber, hatur nuhun sumber sumber tersebut hehehehe dalapan puluh 2 kali."<<endl;
-    cout<<"Nama : Muhammad Adli Ghifari"<<endl;
-    cout<<"NIM : 1301164374"<<endl;
+   cout<<"Program ini dikerjakan dengan bantuan dari berbagai sumber, hatur nuhun sumber sumber tersebut hehehehe dalapan puluh 2 kali."<<endl;
+   cout<<"Nama : Muhammad Adli Ghifari"<<endl;
+   cout<<"NIM : 1301164374"<<endl;
     //=================================================
 }
