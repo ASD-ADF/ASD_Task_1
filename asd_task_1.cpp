@@ -68,7 +68,9 @@ void set_proporsi_nilai(){
     //=================================================
     // YOUR CODE STARTS HERE
 
-
+    iopiopiopiopiopiopiopiopiopiopiopiopoi
+        iopiopiopiopiopiopiopiopiop
+        iopiopoipiop
     // YOUR CODE ENDS HERE
     //=================================================
 }
