@@ -1,7 +1,7 @@
 /**
-    NAMA  : isikan nama anda
-    NIM   :
-    KELAS :
+    NAMA  : Mohammad Izzaulhaq Huda
+    NIM   : 1301160565
+    KELAS : IF 40-02
 **/
 
 
@@ -14,8 +14,10 @@ using namespace std;
 **/
 //=================================================
 // YOUR CODE STARTS HERE
-
-
+int pilihan,A,B,C,D,UTS,UAS,TUBES;
+    long double Total;
+    string index;
+    double uts,uas,tubes;
 // YOUR CODE ENDS HERE
 //=================================================
 
@@ -33,6 +35,14 @@ int main() {
 }
 
 void main_menu(){
+    do{
+    count<<" Daftar Menu : \n";
+    count<<" 1. Set standar index nilai \n";
+    count<<" 2. Set proporsi nilai \n";
+    count<<" 3. Input nilai \n";
+    count<<" 4. Keluar \n";
+    count<<" Masukan pilihan : ";
+    cin>>pilihan;
     /**
     - fungsi berisi pilihan menu di dalam aplikasi:
       daftar menu:
@@ -47,11 +57,20 @@ void main_menu(){
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    if (pilihan == 1){
+            set_standar();
+    }
+    else if (pilihan == 2){
+        set_proporsi_nilai();
+    }
+    else if (pilihan == 3){
+            input_nilai();
+            hitung_index();
+    }
+    }while(pilihan!=4);
 
     // YOUR CODE ENDS HERE
     //=================================================
-    thank_you();
 }
 
 
@@ -63,8 +82,17 @@ void set_proporsi_nilai(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout<<"input Prosentase dalam persen \n"<<"\n";
+    cout<<"Masukan Prosentase UTS : ";
+    cin>>pUTS;
+    cout<<"Masukan Prosentase UAS : ";
+    cin>>pUAS;
+    cout<<"Masukan Prosentase Tubes : ";
+    cin>>pTUBES;
+    if (pUAS+pUTS+pTUBES!=100){
+        cout<<"Prosentasi yang anda masukan != 100, silahkan ulangi lagi \n";
+        set_proporsi_nilai();
+    }
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -77,7 +105,26 @@ void set_standar(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    cout<<"Masukan standar minimum A : ";
+    cin>>A;
+    cout>>"Masukan standar minimum B : ";
+    cin>>B;
+    cout<<"Masukan standar minimum C : ";
+    cin>>C;
+    cout<<"Masukan standar minimum D : ";
+    cin>>D;
 
+    if (B,C,D>=A){
+        cout<<"Anda salah memasukkan standar nilai\n";
+        set_standar();
+    }
+    else if (C,D>=B){
+        cout<<"Anda salah memasukkan standar nilai\n";
+        set_standar();
+    }
+    if (D>=C){
+        cout<<"Anda salah memasukkan standar nilai\n";
+        set_standar();
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -94,12 +141,31 @@ char hitung_index(double uts, double uas, double tubes){
     char index;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    if (Total>=A){
+            index ="A";
+        cout<<"Indeks total nilai anda adalah : "<<indeks<<"\n";
+    }
+    else if (Total>=B){
+            index ="B";
+        cout<<"Indeks total nilai anda adalah : "<<indeks<<"\n";
+    }
+    else if (Total>=C){
+            index ="C";
+        cout<<"Indeks total nilai anda adalah : "<<indeks<<"\n";
+    }
+    else if (Total>=D){
+            index ="D";
+        cout<<"Indeks total nilai anda adalah : "<<indeks<<"\n";
+    }
+    else if {
+            index ="E";
+        cout<<"Indeks total nilai anda adalah : "<<indeks<<"\n";
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
     return index;
-}
+
 
 
 void input_nilai(){
@@ -110,7 +176,12 @@ void input_nilai(){
     double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout<<"Masukan nilai UTS : ";
+    cin>>uts;
+    cout<<"Masukan nilai UAS : ";
+    cin>>uas;
+    cout<<"Masukan nilai Tubes : ";
+    cin>>tubes;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -123,7 +194,7 @@ void thank_you(){
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout<<"Terimakasih telat menggunakan program ini";
 
     // YOUR CODE ENDS HERE
     //=================================================
