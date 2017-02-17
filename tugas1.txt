@@ -16,9 +16,8 @@ using namespace std;
 // YOUR CODE STARTS HERE
 
 int a, x, y, z, awal;
-float nuts,nuas,ntubes;
-float uts, uas, tubes;
-float total;
+double nuts,nuas,ntubes;
+double uts, uas, tubes;
 
 // YOUR CODE ENDS HERE
 //=================================================
@@ -31,14 +30,12 @@ void hitung_index(double uts, double uas, double tubes);
 void input();
 void thank_you();
 
-int main()
-{
+int main() {
     main_menu();
     return 0;
 }
 
-void main_menu()
-{
+void main_menu(){
     /**
     - fungsi berisi pilihan menu di dalam aplikasi:
       daftar menu:
@@ -53,8 +50,8 @@ void main_menu()
     int pilihan;
     //=================================================
     // YOUR CODE STARTS HERE
-    awal=1;
-    while(awal==1)
+awal=1;
+while(awal==1)
     {
 
         cout<<"Daftar Menu"<<endl;
@@ -70,7 +67,7 @@ void main_menu()
         }
         else if (pilihan==2)
         {
-            set_proporsi_nilai ();
+            set_proporsi ();
         }
         else if (pilihan==3)
         {
@@ -83,12 +80,11 @@ void main_menu()
     }
 }
 
-// YOUR CODE ENDS HERE
-//=================================================
+    // YOUR CODE ENDS HERE
+    //=================================================
 
 
-void set_proporsi_nilai()
-{
+void set_proporsi_nilai(){
     /**
     - fungsi mengubah prosentase nilai UTS, UAS, dan TUBES
     - fungsi akan menerima 3 input prosentase dari user untuk UTS, UAS, dan TUBES
@@ -105,18 +101,11 @@ void set_proporsi_nilai()
     cout<<"Masukkan prosentase TUBES: "<<endl;
     cin>>ntubes;
 
-    if (nuts+nuas+ntubes != 100)
-    {
-        cout<<"Presentase yang dimasukkan salah, silahkan ulang kembali"<<endl;
-        set_proporsi_nilai();
-    }
-
     // YOUR CODE ENDS HERE
     //=================================================
 }
 
-void set_standar()
-{
+void set_standar(){
     /**
     - fungsi mengubah standar index A, B, C, D, dan E
     - fungsi akan menerima input rentang nilai untuk masing-masing index nilai
@@ -134,7 +123,6 @@ void set_standar()
     cout<<"Masukkan standar minimum D: ";
     cin>>z;
 
-
     main_menu();
 
     // YOUR CODE ENDS HERE
@@ -142,9 +130,7 @@ void set_standar()
 }
 
 
-void hitung_index (float uts, float uas, float tubes, float nuts, float nuas, float ntubes, int a, int x, int y, int z)
-{
-
+void hitung_index(double nuts, double nuas, double ntubes, int a, int x, int y, int z,){
     /**
     - fungsi menghitung total nilai berdasarkan input parameter dan proporsi nilai
     - fungsi menentukan index nilai berdasarkan standar nilai
@@ -155,30 +141,30 @@ void hitung_index (float uts, float uas, float tubes, float nuts, float nuas, fl
     //=================================================
     // YOUR CODE STARTS HERE
 
-    total=(nuts/100*uts)+(nuas/100*uas)+(ntubes/100*tubes);
-    cout<<total<<endl;
-    if (total>=a)
-    {
-        cout<<"Index nilai anda adalah: A";
-    }
-    else if (total>=x)
-    {
-        cout<<"Index nilai anda adalah: B";
-    }
-    else if (total>=y)
-    {
-        cout<<"Index nilai anda adalah: C";
-    }
-    else if (total>=z)
-    {
-        cout<<"Index nilai anda adalah: D";
-    }
-    else
-    {
-        cout<<"Index nilai anda adalah: E";
-    }
+total=(nuts/100*uts)+(nuas/100*uas)+(ntubes/100*tubes);
+cout<<total<<endl;
+if (total>=a)
+{
+    cout<<"Index nilai anda adalah: A";
+}
+else if (total>=x)
+{
+    cout<<"Index nilai anda adalah: B";
+}
+else if (total>=y)
+{
+    cout<<"Index nilai anda adalah: C";
+}
+else if (total>=z)
+{
+    cout<<"Index nilai anda adalah: D";
+}
+else
+{
+    cout<<"Index nilai anda adalah: E";
+}
 
-    cout<<endl;
+cout<<endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -186,8 +172,7 @@ void hitung_index (float uts, float uas, float tubes, float nuts, float nuas, fl
 }
 
 
-void input()
-{
+void input(){
     /**
     - fungsi menerima input nilai UTS, UAS, dan TUBES
     - fungsi menampilkan index yang didapat berdasarkan input nilai UTS, UAS, dan TUBES
@@ -200,8 +185,8 @@ void input()
     cin>>uts;
     cout<<"Masukkan nilai UAS: ";
     cin>>uas;
-    cout<<"Masukkan nilai TUBES: ";
-    cin>>tubes;
+    cout>>"Masukkan nilai TUBES: ";
+    cin<<<tubes;
 
     hitung_index(uts,uas,tubes,nuts,nuas,ntubes,a,x,y,z);
 
@@ -210,8 +195,7 @@ void input()
     //=================================================
 }
 
-void thank_you()
-{
+void thank_you(){
     /**
     - fungsi menampilkan pesan singkat untuk mengakhiri program
     - tampilkan nim dan nama kalian
@@ -219,9 +203,9 @@ void thank_you()
     //=================================================
     // YOUR CODE STARTS HERE
 
-    cout<<"Anda telah selesai. Terima Kasih :))"<<endl;
-    cout<<"Nama: Falia Amalia"<<endl;
-    cout<<"NIM: 1301164602";
+cout<<"Anda telah selesai. Terima Kasih :))"<<endl;
+cout<<"Nama: Falia Amalia"endl;
+cout<<"NIM: 1301164602";
 
     // YOUR CODE ENDS HERE
     //=================================================
