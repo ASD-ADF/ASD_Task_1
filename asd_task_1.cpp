@@ -174,7 +174,6 @@ void input_nilai()
     - fungsi menerima input nilai UTS, UAS, dan TUBES
     - fungsi menampilkan index yang didapat berdasarkan input nilai UTS, UAS, dan TUBES
     **/
-    //double uas, uts, tubes;
     //=================================================
     // YOUR CODE STARTS HERE
     cout<<"Masukkan nilai UTS: ";
@@ -198,10 +197,14 @@ void thank_you()
     - fungsi menampilkan pesan singkat untuk mengakhiri program
     - tampilkan nim dan nama kalian
     **/
+    //=================================================
+    // YOUR CODE STARTS HERE
     cout<< " Terimakasih :)"<<endl;
     cout<<endl;
     cout<< " Ayu Wulandari"<<endl;
     cout<<endl;
     cout<< " 1301164104"<<endl;
     cout<<endl;
+    // YOUR CODE ENDS HERE
+    //=================================================
 }
