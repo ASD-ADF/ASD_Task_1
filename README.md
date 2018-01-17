@@ -23,7 +23,7 @@ Example:<br>
  `integer p = 3`<br>
  `exercise_2(n, p)`<br>
  `Output : 8`<br>
- `<br>
+ <br>
  `integer n = 4`<br>
  `integer p = 2`<br>
  `exercise_2(n, p)`<br>
@@ -70,7 +70,6 @@ TODO:
 * Use previous search function
 * Array input is formatted from previous exercise, 
 * value 0 indicates the end of array <br>
- <br>
 Example: <br>
  `integer arr = {3,6,8,2,7,8,1,0,0,0,0,0} `<br>
  `integer x = 8 `<br>
