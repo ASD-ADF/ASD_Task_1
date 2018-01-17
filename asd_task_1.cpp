@@ -14,12 +14,12 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i;
+    for (i=100;i<=200;i++){
+    	if((i % 7 == 0) && (i % 5 != 0)){
+    		cout<<i;
+		}
+	}
     // ===========================
 }
 
@@ -31,12 +31,12 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i, total;
+    total=n;
+    for(i=1;i<=p;i++){
+        total=total*n;
+    }
+    cout<<total;
     // ===========================
 }
 
@@ -50,15 +50,17 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    if((s1==s2)&&(s2==s3)){
+        cout<<"Equilateral";
+    }
+    else if((s1!=s2)&&(s2!=s3)&&(s1!=s3)){
+        cout<<"Scalene";
+    }
+    else{
+        cout<<"Isosceles";
+    }
     // ===========================
 }
-
 
 void exercise_4() {
     /**
@@ -67,15 +69,15 @@ void exercise_4() {
                 and add it into an array of integer
                 until user inputs number 0
         */
-    int arr[100];
+    int arr[100], i, n;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    n=0;
+    do{
+        cin>>i;
+        arr[n]=i;
+        n++;
+    }while((i!=0)&&(n<=100));
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
@@ -91,12 +93,12 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i;
+    for(i=0;i<=sizeof(arr);i++){
+        if(arr[i]==f){
+            cout<<i;
+        }
+    }
     // ===========================
     return -1;
 }
@@ -110,12 +112,17 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i, j, prev, temp;
+    for(i=0;i<=sizeof(arr);i++){
+        if(arr[i]==x){
+            prev=-1;
+            for(j=i+1;i<(sizeof(arr)+1);i++){
+                temp=arr[j];
+                arr[j]=prev;
+                prev=temp;
+            }
+        }
+    }
     // ===========================
 }
 

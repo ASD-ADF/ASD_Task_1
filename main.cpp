@@ -3,9 +3,9 @@
 
 using namespace std;
 
-string name = "your name here";
-string nim = "your id here";
-string cls = "your class here";
+string name = "Rachmansyah Adhi Widhianto";
+string nim = "1301170066";
+string cls = "IF-41-08";
 
 int main() {
     cout << "Hello world!, "<<name
