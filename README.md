@@ -1,4 +1,4 @@
-# Task_1 2017/2018-II
+# Task_1 [2017/2018-II]
 Task 1 : Introduction to C++
 
 ## Workflow
@@ -17,37 +17,35 @@ TODO:
 ## Exercise 2
 TODO:
 * Write a procedure algorithm to raise any number to any power.
-* `procedure exercise_2(n, p)`
-Example:
-`
-	integer n = 2
-	integer p = 3
-	exercise_2(n, p)
-	Output : 8
-	
-	integer n = 4
-	integer p = 2
-	exercise_2(n, p)
-	Output : 16
+* `procedure exercise_2(n, p)`<br>
+Example:<br>
+`	integer n = 2<br>
+	integer p = 3<br>
+	exercise_2(n, p)<br>
+	Output : 8<br>
+	<br>
+	integer n = 4<br>
+	integer p = 2<br>
+	exercise_2(n, p)<br>
+	Output : 16<br>
 `
 
 ## Exercise 3
 TODO:
 * Write a procedure algorithm that determines the type of a Triangle (isosceles, equilateral, or scalene) given the size of the three sides
-* `exercise_3(s1, s2, s3)`
-Example:
-`
-	integer s1: 4
-	integer s2 : 6
-	integer s3 : 4
-	exercise_3(s1, s2, s3)
-	Output : isosceles
-	
-	integer s1: 3
-	integer s2 : 3
-	integer s3 : 3
-	exercise_3(s1, s2, s3)
-	Output : equilateral
+* `exercise_3(s1, s2, s3)`    <br>
+Example:                      <br>
+`	integer s1: 4             <br>
+	integer s2 : 6            <br>
+	integer s3 : 4            <br>
+	exercise_3(s1, s2, s3)    <br>
+	Output : isosceles        <br>
+	                          <br>
+	integer s1: 3             <br>
+	integer s2 : 3            <br>
+	integer s3 : 3            <br>
+	exercise_3(s1, s2, s3)    <br>
+	Output : equilateral      <br>
 `
 
 ## Exercise 4
@@ -61,13 +59,13 @@ TODO:
 * Write a function algorithm to find a number inside an unsorted array of integer, and outputs its index; algorithm will outputs -1 if such number is not found
 * function int exercise_5(arr, f)
 * Array input is formatted from previous exercise, 
-* value 0 indicates the end of array
-Example:
-`
-	integer arr = {3,6,8,2,7,8,1,0,0,0,0,0}
-	integer f = 2
-	integer x = exercise_5(arr, f)
-	Output = 3
+* value 0 indicates the end of array        <br>
+Example:                                    <br>
+`                                           <br>
+	integer arr = {3,6,8,2,7,8,1,0,0,0,0,0} <br>
+	integer f = 2                           <br>
+	integer x = exercise_5(arr, f)          <br>
+	Output = 3                              <br>
 `
 
 ## Exercise 6
@@ -75,12 +73,12 @@ TODO:
 * Write a procedure algorithm to find a number inside an unsorted array of integer, then insert a negative one (-1) behind such found number
 * Use previous search function
 * Array input is formatted from previous exercise, 
-* value 0 indicates the end of array
-
-Example:
-`
-	integer arr = {3,6,8,2,7,8,1,0,0,0,0,0}
-	integer x = 8
-	exercise_6(arr, x)
-	arr result = {3,6,8,-1, 2,7,8,1,0,0,0,0,0}
+* value 0 indicates the end of array                    <br>
+                                                        <br>
+Example:                                                <br>
+`                                                       <br>
+	integer arr = {3,6,8,2,7,8,1,0,0,0,0,0}             <br>
+	integer x = 8                                       <br>
+	exercise_6(arr, x)                                  <br>
+	arr result = {3,6,8,-1, 2,7,8,1,0,0,0,0,0}          <br>
 `
