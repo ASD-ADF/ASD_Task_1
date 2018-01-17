@@ -22,8 +22,7 @@ Example:<br>
  `integer n = 2`<br>
  `integer p = 3`<br>
  `exercise_2(n, p)`<br>
- `Output : 8`<br>
- <br>
+ `Output : 8`<br><br>
  `integer n = 4`<br>
  `integer p = 2`<br>
  `exercise_2(n, p)`<br>
