@@ -1,134 +1,131 @@
-/**
-    NAMA  : isikan nama anda
-    NIM   :
-    KELAS :
-**/
-
-
 #include <iostream>
 
 using namespace std;
 
-/**
-    - daftarkan seluruh variable global yang dibutuhkan di sini
-**/
-//=================================================
-// YOUR CODE STARTS HERE
-asdasdasdasdasdasdsadasd
-asdasdasdasdsadsad
-asdasdasdasdas
+void view_arr(int arr[100]);
 
-// YOUR CODE ENDS HERE
-//=================================================
-
-
-void main_menu();
-void set_standar();
-void set_proporsi_nilai();
-char hitung_index(double uts, double uas, double tubes);
-void input_nilai();
-void thank_you();
-
-int main() {
-    main_menu();
-    return 0;
-}
-
-void main_menu(){
+void exercise_1() {
     /**
-    - fungsi berisi pilihan menu di dalam aplikasi:
-      daftar menu:
-      1. set standar index nilai
-      2. set proporsi nilai
-      3. input nilai
-      4. keluar
-    - fungsi meminta input pilihan menu dari user
-      dan memanggil fungsi menu yang dipilih
-    **/
+     TODO:  Write an algorithm which will prints all
+            such numbers which are divisible by 7
+            but are not a multiple of 5,
+            between 100 and 200 (both included)
+    */
 
-    int pilihan;
-    //=================================================
-    // YOUR CODE STARTS HERE
+    // ===========================
+    // YOUR CODE HERE
+    cout<<"your code here"<<endl;
 
-89089089098089089098089098
-    89089098098098098098098
-    890890890980980890
-    // YOUR CODE ENDS HERE
-    //=================================================
-    thank_you();
+
+
+
+
+    // ===========================
 }
 
-
-void set_proporsi_nilai(){
+void exercise_2(int n, int p) {
     /**
-    - fungsi mengubah prosentase nilai UTS, UAS, dan TUBES
-    - fungsi akan menerima 3 input prosentase dari user untuk UTS, UAS, dan TUBES
-    - fungsi akan mengulang menerima input dari user jika total prosentase != 100
-    **/
-    //=================================================
-    // YOUR CODE STARTS HERE
+         TODO:  Write a procedure algorithm to
+                raise any number to any power.
+        */
+
+    // ===========================
+    // YOUR CODE HERE
+    cout<<"your code here"<<endl;
 
 
-    // YOUR CODE ENDS HERE
-    //=================================================
+
+
+
+    // ===========================
 }
 
-void set_standar(){
+void exercise_3(int s1, int s2, int s3) {
     /**
-    - fungsi mengubah standar index A, B, C, D, dan E
-    - fungsi akan menerima input rentang nilai untuk masing-masing index nilai
-    - fungsi akan mengulang menerima input dari user jika terdapat nilai yang overlap
-    **/
-    //=================================================
-    // YOUR CODE STARTS HERE
+         TODO:  Write a procedure algorithm that determines
+                the type of a Triangle
+                (isosceles, equilateral, or scalene)
+                given the size of the three sides
+        */
+
+    // ===========================
+    // YOUR CODE HERE
+    cout<<"your code here"<<endl;
 
 
-    // YOUR CODE ENDS HERE
-    //=================================================
+
+
+
+    // ===========================
 }
 
 
-char hitung_index(double uts, double uas, double tubes){
+void exercise_4() {
     /**
-    - fungsi menghitung total nilai berdasarkan input parameter dan proporsi nilai
-    - fungsi menentukan index nilai berdasarkan standar nilai
-    - fungsi mengembalikan karakter index nilai
-    **/
+         TODO:  Write a procedure algorithm to continuously
+                receive a numerical input from user
+                and add it into an array of integer
+                until user inputs number 0
+        */
+    int arr[100];
+    // ===========================
+    // YOUR CODE HERE
+    cout<<"your code here"<<endl;
 
-    char index;
-    //=================================================
-    // YOUR CODE STARTS HERE
 
 
-    // YOUR CODE ENDS HERE
-    //=================================================
-    return index;
+
+
+    // ===========================
+    cout<<"array result: ";
+    view_arr(arr);
 }
 
-
-void input_nilai(){
+int exercise_5(int arr[],int f) {
     /**
-    - fungsi menerima input nilai UTS, UAS, dan TUBES
-    - fungsi menampilkan index yang didapat berdasarkan input nilai UTS, UAS, dan TUBES
-    **/
-    double uas, uts, tubes;
-    //=================================================
-    // YOUR CODE STARTS HERE
+         TODO:  Write a function algorithm to find a number
+                inside an unsorted array of integer,
+                and outputs its index; algorithm will
+                outputs -1 if such number is not found
+        */
+
+    // ===========================
+    // YOUR CODE HERE
+    cout<<"your code here"<<endl;
 
 
-    // YOUR CODE ENDS HERE
-    //=================================================
+
+
+
+    // ===========================
+    return -1;
 }
 
-void thank_you(){
+void exercise_6(int arr[],int x) {
     /**
-    - fungsi menampilkan pesan singkat untuk mengakhiri program
-    - tampilkan nim dan nama kalian
-    **/
-    //=================================================
-    // YOUR CODE STARTS HERE
+         TODO:  Write a procedure algorithm to find a number
+         inside an unsorted array of integer,
+         then insert a negative one (-1) behind such found number
+        */
+
+    // ===========================
+    // YOUR CODE HERE
+    cout<<"your code here"<<endl;
 
 
-    // YOUR CODE ENDS HERE
-    //=================================================
+
+
+
+    // ===========================
 }
+
+
+void view_arr(int arr[100]) {
+    /** Function Helper */
+    int i=0;
+    while(arr[i]!=0) {
+        cout<<arr[i]<<", ";
+        i++;
+    }
+}
+

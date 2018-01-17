@@ -1,51 +1,86 @@
-# Task_1
+# Task_1 2017/2018-II
 Task 1 : Introduction to C++
 
-1. fork dan clone repositori ASD_Task_1
-2. buka dan modifikasi isi kode di dalam file ASD_Task_1.cpp
-3. tuliskan kode kalian pada bagian yang telah disediakan
-4. contoh hasil aplikasi dapat dilihat di file example.exe
+## Workflow
+1. FORK and CLONE this repositori ASD_Task_1
+2. open and modify codes in *.cpp files inside project ASD_Task_1
+3. write your code inside the provided space in each functions/procedures (`asd_task_1.cpp`) 
+4. COMMIT and PUSH  your project
+5. create a Pull Request
 
-* buatlah aplikasi sederhana untuk menghitung index nilai berdasarkan nilai UTS, UAS, dan TUBES nya
-* terdapat 6 fungsi yang harus dibuat
-  ```
-    void main_menu();
-    void set_standar();
-    void set_proporsi_nilai();
-    char hitung_index(double uts, double uas, double tubes);
-    void input_nilai();
-    void thank_you();
-  ```
-* void main_menu()
-    - fungsi berisi pilihan menu di dalam aplikasi:
-      daftar menu:
-      1. set standar index nilai
-      2. set proporsi nilai
-      3. input nilai
-      4. keluar
-    - fungsi meminta input pilihan menu dari user
-      dan memanggil fungsi menu yang dipilih
+## Exercise 1
+TODO:  
+* Write an algorithm which will prints all such numbers which are divisible by 7 but are not a multiple of 5, between 100 and 200 (both included)
+* `procedure exercise_1()`
+* Output should be: 112, 119, 126, …, 196
 
-* void set_standar();
-    - fungsi mengubah standar index A, B, C, D, dan E
-    - fungsi akan menerima input rentang nilai untuk masing-masing index nilai
-    - fungsi akan mengulang menerima input dari user jika terdapat nilai yang overlap
-    
-* void set_proporsi_nilai();
-    - fungsi mengubah prosentase nilai UTS, UAS, dan TUBES
-    - fungsi akan menerima 3 input prosentase dari user untuk UTS, UAS, dan TUBES
-    - fungsi akan mengulang menerima input dari user jika total prosentase != 100
-    
-* char hitung_index(double uts, double uas, double tubes);
-    - fungsi menghitung total nilai berdasarkan input parameter dan proporsi nilai
-    - fungsi menentukan index nilai berdasarkan standar nilai
-    - fungsi mengembalikan karakter index nilai
+## Exercise 2
+TODO:
+* Write a procedure algorithm to raise any number to any power.
+* `procedure exercise_2(n, p)`
+Example:
+`
+	integer n = 2
+	integer p = 3
+	exercise_2(n, p)
+	Output : 8
+	
+	integer n = 4
+	integer p = 2
+	exercise_2(n, p)
+	Output : 16
+`
 
-* void input_nilai();
-    - fungsi menerima input nilai UTS, UAS, dan TUBES
-    - fungsi menampilkan index yang didapat berdasarkan input nilai UTS, UAS, dan TUBES
+## Exercise 3
+TODO:
+* Write a procedure algorithm that determines the type of a Triangle (isosceles, equilateral, or scalene) given the size of the three sides
+* `exercise_3(s1, s2, s3)`
+Example:
+`
+	integer s1: 4
+	integer s2 : 6
+	integer s3 : 4
+	exercise_3(s1, s2, s3)
+	Output : isosceles
+	
+	integer s1: 3
+	integer s2 : 3
+	integer s3 : 3
+	exercise_3(s1, s2, s3)
+	Output : equilateral
+`
 
-* void thank_you();
-    - fungsi menampilkan pesan singkat untuk mengakhiri program
-    - tampilkan nim dan nama kalian
+## Exercise 4
+TODO:
+* Write a procedure algorithm to continuously receive a numerical input from user and add it into an array of integer until user inputs number 0
+* `procedure exercise_4()`
+* Try input: 3, 6, 2, 8, 0
 
+## Exercise 5
+TODO:
+* Write a function algorithm to find a number inside an unsorted array of integer, and outputs its index; algorithm will outputs -1 if such number is not found
+* function int exercise_5(arr, f)
+* Array input is formatted from previous exercise, 
+* value 0 indicates the end of array
+Example:
+`
+	integer arr = {3,6,8,2,7,8,1,0,0,0,0,0}
+	integer f = 2
+	integer x = exercise_5(arr, f)
+	Output = 3
+`
+
+## Exercise 6
+TODO:
+* Write a procedure algorithm to find a number inside an unsorted array of integer, then insert a negative one (-1) behind such found number
+* Use previous search function
+* Array input is formatted from previous exercise, 
+* value 0 indicates the end of array
+
+Example:
+`
+	integer arr = {3,6,8,2,7,8,1,0,0,0,0,0}
+	integer x = 8
+	exercise_6(arr, x)
+	arr result = {3,6,8,-1, 2,7,8,1,0,0,0,0,0}
+`
