@@ -1,7 +1,15 @@
 # Task_1 [2017/2018-II]
 Task 1 : Introduction to C++
 
+## Reading Material
+* [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+* [markdown cheat sheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
+
 ## Workflow
+First thing first, try and visit this:
+https://classroom.github.com/a/GJYYUatC
+
+if that doesn't work, then
 1. FORK and CLONE this repositori ASD_Task_1
 2. open and modify codes in *.cpp files inside project ASD_Task_1
 3. write your code inside the provided space in each functions/procedures (`asd_task_1.cpp`) 
