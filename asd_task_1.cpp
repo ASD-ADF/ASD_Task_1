@@ -14,7 +14,12 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    // ok sip kelar
+    for (int i = 100; i < 201 ; i++){
+        if((i%7 ==0 ) &&(i%5!=0)){
+            cout<<i<<", ";
+        }
+    }
 
 
 
