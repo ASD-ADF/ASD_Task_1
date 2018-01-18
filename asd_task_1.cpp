@@ -3,7 +3,8 @@
 using namespace std;
 
 void view_arr(int arr[100]);
-
+void * __gxx_personality_v0=0;
+void * _Unwind_Resume =0;
 void exercise_1() {
     /**
      TODO:  Write an algorithm which will prints all
@@ -14,7 +15,11 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for (int i = 100; i<201 ; i++) {
+        if(( i%7==0) && (i%5!=0)) {
+            cout<<i<<", ";
+        }
+    }
 
 
 
