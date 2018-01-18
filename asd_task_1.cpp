@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 using namespace std;
 
 void view_arr(int arr[100]);
@@ -15,8 +16,10 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    for (int i = 100; i<201 ; i++) {
-        if(( i%7==0) && (i%5!=0)) {
+    for (int i = 100; i<201 ; i++)
+    {
+        if(( i%7==0) && (i%5!=0))
+        {
             cout<<i<<", ";
         }
     }
@@ -36,7 +39,14 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=p;
+    int y=1;
+    while (i>0)
+    {
+        y*=n;
+        i--;
+    }
+    cout<<y<<endl;
 
 
 
@@ -51,11 +61,23 @@ void exercise_3(int s1, int s2, int s3) {
                 the type of a Triangle
                 (isosceles, equilateral, or scalene)
                 given the size of the three sides
+
         */
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    if ((s1==s2) || (s2==s3) || (s1==s3)) {
+        if ((s1==s2) && (s2==s3) && (s1==s3)){
+            cout<<"Equilateral"<<endl;
+        }
+        if ((s1!=s2) || (s2!=s3) || (s1!=s3)) {
+            cout<<"Isosceles"<<endl;
+        }
+    }
+    if ((s1!=s2) && (s2!=s3) && (s1!=s3)) {
+        cout<<"Scalene"<<endl;
+
+    }
 
 
 
