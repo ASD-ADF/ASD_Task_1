@@ -15,7 +15,13 @@ void exercise_1() {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-
+    void exercise_1(){
+    for(int i = 100; i <=200; i+=7){
+        if ((i % 7 == 0) && (i % 5 != 0)){
+            cout << i <<", ";
+        }
+    }
+}
 
 
 
