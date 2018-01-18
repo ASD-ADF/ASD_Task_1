@@ -32,7 +32,9 @@ void exercise_2(int n, int p) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-
+    for (int i = 100; i < 201 ; i++){
+        if((i))
+    }
 
 
 
