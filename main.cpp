@@ -1,13 +1,19 @@
 #include <iostream>
 #include "asd_task_1.h"
+#include <windows.h>
 
 using namespace std;
 
-string name = "your name here";
-string nim = "your id here";
-string cls = "your class here";
+string name = "Muhammad Mukhtar Dwi Putra";
+string nim = "1301170278";
+string cls = "IF-41-08";
 
-int main() {
+int main()
+{
+    Beep(369,200);
+    Beep(369,200);
+    Beep(369,200);
+
     cout << "Hello world!, "<<name
          <<",\nid: " << nim
          <<"\nfrom " << cls<< endl;
@@ -17,9 +23,14 @@ int main() {
     cout<<"Output should be:"<<endl;
     cout<<"112, 119, 126, 133, 147, 154, 161, 168, 182, 189, 196,"<<endl;
     cout<<"Your Answer:  "<<endl;
+
+
+    cout<<endl;
     exercise_1();
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
+
+
 
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 2"<<endl;
@@ -38,6 +49,8 @@ int main() {
     exercise_2(n, p);
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
+
+
 
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 3"<<endl;
@@ -75,6 +88,8 @@ int main() {
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
 
+
+
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 4"<<endl;
     cout<<"try inputs: 3, 6, 2, 8, 0"<<endl;
@@ -84,28 +99,34 @@ int main() {
     cin.get();
     cin.get();
 
+
+    int pem;
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 5"<<endl;
     int arr[] = {3,6,8,2,7,8,1,0,0,0,0,0};
     cout<<"Initial Array   : ";
     view_arr(arr);
     cout<<endl;
+
     int f = 7;
     int x;
     cout<<"input= 7"<<endl;
     cout<<"Output should be: 4"<<endl;
     x = exercise_5(arr, f);
     cout<<"Your Answer     : "<<x<<endl;
+
     f = 8;
     cout<<"input= 8"<<endl;
     cout<<"Output should be: 2"<<endl;
     x = exercise_5(arr, f);
     cout<<"Your Answer     : "<<x<<endl;
+
     f = 9;
     cout<<"input= 9"<<endl;
     cout<<"Output should be: -1"<<endl;
     x = exercise_5(arr, f);
     cout<<"Your Answer     : "<<x<<endl;
+
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
 
@@ -115,7 +136,7 @@ int main() {
     cout<<"Initial Array   : ";
     view_arr(arr);
     cout<<endl;
-    x = 7;
+    x = 8;
     cout<<"input= 8"<<endl;
     cout<<"Output should be: 3, 6, 8, -1, 2, 7, 8, 1"<<endl;
     cout<<"Your Answer     : ";
@@ -124,7 +145,11 @@ int main() {
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
 
+
     cout<<endl<<endl<<"End of Task I"<<endl;
     cout<<"Congratulation on completing"<<endl;
+    Beep(369,200);
+    Beep(369,200);
+    Beep(369,200);
     return 0;
 }
