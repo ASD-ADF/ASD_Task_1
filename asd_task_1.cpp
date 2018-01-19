@@ -48,12 +48,12 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    if(s1==s2 && s2==s3)
+    cout << "Equilateral triangle";
+        else if(s1==s2 || s1==s3 || s2==s3)
+        cout << "Isosceles triangle";
+        else
+        cout << "Scalene triangle";
     // ===========================
 }
 
