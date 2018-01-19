@@ -135,22 +135,20 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    int i,c=0,n,p;
-    for(i=0; i<n; i++)
-    {
-        if(arr[i]==x)
-        {
-            c=1;
-            p=i+1;
-            break;
-        }
+    int i;
+    int n;
+    int a;
+    int sb;
+    n=exercise_5(arr,x);
+    i=n-1;
+    sb=-1;
+    while(arr[i]!=0){
+        a=arr[i];
+        arr[i]=sb;
+        sb=a;
+        i++;
     }
-    if(c!=0){
-        arr[i]==arr[i]++;
-        p++;
-        arr[p]=-1;
-    }
-    cout<<endl;
+    arr[i]=sb;
 
 
 }
