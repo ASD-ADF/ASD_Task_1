@@ -59,8 +59,21 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    if(s1==s2 && s2==s3){
+        cout<<"equilateral";
+    }
+    else if ((s1==s2 && s1!=s3)||(s1==s3 && s1!=s2)){
+        cout<<"isosceles";
+    }
+    else if ((s2==s1 && s2!=s3)||(s2==s3 && s2!=s1)){
+        cout<<"isosceles";
+    }
+    else if ((s3==s1 && s3!=s2)||(s3==s2 && s3!=s1)){
+        cout<<"isosceles";
+    }
+    else if(s1!=s2!=s3){
+        cout<<"scalene";
+    }
 
 
 
@@ -77,12 +90,17 @@ void exercise_4() {
                 until user inputs number 0
         */
     int arr[100];
+    int i=0;
+    int x;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
-
-
+    do {
+        cin>>x;
+        arr[i]=x;
+        i++;
+    }
+    while(x != 0);
 
 
     // ===========================
@@ -100,13 +118,11 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
+    for(int i=0;i<11;i++){
+        if (arr[i]==f){
+            return i;
+        }
+    }
     return -1;
 }
 
@@ -119,14 +135,29 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i,c=0,n,p;
+    for(i=0; i<n; i++)
+    {
+        if(arr[i]==x)
+        {
+            c=1;
+            p=i+1;
+            break;
+        }
+    }
+    if(c!=0){
+        arr[i]==arr[i]++;
+        p++;
+        arr[p]=-1;
+    }
+    cout<<endl;
 
 
+}
 
 
 
     // ===========================
-}
 
 
 void view_arr(int arr[100]) {

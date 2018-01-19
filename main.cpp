@@ -21,6 +21,7 @@ int main() {
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
 
+
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 2"<<endl;
     int n=2;
@@ -38,6 +39,7 @@ int main() {
     exercise_2(n, p);
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
+
 
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 3"<<endl;
@@ -75,6 +77,7 @@ int main() {
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
 
+
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 4"<<endl;
     cout<<"try inputs: 3, 6, 2, 8, 0"<<endl;
@@ -82,7 +85,7 @@ int main() {
     exercise_4();
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
-    cin.get();
+
 
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 5"<<endl;
@@ -109,6 +112,7 @@ int main() {
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
 
+
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 6"<<endl;
     int arr2[] = {3,6,8,2,7,8,1,0,0,0,0,0};
@@ -119,6 +123,7 @@ int main() {
     cout<<"input= 8"<<endl;
     cout<<"Output should be: 3, 6, 8, -1, 2, 7, 8, 1"<<endl;
     cout<<"Your Answer     : ";
+    cout<<endl<<endl;
     exercise_6(arr2, x);
     view_arr(arr2);
     cout<<endl<<endl<<"press Enter to continue"<<endl;
