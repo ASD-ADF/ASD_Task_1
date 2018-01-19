@@ -3,11 +3,12 @@
 
 using namespace std;
 
-string name = "your name here";
-string nim = "your id here";
-string cls = "your class here";
+string name = "irbah salsabila";
+string nim = "1301174021";
+string cls = "if-41-08";
 
-int main() {
+int main()
+{
     cout << "Hello world!, "<<name
          <<",\nid: " << nim
          <<"\nfrom " << cls<< endl;
