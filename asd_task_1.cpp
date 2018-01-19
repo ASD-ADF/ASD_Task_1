@@ -19,6 +19,10 @@ void exercise_1() {
             cout<<i<<", ";
         }
     }
+    
+    /**
+    OK, Great, Nice Work
+    */ 
 
 
 
