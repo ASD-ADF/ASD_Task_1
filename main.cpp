@@ -7,10 +7,10 @@ string name = "Rachmansyah Adhi Widhianto";
 string nim = "1301170066";
 string cls = "IF-41-08";
 
-int main() {
+int main(){
     cout << "Hello world!, "<<name
          <<",\nid: " << nim
-         <<"\nfrom " << cls<< endl;
+         <<"\nfrom " << cls << endl;
 
     cout<<endl<<"------------------------------"<<endl;
     cout<<"Exercise 1"<<endl;

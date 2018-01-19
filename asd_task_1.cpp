@@ -17,7 +17,7 @@ void exercise_1() {
     int i;
     for (i=100;i<=200;i++){
     	if((i % 7 == 0) && (i % 5 != 0)){
-    		cout<<i;
+    		cout<<i<<", ";
 		}
 	}
     // ===========================
@@ -33,7 +33,7 @@ void exercise_2(int n, int p) {
     // YOUR CODE HERE
     int i, total;
     total=n;
-    for(i=1;i<=p;i++){
+    for(i=1;i<p;i++){
         total=total*n;
     }
     cout<<total;
@@ -94,13 +94,15 @@ int exercise_5(int arr[],int f) {
     // ===========================
     // YOUR CODE HERE
     int i;
-    for(i=0;i<=sizeof(arr);i++){
+    i=0;
+    while(arr[i]!=0){
         if(arr[i]==f){
-            cout<<i;
+            return i;
         }
+        i++;
     }
-    // ===========================
     return -1;
+    // ===========================
 }
 
 void exercise_6(int arr[],int x) {
@@ -112,20 +114,19 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    int i, j, prev, temp;
-    for(i=0;i<=sizeof(arr);i++){
-        if(arr[i]==x){
-            prev=-1;
-            for(j=i+1;i<(sizeof(arr)+1);i++){
-                temp=arr[j];
-                arr[j]=prev;
-                prev=temp;
-            }
-        }
+    int i, n, temp, prev;
+    n=exercise_5(arr,x);
+    i=n-1;
+    prev=-1;
+    while(arr[i]!=0){
+        temp=arr[i];
+        arr[i]=prev;
+        prev=temp;
+        i++;
     }
+    arr[i]=prev;
     // ===========================
 }
-
 
 void view_arr(int arr[100]) {
     /** Function Helper */
@@ -135,4 +136,3 @@ void view_arr(int arr[100]) {
         i++;
     }
 }
-
