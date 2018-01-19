@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -14,7 +15,9 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
+       for(int i = 100; i<201; i++){
         if(i%7==0 &&i%5!=0){
+            cout<<i<<",";
         }
     }
     // ===========================
@@ -28,11 +31,9 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int answer = 1;
+    answer=pow(n,p);
+    cout<<answer;
 
     // ===========================
 }

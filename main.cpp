@@ -1,5 +1,6 @@
 #include <iostream>
 #include "asd_task_1.h"
+#include <cmath>
 
 using namespace std;
 
