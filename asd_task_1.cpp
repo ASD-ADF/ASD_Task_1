@@ -14,7 +14,7 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-	for (int i = 100; i < 200; i++) {
+	for (int i = 100; i <= 200; i++) {
 		if (i % 7 == 0 && i % 5 != 0) {
 			cout << i << ", ";
 		}
