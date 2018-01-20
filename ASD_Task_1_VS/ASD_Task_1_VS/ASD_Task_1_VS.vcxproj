@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{8D7146C3-BFC2-4877-B22C-D44595D0AE08}</ProjectGuid>
+    <ProjectGuid>{6F7B55F5-9AAA-45E6-B9D9-CE7468DA7768}</ProjectGuid>
     <RootNamespace>ASDTask1VS</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
