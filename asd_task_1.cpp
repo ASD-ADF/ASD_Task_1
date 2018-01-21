@@ -78,7 +78,8 @@ void exercise_4()
     i=0;
     int a;
     a=-1;
-    while(a!=0){
+    while(a!=0)
+    {
         cin>>a;
         arr[i]=a;
         i++;
@@ -100,11 +101,14 @@ int exercise_5(int arr[],int f)
     // ===========================
     // YOUR CODE HERE
     int i=0;
-    while (arr[i]!=NULL){
-        if (arr[i]==f){
+    while (arr[i]!=NULL)
+    {
+        if (arr[i]==f)
+        {
             return i;
         }
-        else{
+        else
+        {
             i++;
         }
     }
@@ -124,12 +128,32 @@ void exercise_6(int arr[],int x)
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i=0;
+    int S=0;
+    int P=-1;
+    bool found=0;
+    while (arr[i]!=NULL && not found)
+    {
+        if (arr[i]==x)
+        {
+            found = 1;
+            i++;
+        }
+        else
+        {
+            i++;
+        }
+    }
+    if (found)
+    {
+        while (arr[i-1]!=NULL)
+        {
+            S=arr[i];
+            arr[i]=P;
+            P=S;
+            i++;
+        }
+    }
     // ===========================
 }
 
