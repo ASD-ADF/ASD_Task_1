@@ -14,7 +14,13 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for (int i = 100; i <= 200; i++)
+    {
+        if(i % 7 == 0 && i % 5 != 0)
+        {
+                cout << i << ", ";
+        }
+    }
 
 
 
@@ -31,7 +37,12 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int a = 1;
+    for (int i = 0; i < p; i++)
+    {
+        a = a * n;
+    }
+    cout << a;
 
 
 
@@ -50,9 +61,20 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    if (s1 == s2 && s1 == s3)
+    {
+        cout << "equilateral";
+    }
 
+    else if (s1 == s2 || s1 == s3 || s2 == s3)
+    {
+        cout << "isosceles";
+    }
 
+    else
+    {
+        cout << "scalene";
+    }
 
 
 
@@ -70,8 +92,16 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    int n;
+    int i = 0;
+    do
+    {
+        cout << "Please input a number or 0 for stop: ";
+        cin >> n;
+        arr[i] = n;
+        i++;
+    } while (n != 0);
+    arr[i] = 0;
 
 
 
@@ -91,9 +121,16 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    int i = 0;
+    int s = (sizeof(arr)/sizeof(arr[0]));
+    while (arr[i] != 0)
+    {
+        if (arr[i] == f)
+        {
+            return i;
+        }
+        i++;
+    }
 
 
 
@@ -104,14 +141,25 @@ int exercise_5(int arr[],int f) {
 void exercise_6(int arr[],int x) {
     /**
          TODO:  Write a procedure algorithm to find a number
-         inside an unsorted array of integer,
+         inside an  unsorted array of integer,
          then insert a negative one (-1) behind such found number
-        */
+    */
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    int n = exercise_5(arr,x);
+    int i = n-1;
+    int m = sizeof(arr) / sizeof(arr[0]);
+    int f = -1;
+    while (arr[i] != 0)
+    {
+        int temp;
+        temp = arr[i];
+        arr[i] = f;
+        f = temp;
+        i++;
+    }
+    arr[i] = f;
 
 
 
