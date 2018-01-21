@@ -2,7 +2,18 @@
 
 using namespace std;
 
-void view_arr(int arr[100]);
+void * __gxx_personality_v0=0; //saya dapet problem __gxx_personality_v0
+void * _Unwind_Resume =0;      //dan _Unwind_Resume, solusi ini saya ambil di internet
+
+void view_arr(int arr[100]) {
+    /** Function Helper */
+    int i=0;
+    while(arr[i]!=0) {
+        cout<<arr[i]<<", ";
+        i++;
+    }
+}
+
 
 void exercise_1() {
     /**
@@ -14,37 +25,31 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-    void exercise_1(){
-    for(int i = 100; i <=200; i+=7){
-        if ((i % 7 == 0) && (i % 5 != 0)){
+    for(int i = 100; i <=200; i++) {
+        if ((i % 7 == 0) && (i % 5 != 0)) {
             cout << i <<", ";
         }
     }
 }
+// ===========================
 
-
-
-
-    // ===========================
-}
 
 void exercise_2(int n, int p) {
     /**
-         TODO:  Write a procedure algorithm to
+         TODO:  Write a procedure algorithm tocin>>input;
                 raise any number to any power.
         */
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
+    int jml = n;
+    for (int i = 1; i < p; i++) {
+        jml *= n;
+    }
+    cout<<jml<<endl;
 }
+// ===========================
+
 
 void exercise_3(int s1, int s2, int s3) {
     /**
@@ -56,12 +61,13 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    if ((s1 == s2)&&(s1 == s3)) {
+        cout<<"equilateral";
+    } else if ((s1 == s2) || (s1 == s3) || (s2 == s3)) {
+        cout<<"isosceles";
+    } else {
+        cout<<"scalene";
+    }
     // ===========================
 }
 
@@ -73,15 +79,17 @@ void exercise_4() {
                 and add it into an array of integer
                 until user inputs number 0
         */
-    int arr[100];
+    int arr[100]={0};
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int input;
+    int i=0;
+    cin>>input;
+    while(input != 0){
+        arr[i] = input;
+        i++;
+        cin>>input;
+    };
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
@@ -97,12 +105,13 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i=0;
+    while((arr[i]!=f) && (i<=12)){
+        i++;
+    }
+    if (i<=12){
+        return i;
+    }
     // ===========================
     return -1;
 }
@@ -116,22 +125,17 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int index=0;
+    while((arr[index]!=x) && (index<=12)){
+        index++;
+    }
+    for(int i=12;i>=index;i--){
+        arr[i+1]=arr[i];
+    }
+    arr[index+1]=-1;
     // ===========================
 }
 
 
-void view_arr(int arr[100]) {
-    /** Function Helper */
-    int i=0;
-    while(arr[i]!=0) {
-        cout<<arr[i]<<", ";
-        i++;
-    }
-}
+
 
