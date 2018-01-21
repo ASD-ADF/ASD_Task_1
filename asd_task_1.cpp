@@ -74,12 +74,15 @@ void exercise_4()
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i;
+    i=0;
+    int a;
+    a=-1;
+    while(a!=0){
+        cin>>a;
+        arr[i]=a;
+        i++;
+    }
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
@@ -96,10 +99,15 @@ int exercise_5(int arr[],int f)
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
+    int i=0;
+    while (arr[i]!=NULL){
+        if (arr[i]==f){
+            return i;
+        }
+        else{
+            i++;
+        }
+    }
 
 
     // ===========================
