@@ -3,9 +3,9 @@
 
 using namespace std;
 
-string name = "your name here";
-string nim = "your id here";
-string cls = "your class here";
+string name = "Iriyanto";
+string nim = "1301174295";
+string cls = "IF-41-08";
 
 int main() {
     cout << "Hello world!, "<<name
@@ -113,13 +113,13 @@ int main() {
     cout<<"Exercise 6"<<endl;
     int arr2[] = {3,6,8,2,7,8,1,0,0,0,0,0};
     cout<<"Initial Array   : ";
-    view_arr(arr);
+    view_arr(arr2);
     cout<<endl;
     x = 8;
     cout<<"input= 8"<<endl;
     cout<<"Output should be: 3, 6, 8, -1, 2, 7, 8, 1"<<endl;
-    cout<<"Your Answer     : ";
     exercise_6(arr2, x);
+    cout<<"Your Answer     : ";
     view_arr(arr2);
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
