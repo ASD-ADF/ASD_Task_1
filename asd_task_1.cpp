@@ -129,7 +129,7 @@ void exercise_6(int arr[],int x)
     // ===========================
     // YOUR CODE HERE
     int i=0;
-    int S=0;
+    int T=0;
     int P=-1;
     bool found=0;
     while (arr[i]!=NULL && not found)
@@ -137,7 +137,6 @@ void exercise_6(int arr[],int x)
         if (arr[i]==x)
         {
             found = 1;
-            i++;
         }
         else
         {
@@ -148,9 +147,9 @@ void exercise_6(int arr[],int x)
     {
         while (arr[i-1]!=NULL)
         {
-            S=arr[i];
+            T=arr[i];
             arr[i]=P;
-            P=S;
+            P=T;
             i++;
         }
     }
