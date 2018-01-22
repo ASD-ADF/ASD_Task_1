@@ -14,7 +14,9 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    cout<<"Algoritma yang bisa dibagi 7 tetapi tidak bisa dibagi 5"<<endl;
+
+
 
 
 
@@ -24,6 +26,9 @@ void exercise_1() {
 }
 
 void exercise_2(int n, int p) {
+
+    int i;
+    int hasil;
     /**
          TODO:  Write a procedure algorithm to
                 raise any number to any power.
@@ -32,11 +37,15 @@ void exercise_2(int n, int p) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
+    cout<<"- - Input - -"<<n<<" , " << p;
+    hasil=n;
 
+    for (i=1; i<p; i++)
+    {
+        hasil = hasil*n;
+    }
 
-
-
-
+    cout<<n<<" Angka dipangkatkan " <<p<<" : " <<hasil<<endl;
     // ===========================
 }
 
