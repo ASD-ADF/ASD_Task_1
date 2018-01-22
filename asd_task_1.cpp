@@ -54,19 +54,11 @@ void exercise_3(int s1, int s2, int s3)
     // ===========================
     // YOUR CODE HERE
     if(s1==s2 && s2==s3)
-<<<<<<< HEAD
         cout << "Equilateral";
     else if(s1==s2 || s1==s3 || s2==s3)
         cout << "Isosceles";
     else
         cout << "Scalene";
-=======
-        cout << "Equilateral triangle";
-    else if(s1==s2 || s1==s3 || s2==s3)
-        cout << "Isosceles triangle";
-    else
-        cout << "Scalene triangle";
->>>>>>> dce906d5b9363db114a755d62572b83dfaa4e14c
     // ===========================
 }
 
@@ -145,10 +137,7 @@ void exercise_6(int arr[],int x)
         if (arr[i]==x)
         {
             found = 1;
-<<<<<<< HEAD
             i--;
-=======
->>>>>>> dce906d5b9363db114a755d62572b83dfaa4e14c
         }
         else
         {
