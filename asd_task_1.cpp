@@ -118,7 +118,7 @@ int exercise_5(int arr[],int f) {
     // ===========================
     // YOUR CODE HERE
     int i=0;
-    while ((i>=0) && (arr[i]!=0))
+    while ((i>=0) && (arr[i]!=0) && (arr[i+1]!=0))
     {
         if (arr[i]==f)
         {
