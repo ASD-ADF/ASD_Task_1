@@ -110,7 +110,6 @@ void exercise_4() {
 
 
 
-
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
@@ -126,14 +125,20 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+      int i;
+      for (i=0; i<12; i++)
+      {
+          if(arr[i]==f)
+          {
+              return i;
+          }
+      }
 
-
-
+          return -1;
 
 
     // ===========================
-    return -1;
+
 }
 
 void exercise_6(int arr[],int x) {
@@ -145,7 +150,30 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
+    int j=0;
+    while ((i>=0) && (arr[i]!=0))
+    {
+        j++;
+        i++;
+    }
+    i=0;
+    arr[j]=-1;
+    int temp;
+    while ((i>0) && (arr[i]!=0))
+    {
+
+        if(arr[i]==x)
+        {
+            for (j; j>i+1; j--)
+            {
+                temp=arr[j];
+                arr[j]=arr[j-1];
+                arr[j-1]=temp;
+            }
+        }
+        i++;
+    }
 
 
 
