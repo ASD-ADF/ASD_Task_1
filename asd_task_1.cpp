@@ -4,7 +4,8 @@ using namespace std;
 
 void view_arr(int arr[100]);
 
-void exercise_1() {
+void exercise_1()
+{
     /**
      TODO:  Write an algorithm which will prints all
             such numbers which are divisible by 7
@@ -14,16 +15,19 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for (int i = 100; i < 201; i++)
 
-
-
-
-
+    {
+        if ((i%7==0) && (i%5!=0))
+        {
+            cout << i << ", ";
+        }
+    }
     // ===========================
 }
 
-void exercise_2(int n, int p) {
+void exercise_2(int n, int p)
+{
     /**
          TODO:  Write a procedure algorithm to
                 raise any number to any power.
@@ -32,15 +36,22 @@ void exercise_2(int n, int p) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
+    cout<<"Input number : ";
+    cin>>n;
+    cout<<"Power : ";
+    cin>>p;
 
-
-
-
+    for (int i = 0; i < p; i++)
+    {
+        n = n * n;
+    }
+    cout<< n;
 
     // ===========================
 }
 
-void exercise_3(int s1, int s2, int s3) {
+void exercise_3(int s1, int s2, int s3)
+{
     /**
          TODO:  Write a procedure algorithm that determines
                 the type of a Triangle
@@ -51,16 +62,33 @@ void exercise_3(int s1, int s2, int s3) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
+    cout<<"Sisi 1 : ";
+    cin>>s1;
+    cout<<"Sisi 2 : ";
+    cin>>s2;
+    cout<<"Sisi 3 : ";
+    cin>>s3;
 
+    if (s1==s2==s3)
+    {
+        cout<<"Equilateral";
+    }
 
+    else if (s1!=s2!=s3)
+    {
+        cout<<"Scalene";
+    }
 
-
-
+    else if ((s1==s2) || (s1==s3) || (s2==s3))
+    {
+        cout<<"Isosceles";
+    }
     // ===========================
 }
 
 
-void exercise_4() {
+void exercise_4()
+{
     /**
          TODO:  Write a procedure algorithm to continuously
                 receive a numerical input from user
@@ -81,7 +109,8 @@ void exercise_4() {
     view_arr(arr);
 }
 
-int exercise_5(int arr[],int f) {
+int exercise_5(int arr[],int f)
+{
     /**
          TODO:  Write a function algorithm to find a number
                 inside an unsorted array of integer,
@@ -101,7 +130,8 @@ int exercise_5(int arr[],int f) {
     return -1;
 }
 
-void exercise_6(int arr[],int x) {
+void exercise_6(int arr[],int x)
+{
     /**
          TODO:  Write a procedure algorithm to find a number
          inside an unsorted array of integer,
@@ -120,10 +150,12 @@ void exercise_6(int arr[],int x) {
 }
 
 
-void view_arr(int arr[100]) {
+void view_arr(int arr[100])
+{
     /** Function Helper */
     int i=0;
-    while(arr[i]!=0) {
+    while(arr[i]!=0)
+    {
         cout<<arr[i]<<", ";
         i++;
     }
