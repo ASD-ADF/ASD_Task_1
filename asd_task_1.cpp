@@ -14,11 +14,11 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+     for(int i=100; i<=200; i++ ){
+        if ((i % 7==0)&& (i % 5!=0)){
+            cout<<i<<", ";
+        }
+    }
 
     // ===========================
 }
@@ -31,11 +31,11 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int res=1;
+    for(int i=1; i<=p; i++){
+        res=res*n;
+    }
+    cout<<res;
 
     // ===========================
 }
@@ -50,11 +50,15 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    if ((s1!=s2)&&(s1!=s3)&&(s2!=s3)) {
+        cout<<"is scalene triangles";
+    }
+    else if ((s1=s2)&&(s1=s3)&&(s2=s3)){
+        cout<<"is equilateral triangles";
+    }
+    else if (((s1=s2)&&(s1!=s3)&&(s2!=s3)) or ((s1!=s2)&&(s1!=s3)&&(s2=s3)) or ((s1!=s2)&&(s1=s3)&&(s2!=s3))){
+        cout<<"is isosceles triangles";
+    }
 
     // ===========================
 }
@@ -70,11 +74,13 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int in=-1;
+    int i=0;
+    while(in!=0){
+        cin>>in;
+        arr[i]=in;
+        i++;
+    }
 
     // ===========================
     cout<<"array result: ";
@@ -91,11 +97,20 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int i=0;
+    int a=0;
+    while(arr[a]!=0){
+        a++;
+    }
+    while(f!=arr[i]){
+        i++;
+    }
+    if (i<=a) {
+        return i;
+    }
+    else{
+        return -1;
+    }
 
     // ===========================
     return -1;
@@ -110,11 +125,23 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int i=0;
+    int a=0;
+    int idx=0;
+    int todo=0;
+    while(arr[a]!=0){
+        a++;
+    }
+    while(arr[i]!=x){
+        i++;
+    }
+    idx=i+1;
+    todo=a-idx;
+    for(int j=0; j<=todo; j++){
+        arr[a+1]=arr[a];
+        a--;
+    }
+    arr[idx]=-1;
 
     // ===========================
 }
