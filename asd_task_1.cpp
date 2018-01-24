@@ -14,7 +14,14 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for (int i = 100; i < 201; i++)
+        
+    {
+        if((i%7==0) && (i%5!=0))
+        {
+            cout<<i<<", ";
+        }
+    }
 
 
 
@@ -31,9 +38,17 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    int hasil = 1;
+    cout<<"N = ";
+    cin>>n>>endl;
+    cout<<"P = ";
+    cin>>p>>endl;
+    for (int i = 1;p;i++)
+    
+    {
+        hasil=hasil*n;
+    }
+    cout<<hasil;
 
 
 
@@ -50,8 +65,24 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    cout<<"S1 = ";
+    cin>>s1>>endl;
+    cout<<"S2 = ";
+    cin>>s2>>endl;
+    cout<<"S3 = ";
+    cin>>s3>>endl;
+    if ((s1==s2) && (s1==s3)&& (s2==s3)
+     {
+        cout<<"equilateral";
+     }
+        else if ((s1==s2) || (s1==s3) || (s2==s3)
+                {
+                 cout<<"isoceles";
+                }
+                else
+                    {
+                        cout<<"scalene";
+                    }
 
 
 
@@ -70,7 +101,8 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    do {
+        
 
 
 
