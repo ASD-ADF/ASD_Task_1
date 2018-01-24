@@ -15,8 +15,10 @@ void exercise_1() {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-
-
+    for (int i = 100; i < 201 ; i++){
+        if(i div 7==true and i div 5==false)
+            cout<<i<<endl;
+    }
 
 
 
@@ -32,9 +34,7 @@ void exercise_2(int n, int p) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-    for (int i = 100; i < 201 ; i++){
-        if((i))
-    }
+    return n^p;
 
 
 
@@ -53,7 +53,18 @@ void exercise_3(int s1, int s2, int s3) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-
+    if (s1==s2)
+        if(s2==s3)
+        cout<<"Equilateral"<<endl;
+        else
+            cout<<"Isosceles"<<endl;
+    if else (s1==s3)
+        if(s3==s2)
+        cout<<"Equilateral"<<endl;
+        else
+            cout<<"Isosceles"<<endl;
+    else
+        cout<<"Scalene"<<endl;
 
 
 
@@ -73,6 +84,11 @@ void exercise_4() {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
+    do {
+      cin >>a;
+    } while( a = 0);
+
+    return 0;
 
 
 
