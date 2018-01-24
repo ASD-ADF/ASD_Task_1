@@ -140,7 +140,7 @@ void exercise_6(int arr[],int x) {
     int a;
     int sb;
     n=exercise_5(arr,x);
-    i=n-1;
+    i=n+1;
     sb=-1;
     while(arr[i]!=0){
         a=arr[i];
