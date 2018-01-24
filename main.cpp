@@ -1,4 +1,6 @@
 #include <iostream>
+#include <math.h>
+#include <stdlib.h>
 #include "asd_task_1.h"
 
 using namespace std;
@@ -8,9 +10,9 @@ string nim = "your id here";
 string cls = "your class here";
 
 int main() {
-    cout << "Hello world!, "<<name
-         <<",\nid: " << nim
-         <<"\nfrom " << cls<< endl;
+    cout << "Hello world!, "<<name<<endl;
+    cout <<",\nid: " << nim<<endl;
+    cout <<"\nfrom " << cls<< endl;
 
     cout<<endl<<"------------------------------"<<endl;
     cout<<"Exercise 1"<<endl;
