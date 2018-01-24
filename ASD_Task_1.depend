@@ -15,11 +15,14 @@
 
 1516324341 c:\users\muhamad\documents\github\asd_task_1\asd_task_1.h
 
-1516579676 source:c:\users\muhamad\documents\github\asd_task_1\asd_task_1.cpp
+1516580830 source:c:\users\muhamad\documents\github\asd_task_1\asd_task_1.cpp
 	<iostream>
 	<cmath>
 
 1516332325 source:c:\users\vectorgrim\documents\github\asd_task_1\main.cpp
+	<iostream>
+	"asd_task_1.h"
+	<cmath>
 	<iostream>
 	"asd_task_1.h"
 	<cmath>
@@ -29,15 +32,6 @@
 1516533443 source:c:\users\vectorgrim\documents\github\asd_task_1\asd_task_1.cpp
 	<iostream>
 	<cmath>
-
-1516332325 source:c:\users\vectorgrim\documents\github\asd_task_1\main.cpp
-	<iostream>
-	"asd_task_1.h"
-	<cmath>
-
-1516332325 c:\users\vectorgrim\documents\github\asd_task_1\asd_task_1.h
-
-1516533443 source:c:\users\vectorgrim\documents\github\asd_task_1\asd_task_1.cpp
 	<iostream>
 	<cmath>
 

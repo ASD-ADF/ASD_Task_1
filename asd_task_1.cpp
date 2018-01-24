@@ -137,7 +137,7 @@ void exercise_6(int arr[],int x)
         if (arr[i]==x)
         {
             found = 1;
-            i--;
+            i++;
         }
         else
         {
