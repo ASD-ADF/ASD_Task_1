@@ -14,12 +14,14 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int x;
+    for (x=100; x<=200;x++){
+            if (x%7==0 && x%5!=0)
+                {
+                    cout<<x<<","<<" ";
+            }
 
-
-
-
-
+    }
     // ===========================
 }
 
@@ -31,15 +33,15 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i = 1;
+    int m = n;
+    while (i < p){
+        n= n*m;
+        i++;
+    }
     // ===========================
+    cout<<n;
 }
-
 void exercise_3(int s1, int s2, int s3) {
     /**
          TODO:  Write a procedure algorithm that determines
@@ -50,7 +52,15 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    if (s1<s2 && s2>s3 && s1==s3){
+        cout<<"isosceles"<<endl;
+    }else if (s1==s2 && s2==s3 && s1==s3){
+        cout<<"equilateral"<<endl;
+    }else if (s1<s2 && s3>s2 && s1<s3){
+        cout<<"scalene"<<endl;
+    }else {
+        cout<<"isosceles"<<endl;
+    }
 
 
 
@@ -70,12 +80,13 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int n;
+    int i=0;
+    while (n!=0){
+        cin>>n;
+        arr[i]=n;
+        i++;
+    }
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
@@ -91,14 +102,15 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
-    return -1;
+    int i=0;
+    while (arr[i]!=0){
+        if (arr[i]=f){
+            return i;
+        }else{
+            return -1;
+        }
+    }
+    i++;
 }
 
 void exercise_6(int arr[],int x) {
