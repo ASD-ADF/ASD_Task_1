@@ -35,15 +35,17 @@ void exercise_2(int n, int p)
 
     // ===========================
     // YOUR CODE HERE
+    int prev;
     cout<<"your code here"<<endl;
     cout<<"Input number : ";
     cin>>n;
+    prev = n;
     cout<<"Power : ";
     cin>>p;
 
-    for (int i = 0; i < p; i++)
+    for (int i = 1; i < p; i++)
     {
-        n = n * n;
+        n = n * prev;
     }
     cout<< n;
 
@@ -68,20 +70,21 @@ void exercise_3(int s1, int s2, int s3)
     cin>>s2;
     cout<<"Sisi 3 : ";
     cin>>s3;
+    cout<<s1<<", "<<s2<<", "<<s3<<" = ";
 
-    if (s1==s2==s3)
+    if ((s1==s2) && (s1==s3) && (s2==s3))
     {
         cout<<"Equilateral";
     }
 
-    else if (s1!=s2!=s3)
-    {
-        cout<<"Scalene";
-    }
-
-    else if ((s1==s2) || (s1==s3) || (s2==s3))
+    else if (((s1==s2) && (s1!=s3)) || ((s1==s3) && (s1!=s2)) || ((s2==s3) && (s2!=s1)))
     {
         cout<<"Isosceles";
+    }
+
+    else
+    {
+        cout<<"Scalene";
     }
     // ===========================
 }
@@ -99,10 +102,15 @@ void exercise_4()
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-
-
-
-
+    int i = 0;
+    int n = 1;
+    while (n!=0)
+    {
+        cout<<"input number : ";
+        cin>>arr[i];
+        n = arr[i];
+        i++;
+    }
 
     // ===========================
     cout<<"array result: ";
@@ -121,13 +129,20 @@ int exercise_5(int arr[],int f)
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
+    int i = 0;
+    cout<<"Masukkan nomor yang akan dicari : ";
+    cin>>f;
+    for (i = 0; i<12; i++)
+    {
+        if (f == arr[i])
+        {
+            return i;
+        }
+    }
 
-
-
-
-
-    // ===========================
     return -1;
+    // ===========================
+
 }
 
 void exercise_6(int arr[],int x)
@@ -141,11 +156,19 @@ void exercise_6(int arr[],int x)
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
+    int i = 0;
+    int idx = 0;
+    int temparr[12];
+    cout<<"Masukkan Nomor yang akan dicari : ";
+    cin>>x;
 
-
-
-
-
+    for (i=0; i < 12; i++)
+    {
+        if (x == arr[i])
+        {
+            arr[i+1] = -1;
+        }
+    }
     // ===========================
 }
 
