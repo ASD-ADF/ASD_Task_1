@@ -3,6 +3,8 @@
 using namespace std;
 
 void view_arr(int arr[100]);
+void * __gxx_personality_v0=0;
+void * _Unwind_Resume =0;
 
 void exercise_1() {
     /**
@@ -14,7 +16,14 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+
+     for (int i = 100; i<201 ; i++)
+    {
+        if(( i%7==0) && (i%5!=0))
+        {
+            cout<<i<<", ";
+        }
+    }
 
 
 
@@ -31,8 +40,14 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    int i=p;
+    int y=1;
+    while (i>0)
+    {
+        y*=n;
+        i--;
+    }
+    cout<<y<<endl;
 
 
 
@@ -50,12 +65,23 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
+     if ((s1==s2) || (s2==s3) || (s1==s3))
+    {
+        if ((s1==s2) && (s2==s3) && (s1==s3))
+        {
+            cout<<"Equilateral"<<endl;
+        }
+        if ((s1!=s2) || (s2!=s3) || (s1!=s3))
+        {
+            cout<<"Isosceles"<<endl;
+        }
+    }
+    if ((s1!=s2) && (s2!=s3) && (s1!=s3))
+    {
+        cout<<"Scalene"<<endl;
 
-
-
-
+    }
     // ===========================
 }
 
@@ -70,7 +96,17 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+     int i=1;
+    cin>>arr[0];
+    while (i>=0)
+    {
+        cin>>arr[i];
+        i++;
+        if (arr[i-1]==0)
+        {
+            break;
+        }
+    }
 
 
 
@@ -91,7 +127,15 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+     int i=0;
+    while ((i>=0) && (arr[i]!=0) && (arr[i+1]!=0))
+    {
+        if (arr[i]==f)
+        {
+            return i;
+        }
+        i++;
+    }
 
 
 
@@ -110,7 +154,29 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
+    int j=0;
+    while ((i>=0) && (arr[i]!=0))
+    {
+        j++;
+        i++;
+    }
+    i=0;
+    arr[j]=-1;
+    int temp;
+    while ((i>=0) &&(arr[i]!=0))
+    {
+        if(arr[i]==x)
+        {
+            for (j; j>i+1; j--)
+            {
+                temp=arr[j];
+                arr[j]=arr[j-1];
+                arr[j-1]=temp;
+            }
+        }
+        i++;
+    }
 
 
 
