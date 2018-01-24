@@ -91,9 +91,6 @@ void exercise_4() {
     return 0;
 
 
-
-
-
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
