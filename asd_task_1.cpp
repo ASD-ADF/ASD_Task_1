@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 using namespace std;
 
 void view_arr(int arr[100]);
@@ -14,12 +15,13 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
+    for(int i=100;i<=200;i++){
+        if (i%7==0 && i%5!=0){
+                cout<<i<<", ";
 
-
-
-
+        }
+    }
     // ===========================
 }
 
@@ -31,12 +33,11 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int hasil = 1;
+    for(int i=1;i<=p;i++){
+        hasil = hasil * n;
+    }
+    cout << hasil;
     // ===========================
 }
 
@@ -50,12 +51,21 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    if(s1 == s2){
+        if(s1 == s3){
+            cout<<"equilateral";
+        }else{
+            cout<<"isosceles";
+        }
+    }else{
+        if(s1 == s3){
+            cout<<"isosceles";
+        }else if(s2 == s3){
+            cout<<"isosceles";
+        }else{
+            cout<<"scalene";
+        }
+    }
     // ===========================
 }
 
@@ -70,12 +80,14 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i=0;
+    int number;
+    cin>> number;
+    while(number != 0){
+        arr[i] = number;
+        cin>>number;
+        i++;
+    }
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
@@ -92,11 +104,19 @@ int exercise_5(int arr[],int f) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-
-
-
-
-
+    int i=0;
+    int found = -1;
+    while(found <0){
+        if(arr[i] == f){
+            found = 1;
+        }else if(i > 10){
+            found = 2;
+        }
+        i++;
+    }
+    if(found == 1){
+        return i-1;
+    }
     // ===========================
     return -1;
 }
@@ -110,7 +130,20 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int temp[100];
+    int Index = exercise_5(arr,x);
+    if(Index != -1){
+        for(int i=Index+1;i<=10;i++){
+            temp[i] = arr[i];
+        }
+        arr[Index+1] = -1;
+        int k = Index+1;
+        for(int j=Index+2;j<=10;j++){
+            arr[j] = temp[k];
+            k++;
+        }
+    }
+
 
 
 
