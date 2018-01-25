@@ -36,13 +36,7 @@ void exercise_2(int n, int p)
     // ===========================
     // YOUR CODE HERE
     int prev;
-    cout<<"your code here"<<endl;
-    cout<<"Input number : ";
-    cin>>n;
     prev = n;
-    cout<<"Power : ";
-    cin>>p;
-
     for (int i = 1; i < p; i++)
     {
         n = n * prev;
@@ -63,14 +57,6 @@ void exercise_3(int s1, int s2, int s3)
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-    cout<<"Sisi 1 : ";
-    cin>>s1;
-    cout<<"Sisi 2 : ";
-    cin>>s2;
-    cout<<"Sisi 3 : ";
-    cin>>s3;
-    cout<<s1<<", "<<s2<<", "<<s3<<" = ";
 
     if ((s1==s2) && (s1==s3) && (s2==s3))
     {
@@ -101,7 +87,6 @@ void exercise_4()
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
     int i = 0;
     int n = 1;
     while (n!=0)
@@ -130,8 +115,8 @@ int exercise_5(int arr[],int f)
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
     int i = 0;
-    cout<<"Masukkan nomor yang akan dicari : ";
-    cin>>f;
+    /*cout<<"Masukkan nomor yang akan dicari : ";
+    cin>>f;*/
     for (i = 0; i<12; i++)
     {
         if (f == arr[i])
@@ -156,19 +141,22 @@ void exercise_6(int arr[],int x)
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-    int i = 0;
-    int idx = 0;
-    int temparr[12];
-    cout<<"Masukkan Nomor yang akan dicari : ";
-    cin>>x;
+    int i, temp, n = 0;
+    int prev = 0;
 
-    for (i=0; i < 12; i++)
+    n = exercise_5(arr,x);
+    i = n+1;
+    prev = -1;
+    while(arr[i] != 0)
     {
-        if (x == arr[i])
-        {
-            arr[i+1] = -1;
-        }
+
+            temp = arr[i];
+            arr[i] = prev;
+            prev = temp;
+            i++;
     }
+    arr[i] = prev;
+
     // ===========================
 }
 
