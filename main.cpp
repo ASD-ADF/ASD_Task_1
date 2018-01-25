@@ -3,11 +3,12 @@
 
 using namespace std;
 
-string name = "your name here";
-string nim = "your id here";
-string cls = "your class here";
+string name = "Muhammad fadhil ihsan";
+string nim = "1301170505";
+string cls = "IF-41-08";
 
-int main() {
+int main()
+{
     cout << "Hello world!, "<<name
          <<",\nid: " << nim
          <<"\nfrom " << cls<< endl;
@@ -115,7 +116,7 @@ int main() {
     cout<<"Initial Array   : ";
     view_arr(arr);
     cout<<endl;
-    x = 7;
+    x = 8;
     cout<<"input= 8"<<endl;
     cout<<"Output should be: 3, 6, 8, -1, 2, 7, 8, 1"<<endl;
     cout<<"Your Answer     : ";
