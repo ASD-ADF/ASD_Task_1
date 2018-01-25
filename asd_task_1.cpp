@@ -14,16 +14,11 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    for (int i = 100; i < 201; i++)
-    {
-        if((i%7==0) && (i%5!=0))
-        {
+    for(int i = 100; i<201; i++){
+        if(i%7==0 && i%5!=0){
             cout<<i<<", ";
         }
     }
-
-
-
 
 
     // ===========================
@@ -37,11 +32,11 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int answer = 1;
+    for(int i=0; i<p ; i++){
+        answer *= n;
+    }
+    cout<<answer;
 
     // ===========================
 }
@@ -56,11 +51,21 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    if(s1==s2 && s2==s3){
+        cout<<"equilateral";
+    }
+    else if ((s1==s2 && s1!=s3)||(s1==s3 && s1!=s2)){
+        cout<<"isosceles";
+    }
+    else if ((s2==s1 && s2!=s3)||(s2==s3 && s2!=s1)){
+        cout<<"isosceles";
+    }
+    else if ((s3==s1 && s3!=s2)||(s3==s2 && s3!=s1)){
+        cout<<"isosceles";
+    }
+    else if(s1!=s2!=s3){
+        cout<<"scalene";
+    }
 
     // ===========================
 }
@@ -74,12 +79,18 @@ void exercise_4() {
                 until user inputs number 0
         */
     int arr[100];
+    int i=0;
+    int x;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
 
+    while(x != 0){
 
+        cin>>x;
+        arr[i]=x;
+        i++;
+    }
 
 
     // ===========================
@@ -97,13 +108,11 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
+    for(int i=0;i<11;i++){
+        if (arr[i]==f){
+            return i;
+        }
+    }
     return -1;
 }
 
@@ -116,14 +125,25 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i;
+    int n;
+    int a;
+    int sb;
+    n=exercise_5(arr,x);
+    i=n-1;
+    sb=-1;
+    while(arr[i]!=0){
+        a=arr[i];
+        arr[i]=sb;
+        sb=a;
+        i++;
+    }
+    arr[i]=sb;
 
 
-
-
+}
 
     // ===========================
-}
 
 
 void view_arr(int arr[100]) {
@@ -134,4 +154,3 @@ void view_arr(int arr[100]) {
         i++;
     }
 }
-
