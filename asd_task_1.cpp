@@ -31,10 +31,14 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-
-    cout<<"your code here"<<endl;
-
-
+    int i=p;
+    int y=1;
+    while (i>0)
+    {
+        y*=n;
+        i--;
+    }
+    cout<<y<<endl;
 
 
 
@@ -66,6 +70,17 @@ void exercise_3(int s1, int s2, int s3) {
     if (s1==s3)
     {
         if(s3==s2)
+        {
+            cout<<"Equilateral"<<endl;
+        }
+        else
+        {
+            cout<<"Isosceles"<<endl;
+        }
+    }
+    if (s2==s3)
+    {
+        if(s3==s1)
         {
             cout<<"Equilateral"<<endl;
         }
