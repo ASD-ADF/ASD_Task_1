@@ -16,14 +16,21 @@ void exercise_1() {
     // ===========================
     // YOUR CODE HERE
     for (int i = 100; i < 201; i++)
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> f057068eed284b339aa24718eea6acaf2a574ad4
     {
         if((i%7==0) && (i%5!=0))
         {
             cout<<i<<", ";
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f057068eed284b339aa24718eea6acaf2a574ad4
 
 
 
@@ -40,6 +47,7 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
+<<<<<<< HEAD
     int hasil =1 ;
     int i =1 ;
     while (i<=p)
@@ -51,6 +59,19 @@ void exercise_2(int n, int p) {
 
 
 
+=======
+    int hasil = 1;
+    cout<<"N = ";
+    cin>>n>>endl;
+    cout<<"P = ";
+    cin>>p>>endl;
+    for (int i = 1;p;i++)
+    
+    {
+        hasil=hasil*n;
+    }
+    cout<<hasil;
+>>>>>>> f057068eed284b339aa24718eea6acaf2a574ad4
 
 
 
@@ -67,6 +88,7 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
+<<<<<<< HEAD
     if ((s1==s2) && (s1==s3)&& (s2==s3))
      {
         cout<<"equilateral";
@@ -74,12 +96,30 @@ void exercise_3(int s1, int s2, int s3) {
         else if ((s1==s2) || (s1==s3) || (s2==s3))
                 {
                  cout<<"isosceles";
+=======
+    cout<<"S1 = ";
+    cin>>s1>>endl;
+    cout<<"S2 = ";
+    cin>>s2>>endl;
+    cout<<"S3 = ";
+    cin>>s3>>endl;
+    if ((s1==s2) && (s1==s3)&& (s2==s3)
+     {
+        cout<<"equilateral";
+     }
+        else if ((s1==s2) || (s1==s3) || (s2==s3)
+                {
+                 cout<<"isoceles";
+>>>>>>> f057068eed284b339aa24718eea6acaf2a574ad4
                 }
                 else
                     {
                         cout<<"scalene";
                     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f057068eed284b339aa24718eea6acaf2a574ad4
 
 
 
@@ -98,11 +138,18 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
+<<<<<<< HEAD
     int i=0;
     cin>>arr[0];
     while (arr[i]!=0) {
     i++;
     cin>>arr[i];
+=======
+    do {
+        
+
+
+>>>>>>> f057068eed284b339aa24718eea6acaf2a574ad4
 
 
     }
