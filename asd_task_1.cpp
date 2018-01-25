@@ -111,12 +111,13 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    int a;
-    do {
-      cin >>arr[a];
-    } while( arr[a] = 0); {
-        a++;
+    int a=0;
+    cin>>arr[0];
+    while (arr[a]!=0) {
+    a++;
+    cin>>arr[a];
     }
+
 
 
     // ===========================
@@ -134,7 +135,15 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
+    while ((i>=0)&&(arr[i]!=0)&&(arr[i+1]!=0))
+    {
+        if (arr[i]==f)
+        {
+            return i;
+        }
+        i++;
+    }
 
 
 
