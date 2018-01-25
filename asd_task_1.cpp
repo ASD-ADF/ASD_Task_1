@@ -102,25 +102,15 @@ void exercise_4() {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-    int i;
-    int n;
+    int i = 0;
+    cin>>arr[0];
+    i++;
 
-    cout<<"Please, masukkan angka yang ingin anda masukkan";
-    cin>>i;
-
-    while(arr[i]!=0) {
-        cout<<arr[i]<<", ";
+    while (arr[i-1]!=0) {
+        cin>>arr[i];
         i++;
 
-
-
     }
-
-
-
-
-
-
 
     // ===========================
     cout<<"array result: ";
