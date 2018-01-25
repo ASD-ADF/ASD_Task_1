@@ -164,7 +164,7 @@ void exercise_6(int arr[],int x) {
     // YOUR CODE HERE
     int i=0;
     int j=0;
-    while ((i>0)&&(arr[i]!=0))
+    while ((i>=0) && (arr[i]!=0))
     {
         j++;
         i++;
@@ -172,7 +172,7 @@ void exercise_6(int arr[],int x) {
     i=0;
     arr[j]=-1;
     int temp;
-    while ((i>=0)&&(arr[i]!=0))
+    while ((i>=0) &&(arr[i]!=0))
     {
         if(arr[i]==x)
         {
@@ -185,10 +185,6 @@ void exercise_6(int arr[],int x) {
         }
         i++;
     }
-
-
-
-
 
     // ===========================
 }
