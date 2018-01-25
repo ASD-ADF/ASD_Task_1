@@ -15,12 +15,12 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    int i = 100;
 
-    for( i < 201; i++) {
 
-        if i%7==0) && ( i%5!=0) {
-        count<<i<<" , ";
+    for(  int i = 100; i < 201; i++) {
+
+        if ((i%7==0) && ( i%5!=0)) {
+        cout<<i<<" , ";
         }
     }
 
@@ -147,7 +147,7 @@ int exercise_5(int arr[],int f) {
             found = true;
             }
 
-    if(!=found){
+    if(!found){
 
         return -1;
         }
