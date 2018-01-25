@@ -70,20 +70,22 @@ void exercise_3(int s1, int s2, int s3) {
     cout<<"Masukkan sisi ketiga \n";
     cin>>s3;
 
-    if (s1==s2==s3) {
-        cout<<"Segitiga sama sisi\n";
+    while(s1==s2==s3){
+
+        if (s1==s2==s3) {
+            cout<<"Segitiga sama sisi\n";
+        }
+
+        if ((s1==s2)>s3) {
+            cout<<"Segitiga sama kaki\n";
+        }
+
+        if (s1!=s2!=s3){
+            cout<<"Segitiga sembarang \n";
+
+        }
+
     }
-
-    if ((s1==s2)>s3) {
-        cout<<"Segitiga sama kaki\n";
-    }
-
-    if (s1!=s2!=s3){
-        cout<<"Segitiga sembarang \n";
-
-    }
-
-
 
 
 
@@ -141,9 +143,11 @@ int exercise_5(int arr[],int f) {
 
         return -1;
         }
+    }
 }
 
-void exercise_6(int arr[],int x){
+void exercise_6(int arr[],int x)
+{
 
     /**
          TODO:  Write a procedure algorithm to find a number
