@@ -150,33 +150,17 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    int i=0;
-    int j=0;
-    while ((i>=0) && (arr[i]!=0))
+    int i = 0;
+    while (arr[i]!=x);
     {
-        j++;
         i++;
     }
-    i=0;
-    arr[j]=-1;
-    int temp;
-    while ((i>0) && (arr[i]!=0))
+    int j;
+    for (j=12; j>1; j--)
     {
-
-        if(arr[i]==x)
-        {
-            for (j; j>i+1; j--)
-            {
-                temp=arr[j];
-                arr[j]=arr[j-1];
-                arr[j-1]=temp;
-            }
-        }
-        i++;
+        (arr[j]=arr[j-1]);
     }
-
-
-
+    arr[i+1] = -1;
 
 
     // ===========================
