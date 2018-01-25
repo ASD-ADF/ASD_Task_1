@@ -7,7 +7,8 @@ string name = "your name here";
 string nim = "your id here";
 string cls = "your class here";
 
-int main() {
+int main()
+{
     cout << "Hello world!, "<<name
          <<",\nid: " << nim
          <<"\nfrom " << cls<< endl;

@@ -1,4 +1,5 @@
 #include <iostream>
+#include"asd_task_1.h""
 
 using namespace std;
 
@@ -14,13 +15,14 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"Algoritma yang bisa dibagi 7 tetapi tidak bisa dibagi 5"<<endl;
+    int i = 100;
 
+    for( i < 201; i++) {
 
-
-
-
-
+        if i%7==0) && ( i%5!=0) {
+        count<<i<<" , ";
+        }
+    }
 
     // ===========================
 }
@@ -36,7 +38,7 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+
     cout<<"- - Input - -"<<n<<" , " << p;
     hasil=n;
 
@@ -59,7 +61,27 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    cout<<"Masukkan sisi pertama \n";
+    cin>>s1;
+
+    cout<<"Masukkan sisi kedua \n";
+    cin>>s2;
+
+    cout<<"Masukkan sisi ketiga \n";
+    cin>>s3;
+
+    if (s1==s2==s3) {
+        cout<<"Segitiga sama sisi\n";
+    }
+
+    if ((s1==s2)>s3) {
+        cout<<"Segitiga sama kaki\n";
+    }
+
+    if (s1!=s2!=s3){
+        cout<<"Segitiga sembarang \n";
+
+    }
 
 
 
@@ -80,6 +102,21 @@ void exercise_4() {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
+    int i;
+    int n;
+
+    cout<<"Please, masukkan angka yang ingin anda masukkan";
+    cin>>i;
+
+    while(arr[i]!=0) {
+        cout<<arr[i]<<", ";
+        i++;
+
+
+
+    }
+
+
 
 
 
@@ -100,17 +137,24 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+   int i;
+   bool found;
+   for (i=0;i<12;i++){
 
+        if(arr[i]==f){
 
+            return i;
+            found = true;
+            }
 
+    if(!=found){
 
-
-    // ===========================
-    return -1;
+        return -1;
+        }
 }
 
-void exercise_6(int arr[],int x) {
+void exercise_6(int arr[],int x){
+
     /**
          TODO:  Write a procedure algorithm to find a number
          inside an unsorted array of integer,
@@ -119,14 +163,35 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
 
 
+    int i;
+    int a;
+    int b;
+    i = -1;
+    while(arr[i]!=x){
 
+        i++;
+        if (arr[i]==x) {
 
-    // ===========================
+            b = i + 1;
+
+        }
+
+        for (a =13;a > b;a--){
+
+            arr[a]=arr[a-1];
+        }
+
+        arr[b] = -1;
+    }
+
 }
+
+
+    // ==========================
+
 
 
 void view_arr(int arr[100]) {
