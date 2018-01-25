@@ -14,8 +14,13 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    for (int i = 100; i < 201; i++)
+    {
+        if ((i%7==0) && (i%5!=0))
+        {
+            cout << i <<", ";
+        }
+    }
 
 
 
@@ -31,7 +36,14 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = 1;
+    int x = n;
+    while (i < p)
+    {
+        n *= x;
+        i++;
+    }
+    cout<<n<<endl;
 
 
 
@@ -50,8 +62,23 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    {
 
+    if(s1==s2 && s1==s3)
+    {
+        cout<<"equilateral"<<endl;
+    }
+    else if(s1==s2 || s1==s3 || s2==s3)
+    {
+        if(s1!=s2 || s1!=s3 || s2!=s3)
+        {
+            cout<<"isosceles"<<endl;
+        }
+    }
+    else
+    cout<<"scalene"<<endl;
+
+  }
 
 
 
@@ -70,11 +97,15 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
-
-
-
+    int i=0;
+    cin>>arr[0];
+    i++;
+    while (arr[i-1]!=0)
+    {
+        cin>>arr[i];
+        i++;
+    }
 
     // ===========================
     cout<<"array result: ";
@@ -91,14 +122,19 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
-    return -1;
+    int i = 0;
+    while ((arr[i]!=f) && (i < 12))
+    {
+        i++;
+    }
+    if(arr[i]==f)
+    {
+        return i;
+    }
+    else
+    {
+        return -1;
+    }
 }
 
 void exercise_6(int arr[],int x) {
@@ -110,7 +146,17 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = 0;
+    while (arr[i]!=x)
+    {
+        i++;
+    }
+    int j;
+    for (j=12;j>1;j--)
+    {
+        (arr[j]=arr[j-1]);
+    }
+    arr[i+1] = -1;
 
 
 
@@ -127,5 +173,6 @@ void view_arr(int arr[100]) {
         cout<<arr[i]<<", ";
         i++;
     }
-}
+ }
+
 
