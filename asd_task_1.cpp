@@ -14,7 +14,11 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for(int i = 100; i<201; i++){
+        if (i%7==0 and i%5!=0){
+            cout<<i<<", ";
+        }
+    }
 
 
 
@@ -28,10 +32,11 @@ void exercise_2(int n, int p) {
          TODO:  Write a procedure algorithm to
                 raise any number to any power.
         */
-
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int bil;
+    bil = 1;
+    for(int i=1; i<=p; i++){
+        bil=bil*n;
+    }cout<<bil<<"";
 
 
 
@@ -50,7 +55,13 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    if((s1==s2)&&(s2==s3)&&(s3==s1)){
+        cout<<"equilateral"<<endl;
+    }else if((s1!=s2)&&(s2!=s3)&&(s3!=s1)){
+        cout<<"scalene"<<endl;
+    }else{
+        cout<<"isosceles"<<endl;
+    }
 
 
 
@@ -70,12 +81,14 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+        int i=0;
+        int a;
+        while ((i<101) && (a!=0)){
+            cout<<"input number= "<<endl;
+            cin >> a;
+            arr[i]=a;
+            i++;
+        }
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
@@ -91,15 +104,17 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
-    return -1;
+      int i=0;
+    int foundTarget=-1;
+    while((arr[i]!=0)&&(foundTarget==-1)){
+        if(arr[i]==f){
+              foundTarget=i;
+           }
+           i++;
+    }
+    return foundTarget;
 }
+
 
 void exercise_6(int arr[],int x) {
     /**
@@ -110,13 +125,23 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = 0;
+    int foundTarget=-1;
 
+    while((arr[i]!=0)&&(foundTarget==-1)){
+        if(arr[i]==x){
+            foundTarget = i;
+        }else{
+            i++;
+        }
+    }
 
-
-
-
-    // ===========================
+    if(foundTarget!=-1){
+        for(i=10;i>foundTarget;i--){
+            arr[i+1]=arr[i];
+        }
+        arr[foundTarget+1]=-1;
+    }
 }
 
 
@@ -128,4 +153,6 @@ void view_arr(int arr[100]) {
         i++;
     }
 }
+
+
 
