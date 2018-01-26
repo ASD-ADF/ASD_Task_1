@@ -14,8 +14,19 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for(int i = 100; i<201; i++){
 
+
+        if (i%7==0 and i%5!=0){
+
+
+           cout<<i<<", ";
+
+
+        }
+
+
+    }
 
 
 
@@ -31,7 +42,19 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int num;
+
+
+    num = 1;
+
+
+    for(int i=1; i<=p; i++){
+
+
+        num=num*n;
+
+
+    }cout<<num<<"";
 
 
 
@@ -50,8 +73,21 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    if ((s1 == s2 && s2 != s3) || (s2 == s3 && s3 != s1) || (s3 == s1 && s1 != s2)) {
 
+
+		cout << "isosceles";
+    }
+    else if (s1 != s2 && s2 != s3 && s3 != s1) {
+    cout << "scalene";
+    }
+    else if (s1 == s2 && s2 == s3) {
+
+
+		cout << "equilateral";
+
+
+	}
 
 
 
@@ -70,8 +106,12 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    int in = -1, i = 0;
+        do {
+        cin >> in;
+        arr[i] = in;
+        i++;
+        } while (in != 0);
 
 
 
@@ -91,14 +131,23 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
 
 
+    int x=-1;
+    bool found;
+    do{
 
 
+    if (arr[i]==f) {
+            x= i;
+    found=true;
+    }
+    i++;
+    } while(i<sizeof(arr[0]) && found == false );
 
     // ===========================
-    return -1;
+    return x;
 }
 
 void exercise_6(int arr[],int x) {
@@ -110,7 +159,42 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int h=0;
+
+
+    int f=-1;
+
+
+    while ((arr[h] == 0) && (f == -1)) {
+
+
+        if (arr[h] == x) {
+
+
+            f = x;
+
+
+       } else {
+
+
+           x++;
+
+
+        }
+
+
+    }
+    if (f == -1) {
+
+        for ( int i = 0 ; i<f ; f++) {
+    arr[h+1]=arr[h];
+
+
+        }
+arr[f+1]=-1;
+
+
+    }
 
 
 
