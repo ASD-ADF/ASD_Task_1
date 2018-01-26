@@ -14,7 +14,13 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = 100;
+    while ( i<=200 ){
+        if ( ( i%7 == 0 ) && ( i%5!=0 ) ){
+            cout << i << ", ";
+        }
+        i++;
+    }
 
 
 
@@ -31,7 +37,12 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int num = 1;
+    for ( int i = 0 ; i < p ; i++ ) {
+        num = n * num;
+    }
+    cout << num;
+
 
 
 
@@ -50,7 +61,13 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    if ( ( s1 == s2 ) && ( s2 == s3 ) &&  ( s1 == s3 ) ){
+        cout << "equilateral" << endl;
+    } else if ( ( s1 == s2 ) || ( s2 == s3 ) || ( s1 == s3 )){
+        cout << "isosceles" << endl;
+    } else{
+        cout << "scalene" << endl;
+    }
 
 
 
@@ -70,15 +87,22 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = 0;
+    int n;
+    while ( ( i < 100 ) && ( n != 0 ) ){
+        cin >> n;
+        arr[i] = n;
+        i++;
+    }
 
-
-
-
-
-    // ===========================
-    cout<<"array result: ";
+    cout << "array result : ";
     view_arr(arr);
+
+
+
+
+
+    // ===========
 }
 
 int exercise_5(int arr[],int f) {
@@ -91,7 +115,12 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i;
+    for ( i = 0 ; i < f ; i++ ){
+        if ( arr[i] == f ){
+            return i;
+        }
+    }
 
 
 
@@ -110,7 +139,16 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int a = exercise_5( arr , x ) + 1;
+    int t1 = arr[a];
+    int t2;
+    arr [a] = -1;
+    while ( arr[a] != 0 ){
+        a++;
+        t2 = arr[a];
+        arr[a] = t1;
+        t1 = t2;
+    }
 
 
 
