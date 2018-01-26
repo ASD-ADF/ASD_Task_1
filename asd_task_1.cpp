@@ -14,7 +14,11 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+        for (int i = 100;  i <201; i++){
+            if (i%7 == 0 and i%5!=0){
+                cout<< i <<" , ";}
+        }
+
 
 
 
@@ -31,7 +35,11 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int a;
+    a = 1;
+    for (int i = a; i <= p ; i++) {
+        a=a*n;
+    } cout << a <<" ";
 
 
 
@@ -50,7 +58,13 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    if((s1==s2)&&(s2==3)&&(s3==s1)){
+        cout<< "equilateral"<<endl;
+    }else if ((s1!=s2)&&(s2!=s3)&&(s3!=s1)){
+        cout<< "scalene" <<endl;
+    }else{
+        cout<< "isosceles"<<endl;
+        }
 
 
 
@@ -70,7 +84,15 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
+    int a;
+    while ((i<101)&&(a!=0)){
+        cout<<"input number: "<<endl;
+        cin >> a;
+        arr[i]=a;
+        i++;
+    }
+
 
 
 
@@ -91,14 +113,22 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
+    int foundtarget=-1;
+
+    while ((arr[i]!=0)&&(foundtarget==-1)){
+        if(arr[i]==f){
+            foundtarget=i;
+        }
+        i++;
+    }
 
 
 
 
 
     // ===========================
-    return -1;
+    return foundtarget;
 }
 
 void exercise_6(int arr[],int x) {
@@ -110,8 +140,21 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    int i=0;
+    int foundtarget=-1;
+    while((arr[i]!=0)&&(foundtarget==-1)){
+        if(arr[i]==x){
+            foundtarget =-i;
+        }else{
+            i++;
+        }
+    }
+    if(foundtarget!=-1){
+        for(i=10;i>foundtarget;i--){
+            arr[i+1]=arr[i];
+        }
+        arr[foundtarget+1]=-1;
+    }
 
 
 
