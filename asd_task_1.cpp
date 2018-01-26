@@ -12,15 +12,12 @@ void exercise_1() {
             between 100 and 200 (both included)
     */
 
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
-
-
-
-
-    // ===========================
+    for(int i = 100; i<201; i++){
+        if (i%7==0 && i%5!=0){
+            cout<<i<<", ";
+        }
+    }
 }
 
 void exercise_2(int n, int p) {
@@ -29,15 +26,11 @@ void exercise_2(int n, int p) {
                 raise any number to any power.
         */
 
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
+    int power = 1;
+    for(int i=1; i<=p; i++){
+        power=power*n;
+    }
+    cout<<power;
 }
 
 void exercise_3(int s1, int s2, int s3) {
@@ -48,15 +41,13 @@ void exercise_3(int s1, int s2, int s3) {
                 given the size of the three sides
         */
 
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
+    if ((s1==s2)&&(s2==s3)) {
+        cout<<"the triangle is an equilateral";
+    }else if ((s1==s2) || (s1==s3) || (s2==s3)) {
+        cout<<"the triangle is isosceles";
+    }else {
+        cout<<"the triangle is scalene";
+    }
 }
 
 
@@ -68,16 +59,15 @@ void exercise_4() {
                 until user inputs number 0
         */
     int arr[100];
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
-
-
-
-
-    // ===========================
-    cout<<"array result: ";
+    float number, sum = 0;
+    do {
+        cout<<"enter a number: ";
+        cin>>number;
+        sum += number;
+    }
+    while (number != 0);
+    cout<<"array result: "<<sum;
     view_arr(arr);
 }
 
@@ -89,17 +79,18 @@ int exercise_5(int arr[],int f) {
                 outputs -1 if such number is not found
         */
 
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
+    int i;
+    for(i = 0; i < f; i++)
+    {
+        if(arr[i] == f)
+            return i;
+    }
 
-
-
-
-    // ===========================
+    /* If no fixed point present then return -1 */
     return -1;
 }
+
 
 void exercise_6(int arr[],int x) {
     /**
@@ -107,16 +98,16 @@ void exercise_6(int arr[],int x) {
          inside an unsorted array of integer,
          then insert a negative one (-1) behind such found number
         */
-
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
+    int order = exercise_5(arr,x)+1;
+    int temp = arr[order];
+    int temp2;
+    arr[order] = -1;
+    while (arr[order] != 0){
+        order++;
+        temp2 = arr[order];
+        arr[order] = temp;
+        temp = temp2;
+    }
 }
 
 
@@ -128,4 +119,3 @@ void view_arr(int arr[100]) {
         i++;
     }
 }
-
