@@ -14,12 +14,13 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i = 100;
+    while (i<=200){
+            if ((i %7 == 0) && (i %5!= 0)){
+                cout << i << ", ";
+            }
+            i++;
+		}
     // ===========================
 }
 
@@ -31,12 +32,11 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+ 	int a = n;
+	for (int i = 1; i < p; i++) {
+		a = a * n;
+	}
+	cout << a;
     // ===========================
 }
 
@@ -50,12 +50,15 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    if ((s1 == s2 && s2 != s3) || (s2 == s3 && s3 != s1) || (s3 == s1 && s1 != s2)) {
+		cout << "isosceles";
+	}
+    else if (s1 != s2 && s2 != s3 && s3 != s1) {
+		cout << "scalene";
+	}
+	else if (s1 == s2 && s2 == s3) {
+		cout << "equilateral";
+	}
     // ===========================
 }
 
@@ -70,12 +73,12 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+   	int in = -1, i = 0;
+	do {
+		cin >> in;
+		arr[i] = in;
+		i++;
+	} while (in != 0);
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
@@ -91,12 +94,15 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+	int i = 0;
+	while (arr[i] != NULL) {
+		if (arr[i] == f) {
+			return i;
+		}
+		else {
+			i++;
+		}
+	}
     // ===========================
     return -1;
 }
@@ -110,12 +116,25 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+   	int i = 0, swap = 0, place = -1;
+	bool found = 0;
+	while (arr[i] != NULL && not found) {
+		if (arr[i] == x) {
+			found = 1;
+			i++;
+		}
+		else {
+			i++;
+		}
+	}
+	if (found) {
+		do {
+			swap = arr[i];
+			arr[i] = place;
+			place = swap;
+			i++;
+		} while (arr[i-1] != NULL);
+	}
     // ===========================
 }
 
