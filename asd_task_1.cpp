@@ -119,18 +119,20 @@ void exercise_6(int arr[],int x) {
          inside an unsorted array of integer,
          then insert a negative one (-1) behind such found number
         */
+        int f = 7;
+        x= find (arr, f);
+        x++;
+        int t1 =-1;
+        int t2 = arr[x];
+        while (t2 != 0){
+            arr[x]= t1;
+            x++;
+            t1 = t2;
+            t2 = arr[x];
+            arr[x]=t1;
+        }// ===========================
 
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
-}
-
+)
 
 void view_arr(int arr[100]) {
     /** Function Helper */
