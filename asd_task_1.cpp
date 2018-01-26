@@ -14,8 +14,14 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    //cout<<"your code here"<<endl;
+int n = 100;
+while (n < 201) {
+    if ((n % 7 == 0) && (n % 5 != 0)){
+        cout<< n << endl;
+    }
+    n++;
+}
 
 
 
@@ -31,9 +37,12 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    //cout<<"your code here"<<endl;
+int x = n;
+for (int i = 0 ; i < p-1 ; i++) {
+    x = x*n;
+}
+cout << x ;
 
 
 
@@ -50,9 +59,16 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    //cout<<"your code here"<<endl;
 
-
+if (s1 == s2 && s1 == s3){
+    cout << "Equilateral" ;
+} else if (s1 == s2 || s1 == s3 || s2 == s3){
+//} else if (s1 == s2 && s1 == s3){
+    cout << "Isosceles";
+} else {
+    cout << "Scalene";
+}
 
 
 
@@ -70,8 +86,12 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    //cout<<"your code here"<<endl;
+int i,x = 0;
+  do {
+    cin>>arr[i];
+    i++;
+} while ((i < 101) && (arr[i-1] != 0));
 
 
 
@@ -91,14 +111,22 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    //cout<<"your code here"<<endl;
+int i = 0;
+int x = -1;
+bool found=false;
+do {
+        if (arr[i] == f) {
+            x = i;
+            found = true;
+        }
+    i++;
+} while (i < sizeof(arr) && found == false);
 
 
 
     // ===========================
-    return -1;
+    return x;
 }
 
 void exercise_6(int arr[],int x) {
@@ -111,13 +139,30 @@ void exercise_6(int arr[],int x) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
+    int a = 0;
+    int ft=-1;
 
+    while((arr[a]!=0)&&(ft==-1)){
+        if(arr[a]==x){
+            ft = a;
+        }else{
+            a++;
+        }
+    }
+
+    if(ft!=-1){
+        for(a=10;a>ft;a--){
+            arr[a+1]=arr[a];
+        }
+        arr[ft+1]=-1;
+    }
+}
 
 
 
 
     // ===========================
-}
+
 
 
 void view_arr(int arr[100]) {
