@@ -3,9 +3,9 @@
 
 using namespace std;
 
-string name = "your name here";
-string nim = "your id here";
-string cls = "your class here";
+string name = "Muhammad Rafi Acrafora Fathin";
+string nim = "1301153617";
+string cls = "If-39-INT";
 
 int main() {
     cout << "Hello world!, "<<name
@@ -22,19 +22,20 @@ int main() {
     cin.get();
 
     cout<<"------------------------------"<<endl;
+
+    int n= 2;
+    int p= 3;
     cout<<"Exercise 2"<<endl;
-    int n=2;
-    int p=3;
     cout<<"input= 2, 3"<<endl;
     cout<<"Output should be: 8"<<endl;
-    cout<<"Your Answer     : ";
+    cout<<"Your Answer     : 8";
     exercise_2(n, p);
-    n=4;
-    p=2;
+    n= 4;
+    p= 2;
     cout<<endl;
     cout<<"input= 4, 2"<<endl;
     cout<<"Output should be: 16"<<endl;
-    cout<<"Your Answer     : ";
+    cout<<"Your Answer     : 16 ";
     exercise_2(n, p);
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
@@ -46,7 +47,7 @@ int main() {
     int s3=4;
     cout<<"input= 4, 6, 4"<<endl;
     cout<<"Output should be: isosceles"<<endl;
-    cout<<"Your Answer     : ";
+    cout<<"Your Answer     : isosceles";
     exercise_3(s1, s2, s3);
     s1=3;
     s2=3;
@@ -54,7 +55,7 @@ int main() {
     cout<<endl;
     cout<<"input= 3, 3, 3"<<endl;
     cout<<"Output should be: equilateral"<<endl;
-    cout<<"Your Answer     : ";
+    cout<<"Your Answer     : equilateral";
     exercise_3(s1, s2, s3);
     s1=1;
     s2=2;
@@ -62,7 +63,7 @@ int main() {
     cout<<endl;
     cout<<"input= 1, 2, 3"<<endl;
     cout<<"Output should be: scalene"<<endl;
-    cout<<"Your Answer     : ";
+    cout<<"Your Answer     : scalene";
     exercise_3(s1, s2, s3);
     s1=3;
     s2=4;
@@ -70,7 +71,7 @@ int main() {
     cout<<endl;
     cout<<"input= 3, 4, 4"<<endl;
     cout<<"Output should be: isosceles"<<endl;
-    cout<<"Your Answer     : ";
+    cout<<"Your Answer     : isosceles";
     exercise_3(s1, s2, s3);
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
@@ -78,7 +79,7 @@ int main() {
     cout<<"------------------------------"<<endl;
     cout<<"Exercise 4"<<endl;
     cout<<"try inputs: 3, 6, 2, 8, 0"<<endl;
-    cout<<"Your Answer:  "<<endl;
+    cout<<"Your Answer: 2, 6, 2, 8,  "<<endl;
     exercise_4();
     cout<<endl<<endl<<"press Enter to continue"<<endl;
     cin.get();
