@@ -14,11 +14,11 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    for (int i>99; (i<=200); i++) {
+        if ((i%7==0) && (i%5!=0)) {
+            cout << i <<", ";
+        }
+    }
 
     // ===========================
 }
@@ -31,11 +31,11 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int result = 1;
+    for (int i=0; i<p; i++){
+        result *= n;
+    }
+    cout<<result;
 
     // ===========================
 }
@@ -50,10 +50,13 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
+    if ((s1==s2) && (s2==s3)){
+        cout << "equilateral";
+    }
+    else if ((s1==s3)or(s1==s2)or(s2==s3)){
+        cout << "isosceles";
+    }
+        cout << "scalene";
 
 
     // ===========================
@@ -70,9 +73,14 @@ void exercise_4() {
     int arr[100];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    int i =0;
+    while (arr[i]!=0){
+        if (arr[i]=f){
+            return i;
+        }
+            return -1;
+    }
+    cout<<i+1<<endl;
 
 
 
@@ -91,7 +99,18 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    f = 7;
+    x = find(arr,f);
+    x++
+    int a = -1;
+    int b = arr[x];
+    while (b!=0){
+        arr[x] := a;
+        x++
+        a := b;
+        b := arr[x];
+    }
+    cout<<arr[x] := a <<endl;
 
 
 
@@ -110,7 +129,23 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i;
+    int j;
+    i=-1;
+    while (arr[i]!= x)
+    {
+        i++;
+        if(arr[i]==x )
+        {
+          j=i+1;
+        }
+
+    }
+    for (i=12; i>j; i-- )
+    {
+        arr[i]=arr[i-1];
+    }
+    arr[j]=-1;
 
 
 
