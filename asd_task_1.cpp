@@ -12,14 +12,12 @@ void exercise_1() {
             between 100 and 200 (both included)
     */
 
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
-
-
-
-
+    for(int i = 100; i<201; i++){
+        if (i%7==0 and i%5!=0){
+            cout<<i<<", ";
+        }
+    }
     // ===========================
 }
 
@@ -32,11 +30,12 @@ void exercise_2(int n, int p) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-
-
-
-
-
+     int num;
+    num = 1;
+    for(int i=1; i<=p; i++){
+        num=num*n;
+    }
+    cout<<num<<"";
     // ===========================
 }
 
@@ -48,15 +47,12 @@ void exercise_3(int s1, int s2, int s3) {
                 given the size of the three sides
         */
 
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
+    if ((s1==s2)&&(s2==s3)&&(s1==s3)){
+        cout<<"equilateral"<<endl;
+    }else if ((s1==s2)||(s2==s3)||(s3==s1)){
+        cout<<"isosceles"<<endl;
+    }else
+        cout<<"scalene"<<endl;
 }
 
 
@@ -68,15 +64,15 @@ void exercise_4() {
                 until user inputs number 0
         */
     int arr[100];
-    // ===========================
-    // YOUR CODE HERE
+
     cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
+    int x = 0;
+    int j;
+    while ((x<100)&&(j!=0)){
+        cin>>j;
+        arr[x]=j;
+        x++;
+    }
     cout<<"array result: ";
     view_arr(arr);
 }
@@ -92,14 +88,17 @@ int exercise_5(int arr[],int f) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
-    return -1;
+       int i=0;
+    int get=-1;
+    while((arr[i]!=0)&&(get==-1)){
+        if(arr[i]==f){
+              get=i;
+           }
+           i++;
+    }
+    return get;
 }
+
 
 void exercise_6(int arr[],int x) {
     /**
@@ -111,7 +110,23 @@ void exercise_6(int arr[],int x) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
+    int j = 0;
+    int get=-1;
 
+    while((arr[j]!=0)&&(get==-1)){
+        if(arr[j]==x){
+            get = j;
+        }else{
+            j++;
+        }
+    }
+
+    if(get!=-1){
+        for(j=10;j>get;j--){
+            arr[j+1]=arr[j];
+        }
+        arr[get+1]=-1;
+    }
 
 
 
@@ -128,4 +143,7 @@ void view_arr(int arr[100]) {
         i++;
     }
 }
+
+
+
 

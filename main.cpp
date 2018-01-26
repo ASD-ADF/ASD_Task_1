@@ -115,7 +115,7 @@ int main() {
     cout<<"Initial Array   : ";
     view_arr(arr);
     cout<<endl;
-    x = 7;
+    x = 8;
     cout<<"input= 8"<<endl;
     cout<<"Output should be: 3, 6, 8, -1, 2, 7, 8, 1"<<endl;
     cout<<"Your Answer     : ";
@@ -128,3 +128,4 @@ int main() {
     cout<<"Congratulation on completing"<<endl;
     return 0;
 }
+
