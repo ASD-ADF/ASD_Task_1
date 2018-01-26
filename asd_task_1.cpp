@@ -103,15 +103,16 @@ int exercise_5(int arr[],int f) {
     // ===========================
     // YOUR CODE HERE
     int i=0;
-    while (arr[i]!=0){
-        if (arr[i]=f){
-            return i;
-        }else{
+    while ((arr[i]!=0) && (f!=arr[i])){
+            i++;
+    }
+        if (arr[i]==0){
             return -1;
+        }else{
+            return i;
         }
     }
-    i++;
-}
+
 
 void exercise_6(int arr[],int x) {
     /**
@@ -119,20 +120,23 @@ void exercise_6(int arr[],int x) {
          inside an unsorted array of integer,
          then insert a negative one (-1) behind such found number
         */
-        int f = 7;
-        x= find (arr, f);
-        x++;
-        int t1 =-1;
-        int t2 = arr[x];
-        while (t2 != 0){
-            arr[x]= t1;
-            x++;
-            t1 = t2;
-            t2 = arr[x];
-            arr[x]=t1;
-        }// ===========================
+        int i= 0;
+        int a= 0;
+        while ((arr[i]!=0) && (arr[i]!= x)){
+            i++;
+        }
+        while (arr[a]!=0){
+            a++;
+        }
+        int n=a-i;
+        for(int y =1; y<=n; y++){
+            arr[a+1]=arr[a];
+            a--;
+        }
+        arr[i+1]=-1;
 
-)
+}
+
 
 void view_arr(int arr[100]) {
     /** Function Helper */
