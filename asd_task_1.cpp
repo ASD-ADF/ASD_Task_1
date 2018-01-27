@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -14,12 +15,12 @@ void exercise_1() {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int a;
+    for (a=100; a<=200; a++){
+        if ((a % 7 == 0) and (a % 5 != 0)){
+            cout<<a<<", ";
+        }
+    }
     // ===========================
 }
 
@@ -31,12 +32,9 @@ void exercise_2(int n, int p) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int hasil;
+    hasil = pow(n,p);
+    cout<<hasil;
     // ===========================
 }
 
@@ -50,12 +48,13 @@ void exercise_3(int s1, int s2, int s3) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    if ((s1==s2)and (s1==s3)){
+        cout<<"equilateral";
+    }else if ((s1 != s2 ) and (s1 != s3 ) and (s2 != s3 )){
+        cout<<"scalene";
+    }else{
+        cout<<"isosceles";
+    }
     // ===========================
 }
 
@@ -68,14 +67,17 @@ void exercise_4() {
                 until user inputs number 0
         */
     int arr[100];
+    int input, i;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    for(i=0; i<=100; i++){
+        cout<<"Input number : ";
+        cin>>input;
+        arr[i]=input;
+        if(input == 0){
+            break;
+        }
+    }
     // ===========================
     cout<<"array result: ";
     view_arr(arr);
@@ -91,12 +93,12 @@ int exercise_5(int arr[],int f) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i;
+    for(i=0; i<12; i++){
+        if(arr[i]==f){
+            return i;
+        }
+    }
     // ===========================
     return -1;
 }
@@ -110,12 +112,16 @@ void exercise_6(int arr[],int x) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int y = exercise_5(arr ,x) + 1;
+    int temp1 = arr[y];
+    int temp2;
+    arr [y] = -1;
+    while ( arr[y] != 0 ){
+        y++;
+        temp2 = arr[y];
+        arr[y] = temp1;
+        temp1 = temp2;
+    }
     // ===========================
 }
 
