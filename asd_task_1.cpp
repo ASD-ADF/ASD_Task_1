@@ -61,19 +61,7 @@ void exercise_3(int s1, int s2, int s3) {
 }
 
 
-void exercise_4() {
-    /**
-         TODO:  Write a procedure algorithm to continuously
-                receive a numerical input from user
-                and add it into an array of integer
-                until user inputs number 0
-        */
-    int arr[100];
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+FUNGSI SAYA HAPUS
 
 
 
@@ -93,7 +81,7 @@ int exercise_5(int arr[],int f) {
     // ===========================
     // YOUR CODE HERE
     cout<<"your code here"<<endl;
-
+    COBA COBA EXERCISE 5
 
 
 
