@@ -118,3 +118,8 @@ void view_arr(int arr[100]) {
     }
 }
 
+
+tambah baru lagi
+
+coba lagi
+
