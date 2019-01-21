@@ -23,21 +23,23 @@ Task 1 : Introduction to C++
 * Group 8: Exercise D, F, and K2
 
 ## Exercises
-A. Insert Sort (\*\*\*)
+<ol type="A">
+<li>Insert Sort (\*\*\*)<li>
 	write a procedure to receive a number in parameter and insert it into an array so that the array result is in ascending order<br>
 	Example:<br>
-	```cpp
-	n=0;
-	insert_sort(arr,n++,4);
-	view_data_1(arr,n);
-	// should print [4]
-	
-	insert_sort(arr,n++,2);
-	insert_sort(arr,n++,5);
-	view_data_1(arr,n);
-	// should print [2, 4, 5]
-	```
-B. Insert Last Unique (\*\*)
+```C++
+n=0;
+insert_sort(arr,n++,4);
+view_data_1(arr,n);
+// should print [4]
+
+insert_sort(arr,n++,2);
+insert_sort(arr,n++,5);
+view_data_1(arr,n);
+// should print [2, 4, 5]
+```
+<li>Insert Last Unique (\*\*)<li>
+</ol>
 	write a procedure to receive a number in parameter and insert it into an array so that no duplicate value exist in the array
 C. Insert First (\*\*)
 	write a procedure to receive a number in parameter and insert it into an array as the first element
