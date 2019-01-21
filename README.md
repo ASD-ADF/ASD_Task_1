@@ -12,69 +12,50 @@ Task 1 : Introduction to C++
 4. COMMIT and PUSH your project
 5. create a Pull Request
 
-## Exercise 1
-TODO: 
-* Write an algorithm which will prints all such numbers which are divisible by 7 but are not a multiple of 5, between 100 and 200 (both included)
-* `procedure exercise_1()`
-* Output should be: 112, 119, 126, …, 196
+## Group Tasks
+* Group 1: Exercise A, H, and K1
+* Group 2: Exercise B, I, and K2
+* Group 3: Exercise C, J, and K1
+* Group 4: Exercise D, E, and K2
+* Group 5: Exercise A, G, and K1
+* Group 6: Exercise B, J, and K2
+* Group 7: Exercise C, I, and K1
+* Group 8: Exercise D, F, and K2
 
-## Exercise 2
-TODO:
-* Write a procedure algorithm to raise any number to any power.
-* `procedure exercise_2(n, p)`<br>
-Example:<br>
- `integer n = 2`<br>
- `integer p = 3`<br>
- `exercise_2(n, p)`<br>
- `Output : 8`<br><br>
- `integer n = 4`<br>
- `integer p = 2`<br>
- `exercise_2(n, p)`<br>
- `Output : 16`<br>
-
-
-## Exercise 3
-TODO:
-* Write a procedure algorithm that determines the type of a Triangle (isosceles, equilateral, or scalene) given the size of the three sides
-* `exercise_3(s1, s2, s3)` <br>
-Example: <br>
- `integer s1: 4 `<br>
- `integer s2 : 6 `<br>
- `integer s3 : 4 `<br>
- `exercise_3(s1, s2, s3) `<br>
- `Output : isosceles `<br><br>
- `integer s1: 3 `<br>
- `integer s2 : 3 `<br>
- `integer s3 : 3 `<br>
- `exercise_3(s1, s2, s3) `<br>
- `Output : equilateral `<br>
-
-## Exercise 4
-TODO:
-* Write a procedure algorithm to continuously receive a numerical input from user and add it into an array of integer until user inputs number 0
-* `procedure exercise_4()`
-* Try input: 3, 6, 2, 8, 0
-
-## Exercise 5
-TODO:
-* Write a function algorithm to find a number inside an unsorted array of integer, and outputs its index; algorithm will outputs -1 if such number is not found
-* function int exercise_5(arr, f)
-* Array input is formatted from previous exercise, 
-* value 0 indicates the end of array <br>
-Example: <br>
- `integer arr = {3,6,8,2,7,8,1,0,0,0,0,0} `<br>
- `integer f = 2 `<br>
- `integer x = exercise_5(arr, f) `<br>
- `Output = 3 `
-
-## Exercise 6
-TODO:
-* Write a procedure algorithm to find a number inside an unsorted array of integer, then insert a negative one (-1) behind such found number
-* Use previous search function
-* Array input is formatted from previous exercise, 
-* value 0 indicates the end of array <br>
-Example: <br>
- `integer arr = {3,6,8,2,7,8,1,0,0,0,0,0} `<br>
- `integer x = 8 `<br>
- `exercise_6(arr, x) `<br>
- `arr result = {3,6,8,-1, 2,7,8,1,0,0,0,0,0}`
+## Exercises
+A. Insert Sort (\*\*\*)
+	write a procedure to receive a number in parameter and insert it into an array so that the array result is in ascending order<br>
+	Example:
+	```
+	n=0;
+	insert_sort(arr,n++,4);
+	view_data_1(arr,n);
+	// should print [4]
+	
+	insert_sort(arr,n++,2);
+	insert_sort(arr,n++,5);
+	view_data_1(arr,n);
+	// should print [2, 4, 5]
+	```
+B. Insert Last Unique (\*\*)
+	write a procedure to receive a number in parameter and insert it into an array so that no duplicate value exist in the array
+C. Insert First (\*\*)
+	write a procedure to receive a number in parameter and insert it into an array as the first element
+D. Insert Last (\*)
+	write a procedure to receive a number in parameter and insert it into an array as the last element
+E. Search and Delete (\*\*\*)
+	write a procedure to receive a number and delete all number found in the array
+F. Remove Duplicates (\*\*\*)
+	write a procedure to remove all duplicate number inside an array
+G. Maximum and Minimum (\*)
+	write a function to find the maximum and minimum number inside an array. Return the result as string
+H. Count and Sum (\*)
+	write a function to count the odd number inside an array and sum the even number. Return the result as string
+I. Group Data (\*\*)
+	write a function to group the numbers in array into odd-even group in a string
+J. Swap Data (\*\*)
+	write a procedure to swap all number inside an array front to end (1-2-3 into 3-2-1)
+K1. View Data 1 (\*)
+	write a procedure to view all number inside an array (front to end)
+K2. View Data 2 (\*)
+	write a procedure to view all number inside an array, but in backward (from behind to front)
