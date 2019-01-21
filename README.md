@@ -24,10 +24,10 @@ Task 1 : Introduction to C++
 
 ## Exercises
 <ol type="A">
-<li>Insert Sort (\*\*\*)<li>
+<li>Insert Sort (***)<li>
 	write a procedure to receive a number in parameter and insert it into an array so that the array result is in ascending order<br>
 	Example:<br>
-```C++
+```
 n=0;
 insert_sort(arr,n++,4);
 view_data_1(arr,n);
@@ -38,6 +38,7 @@ insert_sort(arr,n++,5);
 view_data_1(arr,n);
 // should print [2, 4, 5]
 ```
+
 <li>Insert Last Unique (\*\*)<li>
 </ol>
 	write a procedure to receive a number in parameter and insert it into an array so that no duplicate value exist in the array
