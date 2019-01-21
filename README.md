@@ -25,8 +25,8 @@ Task 1 : Introduction to C++
 ## Exercises
 A. Insert Sort (\*\*\*)
 	write a procedure to receive a number in parameter and insert it into an array so that the array result is in ascending order<br>
-	Example:
-	```
+	Example:<br>
+	```cpp
 	n=0;
 	insert_sort(arr,n++,4);
 	view_data_1(arr,n);
