@@ -32,8 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="asd_task_1.cpp" />
-		<Unit filename="asd_task_1.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
