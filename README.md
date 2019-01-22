@@ -7,11 +7,11 @@ Task 1 : Introduction to C++
 * [markdown cheat sheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
 
 ## Workflow
-1. FORK and CLONE this repositori ASD_Task_1
-2. open and modify codes in *.cpp files inside project ASD_Task_1
-3. write your code inside the provided space in each functions/procedures (`asd_task_1.cpp`) 
+1. Discuss the solution with your group members
+2. FORK and CLONE this repositori ASD_Task_1
+3. open and modify codes in *.cpp files inside project ASD_Task_1
 4. COMMIT and PUSH your project
-5. create a Pull Request
+5. create a Pull Request, put your student ID as the Pull Message
 
 ## Group Tasks
 * Group 1: Exercise A, G, and J
