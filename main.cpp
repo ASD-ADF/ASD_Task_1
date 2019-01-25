@@ -61,20 +61,24 @@ void insert_sort(int arr[], int &n, int x)
     // YOUR CODES HERE
     //-----------------------
     arr[n] = x;
-    for (int i = 0; i < n; i++)
+    if (n > 0)
     {
-        for (int j = i + 1; j < n; j++)
+        for(int i = 0; i < n ; i++)
         {
-            if (arr[j] < arr[i])
+            for(int j = 0; j < n - i ; j++)
             {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                if(arr[j+1] < arr[j])
+                {
+                    int tmp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = tmp;
+                }
             }
         }
     }
     n = n + 1;
-    //-----------------------
+        //-----------------------
+
 }
 
 
@@ -158,18 +162,23 @@ string first_and_second(int arr[], int n)
     //-----------------------
     bool kondisi = false;
     int i = 0;
-    if (arr[n] = arr[n-1]) {
-        for (i = n-2; kondisi = true; i--) {
-            if (arr[n] > arr[i]) {
+    if (arr[n] = arr[n-1])
+    {
+        for (i = n-2; kondisi = true; i--)
+        {
+            if (arr[n] > arr[i])
+            {
                 kondisi = true;
             }
-            else {
+            else
+            {
                 kondisi = false;
             }
         }
         cout << "greatest = " << arr[n] <<" second greatest = " << arr[i];
     }
-    else {
+    else
+    {
         cout << "greatest = " << arr[n] <<" second greatest = " << arr[n-1];
     }
 
