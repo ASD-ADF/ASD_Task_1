@@ -186,7 +186,15 @@ void swap_data(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    int temp;
+    int i = 0;
+    int j = n-1;
+    while (i<j) {
+        temp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = temp;
+        i++; j--;
+    }
 
     //-----------------------
 }
