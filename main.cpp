@@ -76,7 +76,6 @@ void insert_last_unique(int arr[], int &n, int x) {
     }
     else {
         int i = n - 1;
-        bool sama = false;
         while ( x != arr[i] && i >= 0){
                 i--;
             }
@@ -243,16 +242,10 @@ void view_data_2(int arr[], int n) {
     // YOUR CODES HERE
     //-----------------------
     n = n - 1;
-    if (n == 0){
-        cout<<arr[n]<<" ";
-    }
-    else{
         while(n >= 0){
         cout<<arr[n]<<" ";
         n--;
     }
-    }
-
     //-----------------------
 }
 
