@@ -160,13 +160,14 @@ string first_and_second(int arr[], int n)
 
     // YOUR CODES HERE
     //-----------------------
+    n--;
     bool kondisi = false;
-    int i = 0;
+    int i;
     if (arr[n] = arr[n-1])
     {
-        for (i = n-2; kondisi = true; i--)
+        for (i = n-1; not kondisi; i--)
         {
-            if (arr[n] > arr[i])
+            if (arr[n] > arr[i-1])
             {
                 kondisi = true;
             }
@@ -175,15 +176,15 @@ string first_and_second(int arr[], int n)
                 kondisi = false;
             }
         }
-        cout << "greatest = " << arr[n] <<" second greatest = " << arr[i];
+        cout << "greatest = " << arr[n] <<" second = " << arr[i];
     }
     else
     {
-        cout << "greatest = " << arr[n] <<" second greatest = " << arr[n-1];
+        cout << "greatest = " << arr[n] <<" second = " << arr[n-1];
     }
 
     //-----------------------
-    return 0;
+    return "";
 }
 
 
