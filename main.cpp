@@ -211,8 +211,23 @@ void swap_data(int arr[], int n)
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    int i=0;
+    n = n - 1;
+    if(n == 0)
+    {
+        arr[i] = arr[n];
+    }
+    else
+    {
+        while(i < n)
+        {
+            int temp=arr[i];
+            arr[i] = arr[n];
+            arr[n] = temp;
+            i++;
+            n--;
+        }
+    }
     //-----------------------
 }
 
@@ -241,11 +256,19 @@ void view_data_2(int arr[], int n)
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++)
+    n = n - 1;
+    if(n==0)
     {
-        cout<<arr[i]<<" ";
+        cout << arr[n] << " ";
     }
-    cout<<endl;
+    else
+    {
+        while(n >= 0)
+        {
+            cout << arr[n] << " ";
+            n--;
+        }
+    }
     //-----------------------
 }
 
