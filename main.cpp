@@ -85,7 +85,7 @@ void insert_last_unique(int arr[], int &n, int x) {
             n--;
         }
         }
-    n++;c
+    n++;
     //-----------------------
 }
 
