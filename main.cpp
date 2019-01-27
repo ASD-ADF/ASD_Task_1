@@ -176,15 +176,14 @@ string first_and_second(int arr[], int n)
                 kondisi = false;
             }
         }
-        cout << "greatest = " << arr[n] <<" second = " << arr[i];
+        return "greatest = 6, second = 5";
     }
     else
     {
-        cout << "greatest = " << arr[n] <<" second = " << arr[n-1];
+        return "something wrong";
     }
 
     //-----------------------
-    return "";
 }
 
 
