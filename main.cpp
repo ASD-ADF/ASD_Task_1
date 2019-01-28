@@ -71,7 +71,22 @@ void insert_last_unique(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    if (n == 0){
+        arr[n] = x;
+    }
+    else {
+        int i = n - 1;
+        bool sama = false;
+        while (x != arr[i] && i >= 0){
+            i--;
+        if (i < 0){
+            arr[n] = x;
+        }
+        else {
+            n--;
+        }
+        }
+    n++;
 
     //-----------------------
 }
@@ -183,7 +198,20 @@ void swap_data(int arr[], int n) {
     // YOUR CODES HERE
     //-----------------------
 
-
+    int i = 0;
+    n = n - 1;
+    if(n == 0){
+        arr[i] = arr[n];
+    }
+    else{
+    while (i < n) {
+    int temp = arr[i];
+    arr[i] = arr[n];
+    arr[n] = temp;
+    i++;
+    n--;
+    }
+    }
     //-----------------------
 }
 
@@ -197,10 +225,7 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
+    cout << "Test";
     //-----------------------
 }
 
