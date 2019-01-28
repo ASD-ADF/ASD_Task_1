@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Rakhmat Rifaldy"; // put your name here
+string ID = "1301180407"; // put your student id here
+int group_id = 7; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -100,6 +100,8 @@ void insert_last(int arr[], int &n, int x) {
     n   : number of element inside array, n should increment by 1 after this procedure executed
     x   : number to be inserted
     */
+arr[n] = x;
+n++;
 
     // YOUR CODES HERE
     //-----------------------
@@ -116,6 +118,14 @@ void search_and_delete(int arr[], int &n, int x) {
     n   : number of element inside array, n should decreased by the number of deleted elements from the array
     x   : number to be inserted
     */
+for(int i = 1; i < n; i++){
+    if(arr[i] == x){
+        for(int j = i; j < n; j++){
+            arr[j] = arr[j+1];
+        }
+        n--;
+    }
+}
 
     // YOUR CODES HERE
     //-----------------------
