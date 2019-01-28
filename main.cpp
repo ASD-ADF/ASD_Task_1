@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Rayhan Rahmanda"; // put your name here
+string ID = "1301184233"; // put your student id here
+int group_id = 8; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -87,8 +87,13 @@ void insert_first(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    int temp;
+    for (int n=0; n<(20-1); n++) {
+        temp = 	arr[20-1];
+        arr[20-1] = arr[n];
+        arr[n] = temp;
+    }
+    arr[0] = x;
     //-----------------------
 }
 
@@ -166,8 +171,25 @@ string group_and_average(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    double jumlah=0;
+    double banyak=0;
+    double rata=0;
+    for(n=0;n<20;n++) {
+        if(arr[n]%2!=0 && arr[n]<20 && arr[n]>=0) {
+            jumlah += arr[n];
+            banyak += 1;
+            cout<<arr[n]<<" ";
+        }
+    }
+    for(n=0; n<20; n++) {
+        if (arr[n]%2==0 && arr[n]<20 && arr[n]>0) {
+            jumlah += arr[n];
+            banyak += 1;
+            cout<<arr[n]<<" ";
+        }
+    }
+    rata = (jumlah/=banyak);
+    cout<<", Average = "<<rata<<endl;
     //-----------------------
     return "";
 }
@@ -197,8 +219,10 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+    for(int n=0; n<20; n++) {
+        if (arr[n] != 0 && arr[n]<20 && arr[n]>=0) {
+            cout<<arr[n]<<", ";
+        }
     }
     cout<<endl;
     //-----------------------
@@ -563,10 +587,10 @@ void check_group(int id) {
         cin.get();
 
         view_data_1(arr,n);
-        string s = group_and_average(arr,n);
+        //string s = group_and_average(arr,n);
         cout<<"expected output: 5 3 5 2 4, average = 3.8"<<endl;
-        cout<<"your output    : "<< s;
-
+        string s = group_and_average(arr,n);
+        cout<<"your output    : "<<s;
         break;
     }
     }
