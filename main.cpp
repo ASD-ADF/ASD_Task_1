@@ -246,11 +246,7 @@ void view_data_1(int arr[], int n)
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++)
-    {
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
+
     //-----------------------
 }
 
@@ -266,7 +262,11 @@ void view_data_2(int arr[], int n)
     // YOUR CODES HERE
     //-----------------------
 
-
+    for(int i=0; i<n; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
     //-----------------------
 }
 
