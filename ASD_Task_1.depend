@@ -1,10 +1,12 @@
 # depslib dependency file v1.0
-1516171969 source:c:\users\andityaarifianto\documents\github\asd_task_1\asd_task_1.cpp
+1548112777 source:c:\users\andityaarifianto\documents\github\asd_task_1\asd_task_1.cpp
 	<iostream>
 
-1516171960 source:c:\users\andityaarifianto\documents\github\asd_task_1\main.cpp
+1548113062 source:c:\users\andityaarifianto\documents\github\asd_task_1\main.cpp
 	<iostream>
-	"asd_task_1.h"
 
 1516168119 c:\users\andityaarifianto\documents\github\asd_task_1\asd_task_1.h
+
+1548664858 source:d:\telyu\semester 2\struktur data\task 1\asd_task_1-master\main.cpp
+	<iostream>
 
