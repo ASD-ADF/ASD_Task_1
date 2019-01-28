@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Muhammad Afif Raihan"; // put your name here
+string ID = "1301184220"; // put your student id here
+int group_id = 1; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -53,11 +53,14 @@ void insert_sort(int arr[], int &n, int x) {
     x   : number to be inserted
     */
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    arr[n] = x;
+    n++;
+    int i,j,temp;
+    for(i=0;i<n;i++){
+        temp=arr[i];
+        j=i-1;
+        while((temp<arr[j])&&(j>=0)){
+            arr[j+1]=arr[j];
             j=j-1;
         }
         arr[j+1]=temp;
