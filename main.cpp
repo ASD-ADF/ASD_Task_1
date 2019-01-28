@@ -68,12 +68,12 @@ void insert_sort(int arr[], int &n, int x)
     {
         for (int i=0; i<n; i++ )
         {
-            for (int j = 0; j<n-1; j++)
+            for (int j = i; j<n; j++)
             {
-                if (arr[j+1]<arr[j])
+                if (arr[i]>arr[j])
                 {
-                    int tmp = arr[j+1];
-                    arr[j+1] = arr[j];
+                    int tmp = arr[i];
+                    arr[i] = arr[j];
                     arr[j] = tmp;
                 }
 
@@ -261,8 +261,7 @@ void view_data_2(int arr[], int n)
 
     // YOUR CODES HERE
     //-----------------------
-
-    for(int i=0; i<n; i++)
+    for(int i=n-1; i>-1; i--)
     {
         cout<<arr[i]<<" ";
     }
