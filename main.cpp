@@ -1,12 +1,13 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Abdullah Hadi"; // put your name here
+string ID = "1301193430"; // put your student id here
+int group_id = 2; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -53,11 +54,7 @@ void insert_sort(int arr[], int &n, int x) {
     x   : number to be inserted
     */
 
-    // YOUR CODES HERE
-    //-----------------------
 
-
-    //-----------------------
 }
 
 
@@ -71,8 +68,18 @@ void insert_last_unique(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
+    int i;
+    i = n-1;
+    while (i > -1 && x != arr[i]) {
+        i--;
+    }
 
-
+    if (i < 0) {
+        arr[n] = x;
+        n++;
+    } else {
+        arr[n] = 0;
+    }
     //-----------------------
 }
 
@@ -164,10 +171,26 @@ string group_and_average(int arr[], int n) {
     n   : number of element inside array
     */
 
-    // YOUR CODES HERE
-    //-----------------------
+    float jumlah = 0;
+    float banyak = 0;
+    float rata = 0;
+    for (n=0;n<20;n++) {
+        if(arr[n]%2!= 0 && arr[n]<20 && arr[n]>-1) {
+            jumlah += arr[n];
+            banyak += 1;
+            cout<< arr[n]<<" ";
+        }
+    }
+    for(n=0; n<20; n++) {
+        if (arr[n]%2 == 0 && arr[n]<20 && arr[n]>0) {
+            jumlah += arr[n];
+            banyak += 1;
+            cout<< arr[n]<<" ";
+        }
+    }
 
-
+    rata = (jumlah/=banyak);
+    cout<<", average = "<<setprecision(3)<<rata<<endl;
     //-----------------------
     return "";
 }
