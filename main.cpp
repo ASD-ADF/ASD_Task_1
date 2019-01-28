@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "I Komang Gede Aryadi Pramarta"; // put your name here
+string ID = "1301184175"; // put your student id here
+int group_id = 1; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -54,12 +54,23 @@ void insert_sort(int arr[], int &n, int x) {
     */
 
     // YOUR CODES HERE
+    arr[n]=x;
+    n++;
+
+    int i,j,temp;
+    for (i=0;i<n;i++){
+        temp = arr[i];
+        j=i-1;
+
+        while ((temp<arr[j])&&(j>=0)){
+                arr[j+1]=arr[j];
+                j=j-1;
+        }
+        arr[j+1]=temp;
+    }
+    }
     //-----------------------
-
-
     //-----------------------
-}
-
 
 void insert_last_unique(int arr[], int &n, int x) {
     /**
@@ -87,7 +98,6 @@ void insert_first(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
 
     //-----------------------
 }
@@ -150,9 +160,16 @@ string count_and_sum(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
-    //-----------------------
+    int i, odd, even;
+    odd = 0;
+    even = 0;
+    for (i=0;i<n;i++){
+    if (arr[i] % 2 == 0) {
+        even = even + arr[i];
+    } else {
+        odd = odd + 1;}
+    }
+    cout<< "count odd = "<<odd<<" sum even = "<<even<<endl;
     return "";
 }
 
@@ -197,8 +214,12 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+    for (int i=0; i<n; i++)
+    {
+        if (i==n-1) {
+            cout << arr[i];
+        }else{
+            cout << arr[i]<< ",";}
     }
     cout<<endl;
     //-----------------------
@@ -255,10 +276,9 @@ void check_group(int id) {
         cin.get();
 
         view_data_1(arr,n);
-        string s = count_and_sum(arr,n);
         cout<<"expected output: count odd = 1, sum even = 12"<<endl;
-        cout<<"your output    : "<< s;
-
+        cout<<"your output    : ";
+        cout<<count_and_sum(arr,n);
         break;
     }
     case 2: {
