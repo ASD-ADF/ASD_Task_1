@@ -133,7 +133,7 @@ void search_and_delete(int arr[], int &n, int x)
     {
         if(arr[i]==x)
         {
-            for(int j=i; j>n-1; j++)
+            for(int j=i; j<n-1; j++)
             {
                 arr[j]= arr[j+1];
             }
