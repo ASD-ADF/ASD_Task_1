@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Muhamad Farell Ambiar"; // put your name here
+string ID = "1301184262"; // put your student id here
+int group_id = 1; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -55,7 +55,18 @@ void insert_sort(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    arr[n] = x;
+    n++;
+    int i,j,temp;
+    for(i=0;i<n;i++){
+        temp=arr[i];
+        j=i-1;
+        while((temp<arr[j])&&(j>=0)){
+            arr[j+1]=arr[j];
+            j=j-1;
+        }
+        arr[j+1]=temp;
+    }
 
     //-----------------------
 }
@@ -150,7 +161,19 @@ string count_and_sum(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
+    int hitung = 0;
+    int sum = 0;
+    int i;
+    for(i=0;i<n;i++) {
+        if (arr[i] % 2 == 0) {
+            sum = sum + arr[i];
+        } else {
+            hitung++;
+        }
+    }
 
+    cout<<"Hasil Hitung Odd= "<<hitung<<", ";
+    cout<<" Hasil Sum Even: "<<sum;
 
     //-----------------------
     return "";
@@ -198,7 +221,11 @@ void view_data_1(int arr[], int n) {
     // YOUR CODES HERE
     //-----------------------
     for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+        if(i==n-1) {
+            cout<<arr[i];
+        } else {
+            cout<<arr[i]<<",";
+        }
     }
     cout<<endl;
     //-----------------------
@@ -255,9 +282,10 @@ void check_group(int id) {
         cin.get();
 
         view_data_1(arr,n);
-        string s = count_and_sum(arr,n);
+        //string s = count_and_sum(arr,n);
         cout<<"expected output: count odd = 1, sum even = 12"<<endl;
-        cout<<"your output    : "<< s;
+        cout<<"your output    : ";
+        cout<<count_and_sum(arr,n);
 
         break;
     }
