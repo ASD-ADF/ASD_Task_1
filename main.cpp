@@ -76,9 +76,9 @@ void insert_last_unique(int arr[], int &n, int x) {
     }
     else {
         int i = n - 1;
-        bool sama = false;
-        while (x != arr[i] && i >= 0){
-            i--;
+        while ( x != arr[i] && i >= 0){
+                i--;
+            }
         if (i < 0){
             arr[n] = x;
         }
@@ -87,7 +87,6 @@ void insert_last_unique(int arr[], int &n, int x) {
         }
         }
     n++;
-
     //-----------------------
 }
 
@@ -197,14 +196,13 @@ void swap_data(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
     int i = 0;
     n = n - 1;
-    if(n == 0){
+    if( n == 0){
         arr[i] = arr[n];
     }
     else{
-    while (i < n) {
+    while(i < n ){
     int temp = arr[i];
     arr[i] = arr[n];
     arr[n] = temp;
@@ -225,12 +223,16 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    cout << "Test";
+    for(int i=0; i<n; i++) {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
     //-----------------------
 }
 
 
-void view_data_2(int arr[], int n) {
+void view_data_2(int arr[], int n)
+{
     /**
     TODO: write a procedure to view all number inside an array, but in backward (from behind to front)
     arr : input array
@@ -239,7 +241,11 @@ void view_data_2(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    n = n - 1;
+        while(n >= 0){
+        cout<<arr[n]<<" ";
+        n--;
+    }
 
     //-----------------------
 }
