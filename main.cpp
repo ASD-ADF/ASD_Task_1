@@ -58,8 +58,11 @@ void insert_sort(int arr[], int &n, int x) {
 
 
     //-----------------------
+            j=j-1;
+        }
+        arr[j+1]=temp;
+    }
 }
-
 
 void insert_last_unique(int arr[], int &n, int x) {
     /**
@@ -147,15 +150,28 @@ string count_and_sum(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
+    int even=0;
+    int odd=0;
+    int i;
 
-    // YOUR CODES HERE
-    //-----------------------
+    for (i=0;i<n;i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            even = arr[i] + even;
 
 
-    //-----------------------
+        }
+        else if (arr[i] % 2 != 0)
+        {
+            odd = odd + 1;
+        }
+    }
+
+    cout <<"count odd = "<<odd<<", sum even = "<<even<<endl;
+
     return "";
 }
-
 
 string group_and_average(int arr[], int n) {
     /**
@@ -187,7 +203,6 @@ void swap_data(int arr[], int n) {
     //-----------------------
 }
 
-
 void view_data_1(int arr[], int n) {
     /**
     TODO: write a procedure to view all number inside an array (front to end)
@@ -198,12 +213,15 @@ void view_data_1(int arr[], int n) {
     // YOUR CODES HERE
     //-----------------------
     for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+        if (i == n-1) {
+        cout<<arr[i];
+    }else{
+        cout <<arr[i]<<", ";
+    }
     }
     cout<<endl;
     //-----------------------
 }
-
 
 void view_data_2(int arr[], int n) {
     /**
@@ -255,10 +273,8 @@ void check_group(int id) {
         cin.get();
 
         view_data_1(arr,n);
-        string s = count_and_sum(arr,n);
         cout<<"expected output: count odd = 1, sum even = 12"<<endl;
-        cout<<"your output    : "<< s;
-
+        cout<<"your output    : "<< count_and_sum(arr,n);
         break;
     }
     case 2: {
