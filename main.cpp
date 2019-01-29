@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Ghina Khoerunnisa"; // put your name here
+string ID = "1301181066"; // put your student id here
+int group_id = 7; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -88,7 +88,6 @@ void insert_first(int arr[], int &n, int x) {
     // YOUR CODES HERE
     //-----------------------
 
-
     //-----------------------
 }
 
@@ -103,10 +102,22 @@ void insert_last(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+        arr[n]=x;
+        if (n>0) {
+            int i =0;
+            int tmp;
+            while (i<n) {
+                tmp = arr[i];
+                arr[i] = arr[n];
+                arr[n] = tmp;
+                i++;
+            }
+        }
+        n++;
+}
 
     //-----------------------
-}
+
 
 
 void search_and_delete(int arr[], int &n, int x) {
@@ -119,10 +130,28 @@ void search_and_delete(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
-    //-----------------------
+    int banyak=0;
+    for (n=0; n<5;n++) {
+        if (arr[n] == x) {
+            banyak++;
+        }
+    }
+    for (n=0; n<banyak+1;n++) {
+        if (arr[n]!=x) {
+            arr[n]=arr[n];
+        } else {
+            for (int i=n;i<4;i++) {
+                int tmp;
+                tmp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = tmp;
+            }
+        }
+    }
+    n = 5 - banyak;
 }
+//-----------------------
+
 
 
 string first_and_second(int arr[], int n) {
@@ -189,20 +218,23 @@ void swap_data(int arr[], int n) {
 
 
 void view_data_1(int arr[], int n) {
-    /**
-    TODO: write a procedure to view all number inside an array (front to end)
-    arr : input array
-    n   : number of element inside array
-    */
+        /**
+        TODO: write a procedure to view all number inside an array (front to end)
+        arr : input array
+        n   : number of element inside array
+        */
 
-    // YOUR CODES HERE
-    //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+        // YOUR CODES HERE
+        //-----------------------
+        int i = n+1;
+        for (n = 0; n<i-1; n++) {
+            cout<<arr[n]<<", ";
+        }
     }
-    cout<<endl;
+
+
     //-----------------------
-}
+
 
 
 void view_data_2(int arr[], int n) {
@@ -520,7 +552,6 @@ void check_group(int id) {
 
         view_data_1(arr,n);
         search_and_delete(arr,n, 5);
-        view_data_1(arr,n);
         cout<<"expected output: 3, 2, 4 (reversed)"<<endl;
         cout<<"your output    : ";
         view_data_1(arr,n);
@@ -570,5 +601,6 @@ void check_group(int id) {
         break;
     }
     }
-    cout<<endl;
 }
+
+
