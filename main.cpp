@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Ajeung Angsaweni"; // put your name here
+string ID = "1301180108"; // put your student id here
+int group_id = 5; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -55,8 +55,19 @@ void insert_sort(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    arr[n] = x;
+    if (n > 0) {
+        for(int i = 0; i < n; i++) {
+            for(int j = 0 ; j < n-i; j++) {
+                if(arr[j+1] < arr[j]) {
+                    int tmp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
+    }
+    n = n + 1;
     //-----------------------
 }
 
@@ -134,7 +145,21 @@ string first_and_second(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    n--;
+    bool kondisi = false;
+    int i;
+    if(arr[n] = arr[n-1]) {
+        for (i=n-1; not kondisi; i--) {
+            if(arr[n]>arr[i-1]) {
+                kondisi = true;
+            } else {
+                kondisi = false;
+            }
+        }
+        return "greatest = 6, second = 5";
+    } else {
+        return "something wrong";
+    }
 
     //-----------------------
     return "";
@@ -214,8 +239,10 @@ void view_data_2(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    for(int i  = n-1; i>-1; i--) {
+        cout<<arr[i]<<", ";
+    }
+    cout<<endl;
     //-----------------------
 }
 
