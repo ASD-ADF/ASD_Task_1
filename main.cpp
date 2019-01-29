@@ -4,7 +4,7 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = "TASYA NURFAUZIAH R R "; // put your name here
+string name = "TASYA NURFAUZIAH"; // put your name here
 string ID = "1301180130"; // put your student id here
 int group_id = 7; // your Group Number here (1-8)
 
@@ -104,9 +104,21 @@ void insert_last(int arr[], int &n, int x) {
     // YOUR CODES HERE
     //-----------------------
 
-
-    //-----------------------
+arr[n]=x;
+        if (n>0) {
+            int i =0;
+            int tmp;
+            while (i<n) {
+                tmp = arr[i];
+                arr[i] = arr[n];
+                arr[n] = tmp;
+                i++;
+            }
+        }
+        n++;
 }
+    //-----------------------
+
 
 
 void search_and_delete(int arr[], int &n, int x) {
@@ -120,9 +132,28 @@ void search_and_delete(int arr[], int &n, int x) {
     // YOUR CODES HERE
     //-----------------------
 
-
-    //-----------------------
+int banyak=0;
+    for (n=0; n<5;n++) {
+        if (arr[n] == x) {
+            banyak++;
+        }
+    }
+    for (n=0; n<banyak+1;n++) {
+        if (arr[n]!=x) {
+            arr[n]=arr[n];
+        } else {
+            for (int i=n;i<4;i++) {
+                int tmp;
+                tmp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = tmp;
+            }
+        }
+    }
+    n = 5 - banyak;
 }
+    //-----------------------
+
 
 
 string first_and_second(int arr[], int n) {
