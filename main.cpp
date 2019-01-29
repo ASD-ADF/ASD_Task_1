@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "HAURA ATHAYA SALKA"; // put your name here
+string ID = "1301183454"; // put your student id here
+int group_id = 8; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -87,7 +87,12 @@ void insert_first(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    arr[0] = x;
+    int tmp;
+    for (int n=0; n<19; n++) {
+        tmp = arr[19];
+        arr[19] = arr[n];
+        arr[n] = tmp;
 
     //-----------------------
 }
@@ -166,7 +171,28 @@ string group_and_average(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
+    double jumlahdata = 0;
+    double banyakdata = 0;
+    double rerata = 0;
 
+    for (int n=0; n<20; n++) {
+        if ((arr[n]%2!=0) && (arr[n]<20) && (arr[n]>=0)) {
+        jumlahdata+=arr[n];
+        banyakdata+=1;
+        cout<<arr[n]<<" ";
+        }
+    }
+
+    for (int n=0; n<20; n++) {
+        if ((arr[n]%2==0) && (arr[n]<20) && (arr[n]>0)) {
+            jumlahdata+=arr[n];
+            banyakdata+=1;
+            cout<<arr[n]<<" ";
+        }
+    }
+
+    rerata = jumlahdata/=banyakdata;
+    cout<<", Rata-rata : "<<rerata<<endl;
 
     //-----------------------
     return "";
@@ -197,13 +223,13 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+   for (int n=0; n<20; n++){
+        if (arr[n]<20 && arr[n]>0 && arr[n]!=0) {
+            cout<<arr[n]<<", ";
+        }
     }
-    cout<<endl;
     //-----------------------
 }
-
 
 void view_data_2(int arr[], int n) {
     /**
