@@ -1,6 +1,6 @@
-# Task_1 [2019]
+# Task_1 [2020]
 Task 1 : Introduction to C++
-## Deadline: 29th January 2019
+## Deadline: 25th January 2019
 
 ## Reading Material
 * [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
