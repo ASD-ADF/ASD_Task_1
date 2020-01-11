@@ -25,7 +25,7 @@ Task 1 : Introduction to C++
 
 ## Exercises
 <ol type="A">
-<li><b>Insert Sort (***)</b><br>
+<li><b>Insert Sort (★★★)</b><br>
 	write a procedure to receive a number in parameter and insert it into an array so that the array result is in ascending order<br>
 	Example:
 	
@@ -41,7 +41,7 @@ view_data_1(arr,n);
 // should print [2, 4, 6]
 ```
 </li>
-<li><b>Insert Last Unique (**)</b><br>
+<li><b>Insert Last Unique (★★☆)</b><br>
 	write a procedure to receive a number in parameter and insert it into an array so that no duplicate value exist in the array<br>
 	Example:
 	
@@ -60,7 +60,7 @@ view_data_1(arr,n);
 ```
 
 </li>
-<li><b>Insert First (**)</b><br>
+<li><b>Insert First (★★☆)</b><br>
 	write a procedure to receive a number in parameter and insert it into an array as the first element<br>
 	Example:
 	
@@ -79,7 +79,7 @@ view_data_1(arr,n);
 
 
 </li>
-<li><b>Insert Last (*)</b><br>
+<li><b>Insert Last (★☆☆)</b><br>
 	write a procedure to receive a number in parameter and insert it into an array as the last element<br>
 	Example:
 	
@@ -97,7 +97,7 @@ view_data_1(arr,n);
 ```
 
 </li>
-<li><b> Search and Delete (***)</b><br>
+<li><b> Search and Delete (★★★)</b><br>
 	write a procedure to receive a number and delete all number found in the array<br>
 	Example:
 	
@@ -111,7 +111,7 @@ view_data_1(arr,n);
 
 
 </li>
-<li><b> First and Second (*)</b><br>
+<li><b> First and Second (★☆☆)</b><br>
 	write a function to find the greatest number and second greatest number inside an array. Return the result as string<br>
 	Example:
 	
@@ -125,7 +125,7 @@ cout<< s;
 
 
 </li>
-<li><b>Count and Sum (*)</b><br>
+<li><b>Count and Sum (★☆☆)</b><br>
 	write a function to count the odd number inside an array and sum the even number. Return the result as string<br>
 	Example:
 	
@@ -139,7 +139,7 @@ cout<< s;
 
 
 </li>
-<li><b>Group and Average Data (**)</b><br>
+<li><b>Group and Average Data (★★☆)</b><br>
 	write a function to group the numbers in array into odd-even group in a string that also write its average<br>
 	Example:
 	
@@ -153,7 +153,7 @@ cout<< s;
 
 
 </li>
-<li><b>Swap Data (**)</b><br>
+<li><b>Swap Data (★★☆)</b><br>
 	write a procedure to swap all number inside an array front to end (1-2-3 into 3-2-1)<br>
 	Example:
 	
@@ -167,7 +167,7 @@ view_data_1(arr,n);
 
 
 </li>
-<li><b> View Data 1 (*)</b><br>
+<li><b> View Data 1 (★☆☆)</b><br>
 	write a procedure to view all number inside an array (front to end)<br>
 	Example:
 	
@@ -180,7 +180,7 @@ view_data_1(arr,n);
 
 
 </li>
-<li><b>View Data 2 (*)</b><br>
+<li><b>View Data 2 (★☆☆)</b><br>
 	write a procedure to view all number inside an array, but in backward (from behind to front)<br>
 	Example:
 	
