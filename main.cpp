@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "MUHAMMAD KHIYARUS SYIAM"; // put your name here
+string ID = "1301194242"; // put your student id here
+int group_id = 2; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -195,10 +195,9 @@ void view_data_1(int arr[], int n) {
     n   : number of element inside array
     */
 
-    // YOUR CODES HERE
-    //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+
+    for(int i=0; i<=n; i++) {
+        cout<<arr[n]<<" ";
     }
     cout<<endl;
     //-----------------------
