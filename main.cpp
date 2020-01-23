@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Manuel Benedict"; // put your name here
+string ID = "1301194182"; // put your student id here
+int group_id = 4; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -205,7 +205,7 @@ void view_data_1(int arr[], int n) {
 }
 
 
-void view_data_2(int arr[], int n) {
+void view_data_2(int arr[n], int n) {
     /**
     TODO: write a procedure to view all number inside an array, but in backward (from behind to front)
     arr : input array
@@ -214,7 +214,10 @@ void view_data_2(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    for(int i=n; i>0;i--) {
+      cout<<arr[i]<<" ";
+    }
+    cout<<endl;
 
     //-----------------------
 }
