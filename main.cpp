@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Naufal Rezky Ananda"; // put your name here
+string ID = "1301190478"; // put your student id here
+int group_id = 7; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -103,7 +103,8 @@ void insert_last(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    arr[n]=x;
+    n=n+1;
 
     //-----------------------
 }
@@ -119,13 +120,16 @@ void search_and_delete(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
+    int temp;
     for (int i = 0; i < n; i++)
     {
         if (arr[i] == x)
         {
             while (i < n)
             {
+                temp = arr[i];
                 arr[i] = arr[i + 1];
+                arr[i+1] = temp;
             }
             n = n - 1;
         }
