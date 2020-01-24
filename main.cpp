@@ -71,6 +71,7 @@ void insert_last_unique(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
+
     int i;
     bool sama=false;
     for (i=0; i<n; i++){
