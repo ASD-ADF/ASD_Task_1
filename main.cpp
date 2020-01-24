@@ -24,17 +24,21 @@ void view_data_2(int arr[], int n);
 void check_group(int id);
 
 
-int main() {
+int main()
+{
     cout<<"===================== TASK 1 ====================="<<endl;
     cout<<"Hello, "<<name<<", "<<ID<<endl;
     cout<<"let's check your exercises"<<endl<<endl;
 
-    if( group_id>0 && group_id<9) {
+    if( group_id>0 && group_id<9)
+    {
         check_group(group_id);
 
         cout<<endl<<endl<<"End of Task I"<<endl;
         cout<<"Congratulation on completing"<<endl;
-    } else {
+    }
+    else
+    {
         cout<<"ERROR\nPlease check your personal information above!!"<<endl<<endl;
     }
     return 0;
@@ -45,7 +49,8 @@ int main() {
 /**=================================================*/
 /**             START YOUR WORK HERE                */
 
-void insert_sort(int arr[], int &n, int x) {
+void insert_sort(int arr[], int &n, int x)
+{
     /**
     TODO: write a procedure to receive a number in parameter and insert it into an array so that the array result is in ascending order
     arr : input array
@@ -55,22 +60,26 @@ void insert_sort(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-	arr[n] = x;
-	n++;
-	for (int i = 0; i < n; i++) {
-		int min = i;
-		for (int j = i + 1; j < n; j++) {
-			if (arr[i] > arr[j]) {
-				min = j;
-			}
-		}
-		swap(arr[i], arr[min]);
-	}
+    arr[n] = x;
+    n++;
+    for (int i = 0; i < n; i++)
+    {
+        int min = i;
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[i] > arr[j])
+            {
+                min = j;
+            }
+        }
+        swap(arr[i], arr[min]);
+    }
     //-----------------------
 }
 
 
-void insert_last_unique(int arr[], int &n, int x) {
+void insert_last_unique(int arr[], int &n, int x)
+{
     /**
     TODO: write a procedure to receive a number in parameter and insert it into an array so that no duplicate value exist in the array
     arr : input array
@@ -86,7 +95,8 @@ void insert_last_unique(int arr[], int &n, int x) {
 }
 
 
-void insert_first(int arr[], int &n, int x) {
+void insert_first(int arr[], int &n, int x)
+{
     /**
     TODO: write a procedure to receive a number in parameter and insert it into an array as the first element
     arr : input array
@@ -102,7 +112,8 @@ void insert_first(int arr[], int &n, int x) {
 }
 
 
-void insert_last(int arr[], int &n, int x) {
+void insert_last(int arr[], int &n, int x)
+{
     /**
     TODO: write a procedure to receive a number in parameter and insert it into an array as the last element
     arr : input array
@@ -118,7 +129,8 @@ void insert_last(int arr[], int &n, int x) {
 }
 
 
-void search_and_delete(int arr[], int &n, int x) {
+void search_and_delete(int arr[], int &n, int x)
+{
     /**
     TODO: write a procedure to receive a number and delete all number found in the array
     arr : input array
@@ -134,7 +146,8 @@ void search_and_delete(int arr[], int &n, int x) {
 }
 
 
-string first_and_second(int arr[], int n) {
+string first_and_second(int arr[], int n)
+{
     /**
     TODO: write a function to find the greatest number and second greatest number inside an array. Return the result as string
     arr : input array
@@ -150,7 +163,8 @@ string first_and_second(int arr[], int n) {
 }
 
 
-string count_and_sum(int arr[], int n) {
+string count_and_sum(int arr[], int n)
+{
     /**
     TODO: write a function to count the odd number inside an array and sum the even number. Return the result as string
     arr : input array
@@ -166,7 +180,8 @@ string count_and_sum(int arr[], int n) {
 }
 
 
-string group_and_average(int arr[], int n) {
+string group_and_average(int arr[], int n)
+{
     /**
     TODO: write a function to group the numbers in array into odd-even group in a string that also write its average
     arr : input array
@@ -182,7 +197,8 @@ string group_and_average(int arr[], int n) {
 }
 
 
-void swap_data(int arr[], int n) {
+void swap_data(int arr[], int n)
+{
     /**
     TODO: write a procedure to swap all number inside an array front to end (1-2-3 into 3-2-1)
     arr : input array
@@ -197,7 +213,8 @@ void swap_data(int arr[], int n) {
 }
 
 
-void view_data_1(int arr[], int n) {
+void view_data_1(int arr[], int n)
+{
     /**
     TODO: write a procedure to view all number inside an array (front to end)
     arr : input array
@@ -206,7 +223,8 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++) {
+    for(int i=0; i<n; i++)
+    {
         cout<<arr[i]<<" ";
     }
     cout<<endl;
@@ -214,7 +232,8 @@ void view_data_1(int arr[], int n) {
 }
 
 
-void view_data_2(int arr[], int n) {
+void view_data_2(int arr[], int n)
+{
     /**
     TODO: write a procedure to view all number inside an array, but in backward (from behind to front)
     arr : input array
@@ -223,17 +242,26 @@ void view_data_2(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    for (int i = n-1; i >= 0; i--)
+    {
+        cout << arr[i] << ",";
+    }
+    cout << endl;
     //-----------------------
+    /**
+    aku ngerjain bagian ini
+    */
 }
 
 
-void check_group(int id) {
+void check_group(int id)
+{
     cout<<"Checking Work for Group "<<id<<endl;
 
-    switch(id) {
-    case 1: {
+    switch(id)
+    {
+    case 1:
+    {
         int n=0;
         int arr[20];
         insert_sort(arr,n,4);
@@ -270,7 +298,8 @@ void check_group(int id) {
 
         break;
     }
-    case 2: {
+    case 2:
+    {
         int n=0;
         int arr[20];
         insert_last_unique(arr,n,4);
@@ -312,7 +341,8 @@ void check_group(int id) {
 
         break;
     }
-    case 3: {
+    case 3:
+    {
         int n=0;
         int arr[20];
         insert_first(arr,n,4);
@@ -356,7 +386,8 @@ void check_group(int id) {
 
         break;
     }
-    case 4: {
+    case 4:
+    {
         int n=0;
         int arr[20];
         insert_last(arr,n,4);
@@ -400,7 +431,8 @@ void check_group(int id) {
 
         break;
     }
-    case 5: {
+    case 5:
+    {
         int n=0;
         int arr[20];
         insert_sort(arr,n,4);
@@ -442,7 +474,8 @@ void check_group(int id) {
 
         break;
     }
-    case 6: {
+    case 6:
+    {
         int n=0;
         int arr[20];
         insert_last_unique(arr,n,4);
@@ -492,7 +525,8 @@ void check_group(int id) {
 
         break;
     }
-    case 7: {
+    case 7:
+    {
         int n=0;
         int arr[20];
         insert_last(arr,n,4);
@@ -536,7 +570,8 @@ void check_group(int id) {
 
         break;
     }
-    case 8: {
+    case 8:
+    {
         int n=0;
         int arr[20];
         insert_first(arr,n,4);
