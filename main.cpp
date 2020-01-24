@@ -103,10 +103,8 @@ void insert_last(int arr[], int &n, int x) {
     */
 
     // YOUR CODES HERE
-
     arr[n] = x;
     n++;
-
 }
 
 
@@ -125,7 +123,6 @@ void search_and_delete(int arr[], int &n, int x) {
             arr[i] = 0;
             for (int j = i ; j < n ; j++) {
                 swap(arr[j], arr[j+1]);
-
             }
             n--;
         }
