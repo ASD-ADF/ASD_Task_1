@@ -74,6 +74,8 @@ void insert_sort(int arr[], int &n, int x)
         }
         swap(arr[i], arr[min]);
     }
+    // maaf tadi commit pertama lupa masukkin nama :(
+    // Vincent Williams Jonathan
     //-----------------------
 }
 
