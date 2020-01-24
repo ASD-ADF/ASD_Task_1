@@ -205,7 +205,7 @@ void view_data_1(int arr[], int n) {
 }
 
 
-void view_data_2(int arr[n], int n) {
+void view_data_2(int arr[], int n) {
     /**
     TODO: write a procedure to view all number inside an array, but in backward (from behind to front)
     arr : input array
@@ -214,7 +214,7 @@ void view_data_2(int arr[n], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=n; i>0;i--) {
+    for(int i=n-1; i>=0;i--) {
       cout<<arr[i]<<" ";
     }
     cout<<endl;
