@@ -5,8 +5,9 @@ using namespace std;
 
 /** WRITE DOWN YOUR INFORMATION HERE */
 
-string name = "Vincentius Arnold Fridolin"; // put your name here
-string ID = "1301190221"; // put your student id here
+string name = "Mohammad Mirza Qusyairi"; // put your name here
+string ID = "1301194203"; // put your student id here
+
 int group_id = 4; // your Group Number here (1-8)
 
 
@@ -118,6 +119,7 @@ void search_and_delete(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
 
+    //-----------------------
     for (int i = 0; i < n; i++) {
         if (arr[i] == x) {
             arr[i] = 0;
@@ -218,13 +220,11 @@ void view_data_2(int arr[], int n) {
     */
 
     // YOUR CODES HERE
-    int i;
-    for(i=n-1; i>=0; i--) {
+    for(int i=n-1; i>=0; i--) {
       cout<<arr[i]<<" ";
     }
-    cout<<endl
+    cout<<endl;
 }
-
 
 void check_group(int id) {
     cout<<"Checking Work for Group "<<id<<endl;
@@ -323,7 +323,7 @@ void check_group(int id) {
         cout<<"your output    : ";
         view_data_2(arr,n);
 
-        cout<<endl;
+        cout<<endl;cout<<endl;
         insert_first(arr,n,2);
         cout<<"expected output: 4, 5, 2 (reversed)"<<endl;
         cout<<"your output    : ";
