@@ -220,10 +220,8 @@ void view_data_2(int arr[], int n) {
     */
 
     // YOUR CODES HERE
-
-    //-----------------------
     for(int i=n-1; i>=0; i--) {
-        cout<<arr[i]<<" ";
+      cout<<arr[i]<<" ";
     }
     cout<<endl;
 }
