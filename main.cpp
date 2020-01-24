@@ -222,7 +222,6 @@ void view_data_2(int arr[], int n) {
         cout << arr[i] << " ";
     }
     cout << endl;
-
 }
 
 
