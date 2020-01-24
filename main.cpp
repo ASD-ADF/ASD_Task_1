@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Balqis Sayyidahtul Atikah"; // put your name here
+string ID = "1301193480"; // put your student id here
+int group_id = 6; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -71,8 +71,17 @@ void insert_last_unique(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    int i;
+    bool sama=false;
+    for (i=0; i<n; i++){
+        if (arr[i]==x){
+            sama=true;
+        }
+        if (sama==false){
+            arr[i]=x;
+            i++;
+        }
+    }
     //-----------------------
 }
 
