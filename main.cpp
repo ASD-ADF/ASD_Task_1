@@ -125,13 +125,11 @@ void search_and_delete(int arr[], int &n, int x) {
     {
         if (arr[i] == x)
         {
-            while (i < n)
+            for (int j = i;j < (n - 1); j++
             {
-                temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i+1] = temp;
+                arr[j] = arr[j + 1];
             }
-            n = n - 1;
+            n--;
         }
     }
     //-----------------------
@@ -163,6 +161,7 @@ string count_and_sum(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
+
 
 
     //-----------------------
