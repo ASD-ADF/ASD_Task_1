@@ -79,8 +79,8 @@ void insert_last_unique(int arr[], int &n, int x) {
             sama=true;
         }
         if (sama==false){
-            arr[i]=x;
-            i++;
+            arr[n]=x;
+            n++;
         }
     }
     //-----------------------
