@@ -6,7 +6,7 @@ using namespace std;
 /** WRITE DOWN YOUR INFORMATION HERE */
 string name = ""; // put your name here
 string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+int group_id = 5; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -55,8 +55,17 @@ void insert_sort(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+	arr[n] = x;
+	n++;
+	for (int i = 0; i < n; i++) {
+		int min = i;
+		for (int j = i + 1; j < n; j++) {
+			if (arr[i] > arr[j]) {
+				min = j;
+			}
+		}
+		swap(arr[i], arr[min]);
+	}
     //-----------------------
 }
 
