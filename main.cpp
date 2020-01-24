@@ -70,9 +70,6 @@ void insert_last_unique(int arr[], int &n, int x) {
     */
 
     // YOUR CODES HERE
-    //-----------------------
-
-    //-----------------------
 }
 
 
@@ -180,8 +177,9 @@ void swap_data(int arr[], int n) {
     */
 
     // YOUR CODES HERE
-    //-----------------------
-    //-----------------------
+    for (int i = 0 ; i < n / 2 ; i++) {
+        swap(arr[i],arr[n-i-1]);
+    }
 }
 
 
