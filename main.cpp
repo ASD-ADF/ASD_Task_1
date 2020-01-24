@@ -122,6 +122,7 @@ void search_and_delete(int arr[], int &n, int x) {
     for (int i=0; i<n; i++){
         if (arr[i] == x) {
             arr[i] = 0;
+            n--;
         }
     }
     //-----------------------
