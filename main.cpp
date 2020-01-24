@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "I Wayan Adi Wahyudi"; // put your name here
+string ID = "1301194084"; // put your student id here
+int group_id = 6; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -71,7 +71,6 @@ void insert_last_unique(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
 
     //-----------------------
 }
@@ -182,8 +181,6 @@ void swap_data(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
     //-----------------------
 }
 
@@ -214,8 +211,10 @@ void view_data_2(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    for (int i=n-1; i>=0 ;i--) {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
     //-----------------------
 }
 
