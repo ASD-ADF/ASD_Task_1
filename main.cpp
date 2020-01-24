@@ -119,7 +119,7 @@ void search_and_delete(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    
 
     //-----------------------
 }
