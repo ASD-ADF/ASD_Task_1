@@ -248,8 +248,8 @@ void view_data_2(int arr[], int n)
     }
     cout << endl;
     //-----------------------
-    /*
-    aku kerjain bagian ini
+    /**
+    aku ngerjain bagian ini
     */
 }
 
