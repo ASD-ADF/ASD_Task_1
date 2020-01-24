@@ -4,8 +4,8 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = "Naufal Rezky Ananda"; // put your name here
-string ID = "1301190478"; // put your student id here
+string name = "Michelle Caecilia Fiorenza Bara"; // put your name here
+string ID = "1301194405"; // put your student id here
 int group_id = 7; // your Group Number here (1-8)
 
 
@@ -125,6 +125,12 @@ void search_and_delete(int arr[], int &n, int x) {
     {
         if (arr[i] == x)
         {
+            for (int j = i; j < (n-1); j++)
+            {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j+1] = temp;
+=======
             for (int j = i;j < (n - 1); j++
             {
                 arr[j] = arr[j + 1];
