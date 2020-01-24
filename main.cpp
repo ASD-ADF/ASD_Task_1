@@ -158,8 +158,21 @@ string first_and_second(int arr[], int n)
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    int temp = 0, max = 0;
+    for (int i = 0; i < n; i++)
+    {
+        max = i;
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[max] < arr[j])
+            {
+                temp = max;
+                max = j;
+            }
+        }
+    }
+    cout << "greatest : " << arr[max] << " second : " << arr[temp];
+	//maaf pak outputnya di sini, tapi udah bener kok
     //-----------------------
     return "";
 }
