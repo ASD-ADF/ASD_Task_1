@@ -67,7 +67,7 @@ void insert_sort(int arr[], int &n, int x)
         int min = i;
         for (int j = i + 1; j < n; j++)
         {
-            if (arr[i] > arr[j])
+            if (arr[j] < arr[i])
             {
                 min = j;
             }
