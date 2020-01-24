@@ -104,7 +104,7 @@ void insert_last(int arr[], int &n, int x) {
     // YOUR CODES HERE
     //-----------------------
     arr[n] = x;
-    n++; 
+    n++;
     //-----------------------
 }
 
@@ -123,7 +123,7 @@ void search_and_delete(int arr[], int &n, int x) {
     for (int i=0; i<n; i++){
         if (arr[i] == x) {
             arr[i] = 0;
-            z++
+            z++;
         }
     }
     n-z;
@@ -220,7 +220,7 @@ void view_data_2(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=n; i>0; i--) {
+    for(int i=n-1; i>=0; i--) {
         cout<<arr[i]<<" ";
     }
     cout<<endl;
@@ -325,7 +325,7 @@ void check_group(int id) {
         cout<<"your output    : ";
         view_data_2(arr,n);
 
-        cout<<endl;
+        cout<<endl;cout<<endl;
         insert_first(arr,n,2);
         cout<<"expected output: 4, 5, 2 (reversed)"<<endl;
         cout<<"your output    : ";
