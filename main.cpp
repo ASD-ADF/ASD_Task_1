@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "ARPRIANSAH YONATHAN"; // put your name here
+string ID = "1301194112"; // put your student id here
+int group_id = 1; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -150,7 +150,16 @@ string count_and_sum(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    int i, genap, ganjil;
+    i = 0;
+    while (i < n){
+      if(arr[i]%2 == 0)
+        genap = genap + arr[i];
+      else
+        ganjil = ganjil + 1;
+      i++;
+    }
+    cout << "count odd = " << ganjil << "sum even" << genap;
 
     //-----------------------
     return "";
