@@ -147,12 +147,21 @@ string count_and_sum(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
+    genap = 0;
+    ganjil = 0;
+    for(i = 0; i < n; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            genap = genap + a;
+        }
+        else
+        {
+            ganjil = ganjil + 1;
+        }
+    }
+    cout << "Count odd: " << ganjil << " Sum even: " << genap  << endl;
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
     return "";
 }
 
