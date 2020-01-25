@@ -4,8 +4,13 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
+<<<<<<< HEAD
+string name = "BAGJA 9102 KURNIAWAN"; // put your name here
+string ID = "1301194020"; // put your student id here
+=======
 string name = "MUHAMMAD KHIYARUS SYIAM"; // put your name here
 string ID = "1301194242"; // put your student id here
+>>>>>>> master
 int group_id = 2; // your Group Number here (1-8)
 
 
@@ -71,8 +76,17 @@ void insert_last_unique(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+	bool found = false;
+	for (int i = 0; i < n && !found; i++){
+		if (arr[i] == x) {
+			cout << arr[i] << " " << x;
+			found = true;
+		}
+	}
+	if (!found){
+		arr[n] = x;
+		n++;
+	}
     //-----------------------
 }
 
