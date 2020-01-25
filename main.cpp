@@ -53,11 +53,27 @@ void insert_sort(int arr[], int &n, int x) {
     x   : number to be inserted
     */
 
-    // YOUR CODES HERE
-    //-----------------------
+   arr[n] = x;
+	n = n + 1;
+
+	int i, key, j;
+    for (i = 1; i < n; i++)
+    {
+        key = arr[i];
+        j = i - 1;
+
+        while (j >= 0 && arr[j] > key)
+        {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
 
 
-    //-----------------------
+
+
 }
 
 
@@ -147,22 +163,18 @@ string count_and_sum(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
-
-    // YOUR CODES HERE
-    //-----------------------
+    genap = 0;
+    ganjil = 0;
     int i, genap, ganjil;
-    i = 0;
-    while (i < n){
+    for(i = 0; i < n; i++){
       if(arr[i]%2 == 0)
         genap = genap + arr[i];
       else
         ganjil = ganjil + 1;
-      i++;
     }
     cout << "count odd = " << ganjil << "sum even" << genap;
-
-    //-----------------------
     return "";
+  
 }
 
 
