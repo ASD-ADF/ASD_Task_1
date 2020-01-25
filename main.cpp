@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Daffa Barin Tizard Riyadi;Muh Fachrul Hidayat;Muhammad Kamil Hasan;Hazim Ismail"; // put your name here
+string ID = "1301190369;1301194066;1301190420;1301194149"; // put your student id here
+int group_id = 3; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -87,6 +87,19 @@ void insert_first(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
+ int i;
+
+    if (n<20) {
+        for (i=n-1;i>=0;i--){
+            arr[i+1]=arr[i];
+        }
+        arr[0]=x;
+        n++;
+
+    };
+    else {
+        cout<<"Data penuh";
+    }
 
 
     //-----------------------
@@ -182,7 +195,18 @@ void swap_data(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
+    int a=1;
+    //int temp;
+    int k;
+    k = n-1;
+    for (int i =0;i<k;i++){
 
+       int temp = arr[i];
+        arr[i] = arr[k];
+        arr[k] =temp;
+        k--;
+
+    }
 
     //-----------------------
 }
@@ -197,10 +221,12 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+ for(int i=0; i<n; i++) {
+        cout<<arr[i]<<", ";
+
     }
     cout<<endl;
+
     //-----------------------
 }
 
@@ -211,10 +237,14 @@ void view_data_2(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
+    int k=n-1;
 
-    // YOUR CODES HERE
-    //-----------------------
+    for(int i=0; i<n; i++) {
+        cout<<arr[k]<<", ";
+        k--;
 
+    }
+    cout<<endl;
 
     //-----------------------
 }
@@ -339,6 +369,7 @@ void check_group(int id) {
         cin.get();
 
         view_data_2(arr,n);
+        view_data_1(arr,n);
         swap_data(arr,n);
         view_data_1(arr,n);
         cout<<"expected output: 5, 3, 2, 5, 4 (reversed)"<<endl;
