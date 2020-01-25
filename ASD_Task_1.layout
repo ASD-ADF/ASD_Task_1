@@ -6,5 +6,9 @@
 		<Cursor>
 			<Cursor1 position="6848" topLine="75" />
 		</Cursor>
+		<Folding>
+			<Collapse line="26" />
+			<Collapse line="47" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>
