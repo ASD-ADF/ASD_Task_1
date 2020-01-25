@@ -4,8 +4,22 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
+/*string name = "HASSAN RIZKY PUTRA SAILELLAH"; // put your name here
+string ID = "1301190328"; // put your student id here
+
+string name = "MUHAMMAD IKRAM KAER SINAPOY"; // put your name here
+string ID = "1301193341"; // put your student id here
+
 string name = "ARPRIANSAH YONATHAN"; // put your name here
 string ID = "1301194112"; // put your student id here
+
+string name = "NAUFAL YOZHA REVANSYAH"; // put your name here
+string ID = "1301194282"; // put your student id here
+
+*/
+
+string name = " "; // put your name here
+string ID = " "; // put your student id here
 int group_id = 1; // your Group Number here (1-8)
 
 
@@ -53,22 +67,19 @@ void insert_sort(int arr[], int &n, int x) {
     x   : number to be inserted
     */
 
-   arr[n] = x;
+	arr[n] = x;
 	n = n + 1;
 
 	int i, key, j;
-    for (i = 1; i < n; i++)
-    {
-        key = arr[i];
-        j = i - 1;
-
-        while (j >= 0 && arr[j] > key)
-        {
-            arr[j + 1] = arr[j];
-            j = j - 1;
-        }
-        arr[j + 1] = key;
-    }
+   	for (i = 1; i < n; i++){
+       		key = arr[i];
+       		j = i - 1;
+		while (j >= 0 && arr[j] > key){
+            		arr[j + 1] = arr[j];
+            		j = j - 1;
+     		}
+        	arr[j + 1] = key;
+    	}
 }
 
 
@@ -163,16 +174,18 @@ string count_and_sum(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
+    int i, genap, ganjil;
     genap = 0;
     ganjil = 0;
-    int i, genap, ganjil;
+    
     for(i = 0; i < n; i++){
-      if(arr[i]%2 == 0)
+      if(arr[i]%2 == 0){
         genap = genap + arr[i];
-      else
+      } else {
         ganjil = ganjil + 1;
+      }
     }
-    cout << "count odd = " << ganjil << "sum even" << genap;
+    cout << "count odd = " << ganjil << ", sum even = " << genap;
     return "";
   
 }
@@ -219,7 +232,7 @@ void view_data_1(int arr[], int n) {
     // YOUR CODES HERE
     //-----------------------
     for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+        cout<<arr[i]<<", ";
     }
     cout<<endl;
     //-----------------------
@@ -276,10 +289,10 @@ void check_group(int id) {
         cin.get();
 
         view_data_1(arr,n);
-        string s = count_and_sum(arr,n);
+        
         cout<<"expected output: count odd = 1, sum even = 12"<<endl;
-        cout<<"your output    : "<< s;
-
+        cout<<"your output    : ";
+	count_and_sum(arr,n);
         break;
     }
     case 2: {
