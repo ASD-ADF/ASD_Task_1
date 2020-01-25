@@ -4,8 +4,8 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
+string name = "Daffa Barin Tizard Riyadi;Muh Fachrul Hidayat;Muhammad Kamil Hasan;Hazim Ismail"; // put your name here
+string ID = "1301190369;1301194066;1301190420;1301194149"; // put your student id here
 int group_id = 3; // your Group Number here (1-8)
 
 
