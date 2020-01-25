@@ -175,10 +175,13 @@ string group_and_average(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+ int sum = 0;
+    int average;
+    for (int i=0; i<n; i++)
+        sum += arr[i];
+        average = sum/n;
     //-----------------------
-    return "";
+    return average;
 }
 
 
