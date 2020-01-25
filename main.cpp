@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "MUHAMMAD KHIYARUS SYIAM,BAGJA 9102 KURNIAWAN"; // put your name here
+string ID = "1301194242,1301194020"; // put your student id here
+int group_id = 2; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -71,8 +71,17 @@ void insert_last_unique(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+	bool found = false;
+	for (int i = 0; i < n && !found; i++){
+		if (arr[i] == x) {
+			cout << arr[i] << " " << x;
+			found = true;
+		}
+	}
+	if (!found){
+		arr[n] = x;
+		n++;
+	}
     //-----------------------
 }
 
@@ -166,10 +175,13 @@ string group_and_average(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+ int sum = 0;
+    int average;
+    for (int i=0; i<n; i++)
+        sum += arr[i];
+        average = sum/n;
     //-----------------------
-    return "";
+    return average;
 }
 
 
@@ -195,10 +207,9 @@ void view_data_1(int arr[], int n) {
     n   : number of element inside array
     */
 
-    // YOUR CODES HERE
-    //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+
+    for(int i=0; i<=n; i++) {
+        cout<<arr[n]<<" ";
     }
     cout<<endl;
     //-----------------------
