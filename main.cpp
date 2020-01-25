@@ -71,23 +71,22 @@ void insert_last_unique(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
 
-    //-----------------------
-
-    int i;
+    //--------------
     bool sama=false;
+    int i;
     for (i=0; i<n; i++){
         if (arr[i]==x){
             sama=true;
         }
-        if (sama==false){
-            arr[n]=x;
-            n++;
+    }
+    if (sama==false){
+        arr[n]=x;
+        n++;
         }
     }
     //-----------------------
-=======
 
-}
+
 
 
 void insert_first(int arr[], int &n, int x) {
