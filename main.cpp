@@ -4,8 +4,8 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = "I Wayan Adi Wahyudi"; // put your name here
-string ID = "1301194084"; // put your student id here
+string name = "I Wayan Adi Wahyudi,Balqis Sayyidahtul Atikah,Mayang Sari,Akmal Muhamad Faza."; // put your name here
+string ID = "1301194084,1301193480,1301194227,1301190436"; // put your student id here
 int group_id = 6; // your Group Number here (1-8)
 
 
@@ -193,9 +193,11 @@ void swap_data(int arr[], int n) {
     */
 
     // YOUR CODES HERE
+    //-----------------------
     for (int i = 0 ; i < n / 2 ; i++) {
         swap(arr[i],arr[n-i-1]);
     }
+    //-----------------------
 }
 
 
