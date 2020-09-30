@@ -133,7 +133,7 @@ cout<< s;
 arr = {3, 5, 2, 4, 1, 2, 3, 1, 3}
 n=9;
 string s = count_and_sum(arr,n);
-cout<< s;
+cout<< s<< endl;
 // should print "count odd = 6, sum even = 8"
 ```
 
@@ -147,7 +147,7 @@ cout<< s;
 arr = {3, 5, 2, 4, 1, 2, 3, 1, 3}
 n=9;
 string s = group_data(arr,n);
-cout<< s;
+cout<< s<< endl;
 // should print "3 5 1 3 1 3 2 4 2, average = 2.67"
 ```
 
