@@ -116,8 +116,8 @@ view_data_1(arr,n);
 	Example:
 	
 ```
-arr = {3, 5, 2, 4, 1, 2, 3, 1, 3}
-n=9;
+int arr = {3, 5, 2, 4, 1, 2, 3, 1, 3};
+int n=9;
 string s = first_and_second(arr,n);
 cout<< s;
 // should print greatest = 5, second = 4"
