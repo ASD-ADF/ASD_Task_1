@@ -9,7 +9,7 @@ string ID = ""; // put your student id here
 int group_id = 0; // your Group Number here (1-8)
 
 
-/** FUNCTIONS LIST, DO NOT MODIFY THESE */
+/** FUNCTIONS LIST, DO NOT MODIFY THESE Praveen*/
 void insert_sort(int arr[], int &n, int x);
 void insert_last_unique(int arr[], int &n, int x);
 void insert_first(int arr[], int &n, int x);
