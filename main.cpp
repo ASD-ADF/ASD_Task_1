@@ -1,6 +1,6 @@
-#include <iostream>
-
-using namespace std;
+// #include <iostream>
+#include <bits/stdc++.h>
+// using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
