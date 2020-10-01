@@ -31,12 +31,12 @@ Task 1 : Introduction to C++
 	
 ```
 n=0;
-insert_sort(arr,n,4);
+insert_and_sort(arr,n,4);
 view_data_1(arr,n);
 // should print [4]
 
-insert_sort(arr,n,2);
-insert_sort(arr,n,6);
+insert_and_sort(arr,n,2);
+insert_and_sort(arr,n,6);
 view_data_1(arr,n);
 // should print [2, 4, 6]
 ```
