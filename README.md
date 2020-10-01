@@ -5,6 +5,7 @@ Task 1 : Introduction to C++
 ## Reading Material
 * [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 * [markdown cheat sheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
+* [github tutorial](https://www.youtube.com/watch?v=gwWKnnCMQ5c)
 
 ## Workflow
 1. Discuss the solution with your group members
