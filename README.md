@@ -11,7 +11,8 @@ Task 1 : Introduction to C++
 2. FORK and CLONE this repositori ASD_Task_1
 3. open and modify codes in *.cpp files inside project ASD_Task_1
 4. COMMIT and PUSH your project
-5. create a Pull Request, put your student ID as the Pull Message
+5. create a Pull Request, put your student ID as the Pull 
+6. This is a school project for introduction to C++ am i rigth.
 
 ## Group Tasks
 * Group 1: Exercise A, G, and J
