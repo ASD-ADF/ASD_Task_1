@@ -142,17 +142,14 @@ string first_and_second(int arr[], int n) {
 
 
 string count_and_sum(int arr[], int n) {
-    /**
-    TODO: write a function to count the odd number inside an array and sum the even number. Return the result as string
-    arr : input array
-    n   : number of element inside array
-    */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int i,oddSum=0;
+    for(i=0; i<n; i++){
+        if(arr[i]%2!=0){
+       oddSum=oddSum+arr[i];
+        }  
+    }
+    cout<<"The sum of odd numbers are:"<<oddSum;
+    getch();
     return "";
 }
 
