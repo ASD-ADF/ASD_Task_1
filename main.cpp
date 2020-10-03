@@ -1,4 +1,5 @@
 #include <iostream>
+#include<conio>
 
 using namespace std;
 
@@ -24,7 +25,7 @@ void view_data_2(int arr[], int n);
 void check_group(int id);
 
 
-int main() {
+void main() {
     cout<<"===================== TASK 1 ====================="<<endl;
     cout<<"Hello, "<<name<<", "<<ID<<endl;
     cout<<"let's check your exercises"<<endl<<endl;
@@ -37,7 +38,10 @@ int main() {
     } else {
         cout<<"ERROR\nPlease check your personal information above!!"<<endl<<endl;
     }
-    return 0;
+    
+    //Prompt to inform program end
+    printf("\nPress any key to EXIT...");
+    getch();
 }
 
 
