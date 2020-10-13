@@ -60,7 +60,8 @@ view_data_1(arr,n);
 ```
 
 </li>
-<li><b>Insert First (★★☆)</b><br>
+<li><b>Insert First (★★☆)</b><br><br>
+	
 	write a procedure to receive a number in parameter and insert it into an array as the first element<br>
 	Example:
 	
