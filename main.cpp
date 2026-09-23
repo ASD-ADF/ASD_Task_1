@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Raditya Riandika irfani"; // put your name here
+string ID = "103012500385"; // put your student id here
+int group_id = 5; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -55,7 +55,19 @@ void insert_sort(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
+    int i = 0;
+    while (i < n && arr[i]<x){
+        i++;
+    }
+    int j = n;
+    while (j > i) {
+        arr[j] = arr[j-1];
+        j--;
 
+    }
+    arr[i] = x;
+    n++;
+    
 
     //-----------------------
 }
@@ -135,9 +147,20 @@ string first_and_second(int arr[], int n) {
     // YOUR CODES HERE
     //-----------------------
 
+    int max = arr[0];
+    int smax = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            smax = max;
+            max = arr[i];
+        } else if (arr[i] > smax && arr[i] < max) {
+            smax = arr[i];
+        }
+    }
+    
 
     //-----------------------
-    return "";
+    return "greatest = " + to_string(max) + ", second = " + to_string(smax);
 }
 
 
@@ -214,7 +237,9 @@ void view_data_2(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    for (int i = n-1;i>=0;i--){
+        cout<<arr[i]<<", ";
+    }
 
     //-----------------------
 }
