@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Muhammad Fauzan"; // put your name here
+string ID = "103012500013"; // put your student id here
+int group_id = 3; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -84,12 +84,12 @@ void insert_first(int arr[], int &n, int x) {
     n   : number of element inside array, n should increment by 1 after this procedure executed
     x   : number to be inserted
     */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int i;
+    n++;
+    for (i = n-1; i >= 0; i--) {
+        arr[i+1] = arr[i];
+    }
+    arr[0] = x;
 }
 
 
@@ -179,12 +179,13 @@ void swap_data(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int temp, i;
+    for (i = 0; i < n; i++) {
+        temp = arr[i];
+        arr[i] = arr[n-1];
+        arr[n-1] = temp;
+        n--;
+    }
 }
 
 
@@ -211,12 +212,17 @@ void view_data_2(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
+    int i;
+    i = n;
+    while (i > 0) {
+        cout << arr[i-1];
+        i--;
+        if (i > 0){
+            cout << ", ";
+        }
+    }
+    cout << endl;
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
 }
 
 
