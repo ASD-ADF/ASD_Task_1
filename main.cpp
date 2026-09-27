@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Muh_Syah_Devan_Al_Ghifari"; // put your name here
+string ID = "103012500109"; // put your student id here
+int group_id = 6; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -68,12 +68,18 @@ void insert_last_unique(int arr[], int &n, int x) {
     n   : number of element inside array, n should increment by 1 after this procedure executed
     x   : number to be inserted
     */
+    bool sama = false;
+    int i;
+    for (i=0;i<n;i++){
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+        if (arr[i] == x){
+            sama = true;
+        }
+    }
+        if (sama == false){
+            arr[n] = x;
+            n++;
+        }
 }
 
 
@@ -182,7 +188,16 @@ void swap_data(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
+    int i = 0;
+    int temp;
+    while (i < n){
+        temp = arr[i];
+        arr[i] = arr[n-1];
+        arr[n-1] = temp;
 
+        i++;
+        n--;
+    }
 
     //-----------------------
 }
@@ -214,7 +229,12 @@ void view_data_2(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
+    int i = n-1;
 
+    while (i >= 0){
+        cout<<arr[i]<<" ";
+        i--;
+    }
 
     //-----------------------
 }
