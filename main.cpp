@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Ghulam Rasyiq Badra Ali"; // put your name here
+string ID = "103012530031"; // put your student id here
+int group_id = 8; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -86,10 +86,11 @@ void insert_first(int arr[], int &n, int x) {
     */
 
     // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+   for (int i = n; i >= 1; i--){
+    arr[i] = arr [i - 1];
+   }
+   arr[0] = x;
+   n++;
 }
 
 
@@ -165,11 +166,22 @@ string group_and_average(int arr[], int n) {
     */
 
     // YOUR CODES HERE
-    //-----------------------
+    string odd = "";
+    string even= "";
+    for (int i = 0; i < n; i++){
+        if (arr[i] % 2 != 0){
+            odd += to_string(arr[i])+ " ";
+        }
+        sum += arr[i];
+    }
 
-
-    //-----------------------
-    return "";
+    for (int i = 0; i < n; i++){
+        if (arr[i] % 2 == 0){
+            even += to_string(arr[i]) + " ";
+        }
+    }
+    double average + (double)sum / n;
+    return odd + even + ", average = " + to_string(average);
 }
 
 
