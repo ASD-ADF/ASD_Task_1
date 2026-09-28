@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Aria Chrisna Bayu"; // put your name here
+string ID = "103012500090"; // put your student id here
+int group_id = 2; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -71,7 +71,18 @@ void insert_last_unique(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
+    bool ada = false;
 
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == x) {
+             ada = true;
+        }
+    }
+
+    if (ada==false) {
+        arr[n] = x;
+        ++n;
+    }
 
     //-----------------------
 }
@@ -166,10 +177,28 @@ string group_and_average(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
+    string hasil;
+    int total = 0;
+    for (int i = 0; i < n; i++){
+        if (arr[i] % 2 == 1){
+            hasil += to_string(arr[i]) + " ";
+        }
+        total += arr[i];
+    }
 
+    for (int i = 0; i < n; i++){
+        if (arr[i] % 2 == 0){
+            hasil += to_string(arr[i]) + " ";
+        }
+    }
+    float average;
+    average = (float)total / n;
+
+    hasil += ", average = " + to_string(average);
+
+    return hasil;
 
     //-----------------------
-    return "";
 }
 
 
@@ -182,7 +211,13 @@ void swap_data(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    for(int i=0; i<n; i++) {
+        cout<<arr[i];
+        if (i < n - 1) {
+                cout << ", ";
+        }
+    }
+    cout<<endl;
 
     //-----------------------
 }
