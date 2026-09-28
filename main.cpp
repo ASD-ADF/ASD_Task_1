@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Muhammad Rafi Hazimulfikri"; // put your name here
+string ID = "103012530059"; // put your student id here
+int group_id = 4; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -94,34 +94,33 @@ void insert_first(int arr[], int &n, int x) {
 
 
 void insert_last(int arr[], int &n, int x) {
-    /**
-    TODO: write a procedure to receive a number in parameter and insert it into an array as the last element
-    arr : input array
-    n   : number of element inside array, n should increment by 1 after this procedure executed
-    x   : number to be inserted
-    */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int i, temp;
+    arr[n] = x;
+    n++;
+    i = 0;
+    while (i < n) {
+        temp = arr[i];
+        arr[i] = arr[n - 1];
+        arr[n - 1] = temp;
+        i++;
+    }
 }
 
 
 void search_and_delete(int arr[], int &n, int x) {
-    /**
-    TODO: write a procedure to receive a number and delete all number found in the array
-    arr : input array
-    n   : number of element inside array, n should decreased by the number of deleted elements from the array
-    x   : number to be inserted
-    */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int i, j;
+    arr[n] = x;
+    n++;
+    i = 0;
+    while (i < n) {
+        if (arr[i] == x) {
+            for ( j = i; j < n - 1; j++) {
+                arr[j] = arr[j + 1];
+            }
+            n--;
+        }
+        i++;
+    }
 }
 
 
@@ -206,17 +205,16 @@ void view_data_1(int arr[], int n) {
 
 
 void view_data_2(int arr[], int n) {
-    /**
-    TODO: write a procedure to view all number inside an array, but in backward (from behind to front)
-    arr : input array
-    n   : number of element inside array
-    */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int i;
+    i = 0;
+    while (i < n) {
+        if (i == n - 1) {
+            cout << arr[i] << endl;
+        } else {
+            cout << arr[i] << ", ";
+        }
+        i++;
+    }
 }
 
 
