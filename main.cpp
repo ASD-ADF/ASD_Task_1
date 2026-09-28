@@ -1,12 +1,14 @@
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Zaky Naufal"; // put your name here
+string ID = "103012500191"; // put your student id here
+int group_id = 8; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -87,7 +89,11 @@ void insert_first(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    for (int i = n - 1; i >= 0; i--) {
+        arr[i + 1] = arr[i];
+    }
+    arr[0] = x;
+    n++;
 
     //-----------------------
 }
@@ -166,10 +172,36 @@ string group_and_average(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
+    if (n <= 0) return "";
 
+    string result = "";
+    double sum = 0;
 
+    bool first_odd = true;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+        if (arr[i] % 2 != 0) {
+            if (!first_odd) result += " ";
+            result += to_string(arr[i]);
+            first_odd = false;
+        }
+    }
+    bool first_even = true;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            if (!first_even) result += " ";
+            result += to_string(arr[i]);
+            first_even = false;
+        }
+    }
+    double avg = sum / n;
+    stringstream ss;
+    ss << fixed << setprecision(2) << avg;
+
+    result += ", average = " + ss.str();
+
+    return result; 
     //-----------------------
-    return "";
 }
 
 
@@ -197,10 +229,14 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+    cout << "[";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i];
+        if (i < n - 1) {
+            cout << ", ";
+        }
     }
-    cout<<endl;
+    cout << "]" << endl;
     //-----------------------
 }
 
