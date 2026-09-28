@@ -86,9 +86,12 @@ void insert_first(int arr[], int &n, int x) {
     */
 
     // YOUR CODES HERE
-    //-----------------------
+      for (int i = n; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
 
-
+    arr[0] = x;
+    n++;
     //-----------------------
 }
 
@@ -165,10 +168,26 @@ string group_and_average(int arr[], int n) {
     */
 
     // YOUR CODES HERE
-    //-----------------------
+    int total = 0;
+    string hasil = "";
+    string hasil = "",odd = "", even = "";
 
+    for (int i = 0; i < n; i++) {
+        hasil =hasil + to_string(arr[i]) + " ";
+        total =total + arr[i];
+        if (arr[i] % 2 == 0) {
+            even = even + to_string(arr[i]) + " ";
+        } else {
+            odd = odd + to_string(arr[i]) + " ";
+        }
+        total = total + arr[i];
+    }
 
-    //-----------------------
+    float average = (float) total / n;
+
+    hasil =hasil + "Average: " + to_string(average);
+    hasil = hasil + odd + even + "Average: " + to_string(average);
+
     return "";
 }
 
