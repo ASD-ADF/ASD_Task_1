@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Rafael Putra Ananta Saragih"; // put your name here
+string ID = "103012500337"; // put your student id here
+int group_id = 5; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -55,6 +55,13 @@ void insert_sort(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
+    int i = n - 1;
+    while (i >=0 && arr[i] > x) {
+        arr[i+1] = arr[i];
+        i--;
+    }
+    arr [i+1] = x;
+    n++;
 
 
     //-----------------------
@@ -134,12 +141,29 @@ string first_and_second(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    int besar1, besar2, temp, i;
+    besar1 = arr[0];
+    besar2 = arr[1];
+    if (besar2 > besar1) {
+        temp = besar1;
+        besar1 = besar2;
+        besar2 = temp;
+    }
+    i = 2;
+    while (i < n) {
+        if (arr[i] > besar1) {
+            besar2 = besar1;
+            besar1 = arr[i];
+        }
+        else if (arr[i] > besar2) {
+            besar2 = arr[i];
+        }
+        i++;
+    }
     //-----------------------
-    return "";
+    return "greatest = " + to_string(besar1) +
+           ", second = " + to_string(besar2);
 }
-
 
 string count_and_sum(int arr[], int n) {
     /**
@@ -214,7 +238,17 @@ void view_data_2(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
+int i;
+cout << "[";
+i = n - 1;
+while (i >= 0) {
+    cout << arr[i];
+    if (i > 0) {
+        cout << ", ";
+    }
+    i--;
+}
+cout << "]";
 
     //-----------------------
 }
