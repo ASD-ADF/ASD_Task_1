@@ -103,7 +103,8 @@ void insert_last(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+arr[n] = x;
+n++;
 
     //-----------------------
 }
@@ -119,7 +120,14 @@ void search_and_delete(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+int j = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] != x) {
+            arr[j] = arr[i];
+            j++;
+        }
+    }
+    n = j;
 
     //-----------------------
 }
