@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Grace Martina Caroline Aritonang"; // put your name here
+string ID = "103012500292"; // put your student id here
+int group_id = 1; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -52,12 +52,16 @@ void insert_sort(int arr[], int &n, int x) {
     n   : number of element inside array, n should increment by 1 after this procedure executed
     x   : number to be inserted
     */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int temp, i;
+    for (i = 0 ; i < n ; i++) {
+        if (x < arr[i]) {
+            temp = arr[i];
+            arr[i] = x;
+            x = temp;
+        }
+    }
+    arr[n] = x;
+    n = n + 1;
 }
 
 
@@ -147,13 +151,17 @@ string count_and_sum(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
-    return "";
+    int odd, even, i;
+    even = 0;
+    odd = 0;
+    for (i = 0; i < n ; i++) {
+        if (arr[i]%2 == 0) {
+            even = even + arr[i];
+        } else {
+            odd = odd + 1;
+        }
+    }
+    return "count odd = " + to_string(odd) + ", sum even = " + to_string(even);
 }
 
 
@@ -198,7 +206,11 @@ void view_data_1(int arr[], int n) {
     // YOUR CODES HERE
     //-----------------------
     for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+        if (i == n-1) {
+            cout<<arr[i]<<" ";
+        } else {
+            cout<<arr[i]<<", ";
+        }
     }
     cout<<endl;
     //-----------------------
