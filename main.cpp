@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "m. fajar ramadhan"; // put your name here
+string ID = "103012500234"; // put your student id here
+int group_id = 2; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -29,7 +29,7 @@ int main() {
     cout<<"Hello, "<<name<<", "<<ID<<endl;
     cout<<"let's check your exercises"<<endl<<endl;
 
-    if( group_id>0 && group_id<9) {
+    if( group_id>0 && group_id<12) {
         check_group(group_id);
 
         cout<<endl<<endl<<"End of Task I"<<endl;
@@ -52,12 +52,13 @@ void insert_sort(int arr[], int &n, int x) {
     n   : number of element inside array, n should increment by 1 after this procedure executed
     x   : number to be inserted
     */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int i = n - 1;
+        while(i >= 0 && arr[i] > x){
+            arr[i + 1] = arr[i];
+            i--;
+        }
+        arr[i + 1] = x;
+        i ++;
 }
 
 
@@ -68,12 +69,15 @@ void insert_last_unique(int arr[], int &n, int x) {
     n   : number of element inside array, n should increment by 1 after this procedure executed
     x   : number to be inserted
     */
+    int i = 0;
+        while (i < n && arr[i] != x) {
+        i++;
+        }
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+        if (i == n) {
+        arr[n] = x;
+        n++;
+        }
 }
 
 
@@ -84,12 +88,11 @@ void insert_first(int arr[], int &n, int x) {
     n   : number of element inside array, n should increment by 1 after this procedure executed
     x   : number to be inserted
     */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    for (int i = n; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[0] = x;
+    n++;
 }
 
 
@@ -101,11 +104,8 @@ void insert_last(int arr[], int &n, int x) {
     x   : number to be inserted
     */
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    arr[n] = x;
+    n++;
 }
 
 
@@ -117,11 +117,14 @@ void search_and_delete(int arr[], int &n, int x) {
     x   : number to be inserted
     */
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int new_n = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] != x) {
+            arr[new_n] = arr[i];
+            new_n++;
+        }
+    }
+    n = new_n;
 }
 
 
@@ -132,11 +135,18 @@ string first_and_second(int arr[], int n) {
     n   : number of element inside array
     */
 
-    // YOUR CODES HERE
-    //-----------------------
+    int first = arr[0];
+    int second = -1;
 
-
-    //-----------------------
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > first) {
+            second = first;
+            first = arr[i];
+        } else if (arr[i] > second && arr[i] != first) {
+            second = arr[i];
+        }
+    }
+    return to_string(first) + " " + to_string(second);
     return "";
 }
 
@@ -148,11 +158,17 @@ string count_and_sum(int arr[], int n) {
     n   : number of element inside array
     */
 
-    // YOUR CODES HERE
-    //-----------------------
+    int count_odd = 0;
+    int sum_even = 0;
 
-
-    //-----------------------
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 != 0) {
+            count_odd++;
+        } else {
+            sum_even += arr[i];
+        }
+    }
+    return to_string(count_odd) + " " + to_string(sum_even);
     return "";
 }
 
@@ -164,14 +180,26 @@ string group_and_average(int arr[], int n) {
     n   : number of element inside array
     */
 
-    // YOUR CODES HERE
-    //-----------------------
+    string ganjil = "";
+    string genap = "";
+    double total = 0;
 
-
-    //-----------------------
-    return "";
+    for (int i = 0; i < n; i++) {
+        total += arr[i];
+        if (arr[i] % 2 != 0) {
+            ganjil += to_string(arr[i]) + " ";
+        } else {
+            genap += to_string(arr[i]) + " ";
+        }
+    }
+    double avg = total / n;
+    avg = (int)(avg * 100 + 0.5) / 100.0;
+    string hasil = ganjil + genap;
+    if (hasil.length() > 0) {
+        hasil.pop_back();
+    }
+    return hasil + ", average = " + to_string(avg).substr(0, 4);
 }
-
 
 void swap_data(int arr[], int n) {
     /**
@@ -180,11 +208,11 @@ void swap_data(int arr[], int n) {
     n   : number of element inside array
     */
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    for (int i = 0; i < n / 2; i++) {
+        int temp = arr[i];
+        arr[i] = arr[n - 1 - i];
+        arr[n - 1 - i] = temp;
+    }
 }
 
 
@@ -195,13 +223,13 @@ void view_data_1(int arr[], int n) {
     n   : number of element inside array
     */
 
-    // YOUR CODES HERE
-    //-----------------------
     for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+        cout<<arr[i];
+        if (i < n - 1) {
+        cout << ", ";
+    }
     }
     cout<<endl;
-    //-----------------------
 }
 
 
@@ -211,12 +239,13 @@ void view_data_2(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+for (int i = n - 1; i >= 0; i--) {
+        cout << arr[i];
+        if (i < n - 1) {
+        cout << ", ";
+    }
+    }
+    cout << endl;
 }
 
 
