@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Naradipa Yogaswara"; // put your name here
+string ID = "103012530038"; // put your student id here
+int group_id = 6; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -62,18 +62,19 @@ void insert_sort(int arr[], int &n, int x) {
 
 
 void insert_last_unique(int arr[], int &n, int x) {
-    /**
-    TODO: write a procedure to receive a number in parameter and insert it into an array so that no duplicate value exist in the array
-    arr : input array
-    n   : number of element inside array, n should increment by 1 after this procedure executed
-    x   : number to be inserted
-    */
+    bool found = false;
 
-    // YOUR CODES HERE
-    //-----------------------
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == x) {
+            found = true;
+            break;
+        }
+    }
 
-
-    //-----------------------
+    if (!found) {
+        arr[n] = x;
+        n++;
+    }
 }
 
 
@@ -174,17 +175,13 @@ string group_and_average(int arr[], int n) {
 
 
 void swap_data(int arr[], int n) {
-    /**
-    TODO: write a procedure to swap all number inside an array front to end (1-2-3 into 3-2-1)
-    arr : input array
-    n   : number of element inside array
-    */
+  int temp;
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    for (int i = 0; i < n / 2; i++) {
+        temp = arr[i];
+        arr[i] = arr[n - 1 - i];
+        arr[n - 1 - i] = temp;
+    }
 }
 
 
@@ -206,17 +203,14 @@ void view_data_1(int arr[], int n) {
 
 
 void view_data_2(int arr[], int n) {
-    /**
-    TODO: write a procedure to view all number inside an array, but in backward (from behind to front)
-    arr : input array
-    n   : number of element inside array
-    */
+   for (int i = n - 1; i >= 0; i--) {
+        cout << arr[i];
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+        if (i > 0) {
+            cout << ", ";
+        }
+    }
+    cout << endl;
 }
 
 
