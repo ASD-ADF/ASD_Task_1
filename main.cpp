@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Muhammad Bintang Nabeel"; // put your name here
+string ID = "103012530005"; // put your student id here
+int group_id = 1; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -46,18 +46,13 @@ int main() {
 /**             START YOUR WORK HERE                */
 
 void insert_sort(int arr[], int &n, int x) {
-    /**
-    TODO: write a procedure to receive a number in parameter and insert it into an array so that the array result is in ascending order
-    arr : input array
-    n   : number of element inside array, n should increment by 1 after this procedure executed
-    x   : number to be inserted
-    */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+    int i = n - 1 ;
+    while (i >= 0 && arr[i] > x) {
+        arr[i + 1] = arr[i];
+        i--;
+    }
+    arr[i + 1] = x;
+    n++;
 }
 
 
@@ -142,18 +137,16 @@ string first_and_second(int arr[], int n) {
 
 
 string count_and_sum(int arr[], int n) {
-    /**
-    TODO: write a function to count the odd number inside an array and sum the even number. Return the result as string
-    arr : input array
-    n   : number of element inside array
-    */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
-    return "";
+   int count_odd = 0;
+    int sum_even = 0;
+    for(int i = 0; i < n; i++) {
+        if(arr[i] % 2 == 1) {
+            count_odd++;
+        } else {
+            sum_even += arr[i];
+        }
+    }
+    return "count odd = " + to_string(count_odd) + ", sum even = " + to_string(sum_even);
 }
 
 
@@ -189,19 +182,12 @@ void swap_data(int arr[], int n) {
 
 
 void view_data_1(int arr[], int n) {
-    /**
-    TODO: write a procedure to view all number inside an array (front to end)
-    arr : input array
-    n   : number of element inside array
-    */
-
-    // YOUR CODES HERE
-    //-----------------------
+    cout<<"[";
     for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+        cout<<arr[i];
+        if(i<n-1) cout<<", ";
     }
-    cout<<endl;
-    //-----------------------
+    cout<<"]"<<endl;
 }
 
 
