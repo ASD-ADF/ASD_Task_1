@@ -1,12 +1,13 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Dylan Setyawan Ekapraja"; // put your name here
+string ID = "103012500203"; // put your student id here
+int group_id = 1; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -55,8 +56,13 @@ void insert_sort(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+        int i = n - 1;
+    while (i >= 0 && arr[i] > x) {
+        arr[i + 1] = arr[i];
+        i--;
+    }
+    arr[i + 1] = x;
+    n++;
     //-----------------------
 }
 
@@ -150,8 +156,16 @@ string count_and_sum(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-
-
+    int countOdd = 0;
+    int sumEven = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 != 0) {
+            countOdd++;
+        } else {
+            sumEven += arr[i];
+        }
+    }
+    return "count odd = " + to_string(countOdd) + ", sum even = " + to_string(sumEven);
     //-----------------------
     return "";
 }
