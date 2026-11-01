@@ -103,7 +103,8 @@ void insert_last(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    arr[n] = x;
+    n++;
 
     //-----------------------
 }
@@ -119,7 +120,17 @@ void search_and_delete(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
-
+    int i = 0;
+    while (i < n) {
+        if (arr[i] == x) {
+            for (int j = i; j < n - 1; j++) {
+                arr[j] = arr[j + 1];
+            }
+            n--;
+        } else {
+            i++;
+        }
+    }
 
     //-----------------------
 }
@@ -197,10 +208,14 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+    std::cout << "[";
+    for (int i = n - 1; i >= 0; i--) {
+        std::cout << arr[i];
+        if (i > 0) {
+            std::cout << ", ";
+        }
     }
-    cout<<endl;
+    std::cout << "]";
     //-----------------------
 }
 
